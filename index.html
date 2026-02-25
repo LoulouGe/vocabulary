@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon English Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -112,7 +113,13 @@ Dog = Chien"></textarea>
                 <button id="flashcard-next-btn">Suivant</button>
             </div>
 
+            <div id="flashcard-status-btns">
+                <button id="flashcard-learning-btn" class="status-btn learning">En cours</button>
+                <button id="flashcard-learned-btn" class="status-btn learned">Appris</button>
+            </div>
+
             <div id="flashcard-end-buttons" style="display: none;">
+                <button id="flashcard-replay-learning-btn" style="display: none;">Réviser les mots en cours</button>
                 <button id="flashcard-replay-btn">Rejouer</button>
                 <button id="flashcard-menu-btn" class="btn-secondary">Changer de thème</button>
             </div>

@@ -2601,6 +2601,12 @@ const flashcardNav = document.getElementById("flashcard-nav");
 const flashcardEndButtons = document.getElementById("flashcard-end-buttons");
 const flashcardReplayBtn = document.getElementById("flashcard-replay-btn");
 const flashcardMenuBtn = document.getElementById("flashcard-menu-btn");
+const flashcardStatusBtns = document.getElementById("flashcard-status-btns");
+const flashcardLearningBtn = document.getElementById("flashcard-learning-btn");
+const flashcardLearnedBtn = document.getElementById("flashcard-learned-btn");
+const flashcardReplayLearningBtn = document.getElementById(
+  "flashcard-replay-learning-btn",
+);
 const modeFlashcardBtn = document.getElementById("mode-flashcard-btn");
 
 function hideAll() {
@@ -3016,12 +3022,16 @@ function endMatchRound() {
 
 let flashcardWords = [];
 let flashcardIndex = 0;
+let flashcardStatus = {};
 
-function startFlashcardRound() {
-  flashcardWords = shuffle(words);
+function startFlashcardRound(wordsToUse) {
+  flashcardWords = shuffle(wordsToUse || words);
   flashcardIndex = 0;
+  flashcardStatus = {};
   flashcardEndButtons.style.display = "none";
+  flashcardReplayLearningBtn.style.display = "none";
   flashcardNav.style.display = "flex";
+  flashcardStatusBtns.style.display = "flex";
   displayFlashcard();
 }
 
@@ -3050,6 +3060,10 @@ function updateFlashcardContent(word) {
 
   flashcardPrevBtn.disabled = flashcardIndex === 0;
   flashcardPrevBtn.style.opacity = flashcardIndex === 0 ? "0.4" : "1";
+
+  const status = flashcardStatus[flashcardIndex];
+  flashcardLearningBtn.classList.toggle("active", status === "learning");
+  flashcardLearnedBtn.classList.toggle("active", status === "learned");
 }
 
 flashcard.addEventListener("click", () => {
@@ -3063,8 +3077,20 @@ flashcardNextBtn.addEventListener("click", () => {
   } else {
     // Fin de la révision
     flashcardNav.style.display = "none";
+    flashcardStatusBtns.style.display = "none";
     flashcardProgress.textContent = "Révision terminée !";
     flashcardEndButtons.style.display = "";
+
+    const learningCount = Object.values(flashcardStatus).filter(
+      (s) => s === "learning",
+    ).length;
+    if (learningCount > 0) {
+      flashcardReplayLearningBtn.textContent =
+        "Réviser les mots en cours (" + learningCount + ")";
+      flashcardReplayLearningBtn.style.display = "";
+    } else {
+      flashcardReplayLearningBtn.style.display = "none";
+    }
   }
 });
 
@@ -3073,6 +3099,25 @@ flashcardPrevBtn.addEventListener("click", () => {
     flashcardIndex--;
     displayFlashcard();
   }
+});
+
+flashcardLearningBtn.addEventListener("click", () => {
+  flashcardStatus[flashcardIndex] = "learning";
+  flashcardLearningBtn.classList.add("active");
+  flashcardLearnedBtn.classList.remove("active");
+});
+
+flashcardLearnedBtn.addEventListener("click", () => {
+  flashcardStatus[flashcardIndex] = "learned";
+  flashcardLearnedBtn.classList.add("active");
+  flashcardLearningBtn.classList.remove("active");
+});
+
+flashcardReplayLearningBtn.addEventListener("click", () => {
+  const learningWords = flashcardWords.filter(
+    (_, i) => flashcardStatus[i] === "learning",
+  );
+  startFlashcardRound(learningWords);
 });
 
 flashcardReplayBtn.addEventListener("click", () => {
