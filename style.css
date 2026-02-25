@@ -550,3 +550,34 @@ textarea:focus {
     padding: 12px 15px;
     font-size: 0.9rem;
 }
+
+/* Indicateur de scroll sur les grilles */
+#theme-grid,
+#saved-lists-grid {
+    -webkit-overflow-scrolling: touch;
+    box-shadow: inset 0 -20px 15px -15px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    #word-to-translate {
+        font-size: 2.4rem;
+    }
+
+    .flashcard-front p {
+        font-size: 1.8rem;
+    }
+
+    #flashcard-back-word {
+        font-size: 1.6rem;
+    }
+
+    .flashcard {
+        height: 170px;
+    }
+}
