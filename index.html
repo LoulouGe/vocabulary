@@ -25,6 +25,16 @@ Dog = Chien"></textarea>
             <button id="start-custom-btn">Jouer avec ma liste</button>
         </div>
 
+        <!-- Écran de choix du mode de jeu -->
+        <div id="mode-screen" style="display: none;">
+            <p class="instruction">Choisis un mode de jeu :</p>
+            <div id="mode-grid">
+                <button id="mode-quiz-btn" class="mode-btn">Quiz</button>
+                <button id="mode-match-btn" class="mode-btn">Relier les mots</button>
+            </div>
+            <button id="back-to-setup-btn" class="btn-secondary">Retour</button>
+        </div>
+
         <!-- Écran de quiz (caché au début) -->
         <div id="quiz-area" style="display: none;">
             <p id="instruction" class="instruction">Traduisez en français :</p>
@@ -43,6 +53,28 @@ Dog = Chien"></textarea>
 
             <div class="score-board">
                 Score : <span id="score">0</span> / <span id="total">10</span>
+            </div>
+        </div>
+
+        <!-- Écran du jeu Relier les mots -->
+        <div id="match-area" style="display: none;">
+            <p class="instruction">Relie chaque mot anglais à sa traduction française !</p>
+            <p id="match-progress" class="progress"></p>
+
+            <div id="match-columns">
+                <div id="match-col-en" class="match-column"></div>
+                <div id="match-col-fr" class="match-column"></div>
+            </div>
+
+            <p id="match-feedback"></p>
+
+            <div id="match-end-buttons" style="display: none;">
+                <button id="match-replay-btn">Rejouer</button>
+                <button id="match-menu-btn" class="btn-secondary">Changer de thème</button>
+            </div>
+
+            <div class="score-board">
+                Score : <span id="match-score">0</span> / <span id="match-total">5</span>
             </div>
         </div>
     </div>

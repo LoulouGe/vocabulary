@@ -5,12 +5,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    /* Background floral : on utilise un dégradé doux avec un motif léger */
-    background-color: #f1f3f0;
-    background-image: radial-gradient(#d4dfd0 1px, transparent 1px);
-    background-size: 20px 20px;
-    /* Petit motif discret */
-    height: 100vh;
+    background-color: #e9ede6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3C!-- feuille 1 --%3E%3Cpath d='M50 80 Q60 40 80 30 Q70 60 75 85 Q60 90 50 80Z' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M55 82 Q62 50 75 35' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.5'/%3E%3C!-- tige 1 --%3E%3Cpath d='M58 85 Q55 110 60 130' stroke='%23a3b18a' stroke-width='1.2' fill='none' opacity='0.4'/%3E%3C!-- petite feuille --%3E%3Cpath d='M62 105 Q72 95 78 100 Q70 108 62 105Z' fill='%23d4dfd0' opacity='0.5'/%3E%3C!-- fleur simple --%3E%3Ccircle cx='60' cy='135' r='4' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='60' cy='135' r='1.5' fill='%23c8d5b9' opacity='0.5'/%3E%3C!-- branche eucalyptus --%3E%3Cpath d='M320 50 Q330 80 325 120' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.4'/%3E%3Cellipse cx='315' cy='60' rx='8' ry='5' transform='rotate(-30 315 60)' fill='%23c8d5b9' opacity='0.4'/%3E%3Cellipse cx='330' cy='75' rx='8' ry='5' transform='rotate(20 330 75)' fill='%23d4dfd0' opacity='0.4'/%3E%3Cellipse cx='318' cy='90' rx='8' ry='5' transform='rotate(-20 318 90)' fill='%23c8d5b9' opacity='0.35'/%3E%3Cellipse cx='328' cy='108' rx='7' ry='4.5' transform='rotate(15 328 108)' fill='%23d4dfd0' opacity='0.4'/%3E%3C!-- fougere --%3E%3Cpath d='M180 340 Q185 310 190 280' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.35'/%3E%3Cpath d='M185 320 Q175 312 170 315 Q178 318 185 320Z' fill='%23c8d5b9' opacity='0.4'/%3E%3Cpath d='M186 310 Q195 302 200 306 Q193 308 186 310Z' fill='%23d4dfd0' opacity='0.4'/%3E%3Cpath d='M187 300 Q178 292 173 296 Q180 298 187 300Z' fill='%23c8d5b9' opacity='0.35'/%3E%3Cpath d='M189 290 Q197 283 202 287 Q195 288 189 290Z' fill='%23d4dfd0' opacity='0.35'/%3E%3C!-- feuille monstera simplifiee --%3E%3Cpath d='M350 300 Q340 270 355 250 Q360 270 370 265 Q365 280 375 278 Q368 295 355 305Z' fill='%23c8d5b9' opacity='0.3'/%3E%3Cpath d='M352 300 Q348 275 355 255' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.35'/%3E%3C!-- petites baies --%3E%3Ccircle cx='140' cy='180' r='3' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='148' cy='175' r='3' fill='%23d4dfd0' opacity='0.4'/%3E%3Ccircle cx='144' cy='185' r='2.5' fill='%23c8d5b9' opacity='0.35'/%3E%3Cpath d='M144 175 Q142 165 145 155' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C!-- grande feuille tombante --%3E%3Cpath d='M250 20 Q230 50 240 90 Q250 60 260 55 Q255 40 250 20Z' fill='%23d4dfd0' opacity='0.3'/%3E%3Cpath d='M248 25 Q238 55 242 85' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.35'/%3E%3C!-- brin d herbe --%3E%3Cpath d='M90 380 Q85 350 95 330' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.3'/%3E%3Cpath d='M95 380 Q100 355 92 335' stroke='%23c8d5b9' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C!-- petite fleur 2 --%3E%3Cpath d='M280 180 Q283 175 286 180 Q283 178 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M286 180 Q289 177 286 174 Q287 177 286 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M280 180 Q277 177 280 174 Q279 177 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M280 180 Q283 183 286 180 Q283 182 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='283' cy='178' r='1.5' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M283 183 Q280 200 282 215' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,6 +191,104 @@ textarea:focus {
 }
 
 #end-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Mode selection screen */
+#mode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.mode-btn {
+    padding: 20px 10px;
+    font-size: 0.95rem;
+    border-radius: 15px;
+    background: #f1f3f0;
+    color: #344e41;
+    border: 2px solid #dad7cd;
+    font-weight: 600;
+}
+
+.mode-btn:hover {
+    background: #588157;
+    color: white;
+    border-color: #588157;
+    transform: translateY(-2px);
+}
+
+#back-to-setup-btn {
+    margin-top: 10px;
+}
+
+/* Matching game */
+#match-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.match-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.match-word {
+    padding: 12px 10px;
+    border-radius: 12px;
+    background: #f1f3f0;
+    color: #344e41;
+    border: 2px solid #dad7cd;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: center;
+    user-select: none;
+}
+
+.match-word:hover:not(.matched) {
+    border-color: #a3b18a;
+    background: #e9ede6;
+    transform: translateY(-1px);
+}
+
+.match-word.selected {
+    border-color: #588157;
+    background: #588157;
+    color: white;
+    transform: scale(1.03);
+}
+
+.match-word.matched {
+    border-color: #588157;
+    background: #dde5db;
+    color: #588157;
+    cursor: default;
+    opacity: 0.7;
+}
+
+.match-word.wrong {
+    border-color: #c1121f;
+    background: #fde2e4;
+    color: #c1121f;
+}
+
+#match-feedback {
+    margin-top: 10px;
+    font-weight: 600;
+    min-height: 24px;
+    color: #344e41;
+}
+
+#match-end-buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;

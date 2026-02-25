@@ -87,6 +87,7 @@ const themes = {
 };
 
 const ROUND_SIZE = 10;
+const MATCH_SIZE = 5;
 
 let words = [];
 let currentIndex = 0;
@@ -102,6 +103,11 @@ const wordListInput = document.getElementById('word-list-input');
 const startCustomBtn = document.getElementById('start-custom-btn');
 const themeGrid = document.getElementById('theme-grid');
 
+const modeScreen = document.getElementById('mode-screen');
+const modeQuizBtn = document.getElementById('mode-quiz-btn');
+const modeMatchBtn = document.getElementById('mode-match-btn');
+const backToSetupBtn = document.getElementById('back-to-setup-btn');
+
 const quizArea = document.getElementById('quiz-area');
 const wordDisplay = document.getElementById('word-to-translate');
 const userInput = document.getElementById('user-input');
@@ -114,6 +120,17 @@ const progress = document.getElementById('progress');
 const endButtons = document.getElementById('end-buttons');
 const replayBtn = document.getElementById('replay-btn');
 const menuBtn = document.getElementById('menu-btn');
+
+const matchArea = document.getElementById('match-area');
+const matchColEn = document.getElementById('match-col-en');
+const matchColFr = document.getElementById('match-col-fr');
+const matchFeedback = document.getElementById('match-feedback');
+const matchScoreDisplay = document.getElementById('match-score');
+const matchTotalDisplay = document.getElementById('match-total');
+const matchProgress = document.getElementById('match-progress');
+const matchEndButtons = document.getElementById('match-end-buttons');
+const matchReplayBtn = document.getElementById('match-replay-btn');
+const matchMenuBtn = document.getElementById('match-menu-btn');
 
 function shuffle(array) {
     const shuffled = [...array];
@@ -141,14 +158,31 @@ function parseWordList(text) {
     return parsed;
 }
 
-function showSetup() {
-    setupScreen.style.display = '';
+function hideAll() {
+    setupScreen.style.display = 'none';
+    modeScreen.style.display = 'none';
     quizArea.style.display = 'none';
+    matchArea.style.display = 'none';
+}
+
+function showSetup() {
+    hideAll();
+    setupScreen.style.display = '';
+}
+
+function showModeSelect() {
+    hideAll();
+    modeScreen.style.display = '';
 }
 
 function showQuiz() {
-    setupScreen.style.display = 'none';
+    hideAll();
     quizArea.style.display = '';
+}
+
+function showMatch() {
+    hideAll();
+    matchArea.style.display = '';
 }
 
 // Génère les boutons de thèmes
@@ -158,8 +192,7 @@ for (const themeName of Object.keys(themes)) {
     btn.textContent = themeName;
     btn.addEventListener('click', () => {
         words = themes[themeName];
-        showQuiz();
-        startRound();
+        showModeSelect();
     });
     themeGrid.appendChild(btn);
 }
@@ -171,15 +204,39 @@ startCustomBtn.addEventListener('click', () => {
         return;
     }
     words = parsed;
+    showModeSelect();
+});
+
+// Mode selection
+modeQuizBtn.addEventListener('click', () => {
     showQuiz();
     startRound();
 });
 
+modeMatchBtn.addEventListener('click', () => {
+    showMatch();
+    startMatchRound();
+});
+
+backToSetupBtn.addEventListener('click', () => {
+    showSetup();
+});
+
+// Quiz buttons
 replayBtn.addEventListener('click', () => {
     startRound();
 });
 
 menuBtn.addEventListener('click', () => {
+    showSetup();
+});
+
+// Match buttons
+matchReplayBtn.addEventListener('click', () => {
+    startMatchRound();
+});
+
+matchMenuBtn.addEventListener('click', () => {
     showSetup();
 });
 
@@ -306,6 +363,129 @@ function nextWord() {
         userInput.style.display = "none";
         endButtons.style.display = "";
     }
+}
+
+// ===== Jeu Relier les mots =====
+
+let matchWords = [];
+let matchScore = 0;
+let matchedCount = 0;
+let selectedEn = null;
+let selectedFr = null;
+let matchLocked = false;
+
+function startMatchRound() {
+    matchScore = 0;
+    matchedCount = 0;
+    selectedEn = null;
+    selectedFr = null;
+    matchLocked = false;
+    matchFeedback.innerText = "";
+    matchEndButtons.style.display = "none";
+
+    const size = Math.min(MATCH_SIZE, words.length);
+    matchWords = shuffle(words).slice(0, size);
+
+    matchTotalDisplay.innerText = matchWords.length;
+    matchScoreDisplay.innerText = 0;
+    matchProgress.innerText = "0 / " + matchWords.length;
+
+    // Créer les colonnes mélangées
+    const enOrder = shuffle(matchWords);
+    const frOrder = shuffle(matchWords);
+
+    matchColEn.innerHTML = '';
+    matchColFr.innerHTML = '';
+
+    enOrder.forEach(word => {
+        const el = document.createElement('div');
+        el.className = 'match-word';
+        el.textContent = word.english;
+        el.dataset.key = word.english;
+        el.addEventListener('click', () => onClickEn(el, word));
+        matchColEn.appendChild(el);
+    });
+
+    frOrder.forEach(word => {
+        const el = document.createElement('div');
+        el.className = 'match-word';
+        el.textContent = word.french;
+        el.dataset.key = word.english; // clé commune pour vérifier la paire
+        el.addEventListener('click', () => onClickFr(el, word));
+        matchColFr.appendChild(el);
+    });
+}
+
+function onClickEn(el, word) {
+    if (matchLocked || el.classList.contains('matched')) return;
+
+    // Désélectionner l'ancien
+    if (selectedEn) selectedEn.el.classList.remove('selected');
+
+    selectedEn = { el, word };
+    el.classList.add('selected');
+
+    if (selectedFr) tryMatch();
+}
+
+function onClickFr(el, word) {
+    if (matchLocked || el.classList.contains('matched')) return;
+
+    if (selectedFr) selectedFr.el.classList.remove('selected');
+
+    selectedFr = { el, word };
+    el.classList.add('selected');
+
+    if (selectedEn) tryMatch();
+}
+
+function tryMatch() {
+    matchLocked = true;
+    const isCorrect = selectedEn.word.english === selectedFr.word.english;
+
+    if (isCorrect) {
+        selectedEn.el.classList.remove('selected');
+        selectedFr.el.classList.remove('selected');
+        selectedEn.el.classList.add('matched');
+        selectedFr.el.classList.add('matched');
+        matchScore++;
+        matchedCount++;
+        matchScoreDisplay.innerText = matchScore;
+        matchProgress.innerText = matchedCount + " / " + matchWords.length;
+        matchFeedback.innerText = "Bravo !";
+        matchFeedback.style.color = "green";
+
+        selectedEn = null;
+        selectedFr = null;
+        matchLocked = false;
+
+        if (matchedCount === matchWords.length) {
+            endMatchRound();
+        }
+    } else {
+        selectedEn.el.classList.add('wrong');
+        selectedFr.el.classList.add('wrong');
+        matchFeedback.innerText = "Essaie encore !";
+        matchFeedback.style.color = "#c1121f";
+
+        const enEl = selectedEn.el;
+        const frEl = selectedFr.el;
+
+        setTimeout(() => {
+            enEl.classList.remove('selected', 'wrong');
+            frEl.classList.remove('selected', 'wrong');
+            selectedEn = null;
+            selectedFr = null;
+            matchLocked = false;
+        }, 600);
+    }
+}
+
+function endMatchRound() {
+    matchFeedback.innerText = "Bravo ! Score : " + matchScore + " / " + matchWords.length;
+    matchFeedback.style.color = "#344e41";
+    matchProgress.innerText = "Partie terminée !";
+    matchEndButtons.style.display = "";
 }
 
 // On démarre sur l'écran de configuration
