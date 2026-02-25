@@ -3483,5 +3483,21 @@ function renderMasteryBadge(btn, themeName) {
   btn.appendChild(container);
 }
 
+// Reset stats
+document.getElementById("reset-stats-btn").addEventListener("click", () => {
+  if (!confirm("Tu es sûr(e) de vouloir remettre ta progression à zéro ?")) {
+    return;
+  }
+  if (
+    !confirm(
+      "Toutes tes statistiques seront perdues. Vraiment continuer ?",
+    )
+  ) {
+    return;
+  }
+  localStorage.removeItem(STATS_KEY);
+  showSetup();
+});
+
 // On démarre sur l'écran de configuration
 showSetup();
