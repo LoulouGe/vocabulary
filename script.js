@@ -2521,12 +2521,14 @@ const ROUND_SIZE = 10;
 const MATCH_SIZE = 5;
 
 let words = [];
+let currentThemeName = "";
 let currentIndex = 0;
 let score = 0;
 let roundWords = [];
 let roundOver = false;
 let waitingNext = false;
 let attempts = 0;
+let roundResults = [];
 
 // Éléments du DOM
 const setupScreen = document.getElementById("setup-screen");
@@ -2620,6 +2622,9 @@ function hideAll() {
 function showSetup() {
   hideAll();
   setupScreen.style.display = "";
+  renderThemeButtons();
+  renderSavedLists();
+  renderRecommendations();
 }
 
 function showModeSelect() {
@@ -2643,15 +2648,20 @@ function showFlashcard() {
 }
 
 // Génère les boutons de thèmes
-for (const themeName of Object.keys(themes)) {
-  const btn = document.createElement("button");
-  btn.className = "theme-btn";
-  btn.textContent = themeName;
-  btn.addEventListener("click", () => {
-    words = themes[themeName];
-    showModeSelect();
-  });
-  themeGrid.appendChild(btn);
+function renderThemeButtons() {
+  themeGrid.innerHTML = "";
+  for (const themeName of Object.keys(themes)) {
+    const btn = document.createElement("button");
+    btn.className = "theme-btn";
+    btn.textContent = themeName;
+    renderMasteryBadge(btn, themeName);
+    btn.addEventListener("click", () => {
+      words = themes[themeName];
+      currentThemeName = themeName;
+      showModeSelect();
+    });
+    themeGrid.appendChild(btn);
+  }
 }
 
 startCustomBtn.addEventListener("click", () => {
@@ -2661,6 +2671,7 @@ startCustomBtn.addEventListener("click", () => {
     return;
   }
   words = parsed;
+  currentThemeName = customListName.value.trim() || "Liste personnalisée";
   showModeSelect();
 });
 
@@ -2707,6 +2718,7 @@ function startRound() {
   score = 0;
   roundOver = false;
   attempts = 0;
+  roundResults = [];
   scoreDisplay.innerText = score;
   feedback.innerText = "";
   checkBtn.style.display = "";
@@ -2773,6 +2785,7 @@ function checkAnswer() {
   if (answer === correctAnswer) {
     feedback.innerText = "Bravo !";
     feedback.style.color = "green";
+    roundResults.push({ english: word.english, correct: attempts === 0 });
     if (attempts === 0) {
       score += 1;
     } else {
@@ -2803,6 +2816,7 @@ function checkAnswer() {
     } else {
       feedback.innerText = "C'était « " + correctAnswer + " »";
       feedback.style.color = "red";
+      roundResults.push({ english: word.english, correct: false });
     }
   }
 
@@ -2837,6 +2851,7 @@ function nextWord() {
     checkBtn.style.display = "none";
     userInput.style.display = "none";
     endButtons.style.display = "";
+    recordGameResult(currentThemeName, roundResults);
   }
 }
 
@@ -2871,6 +2886,7 @@ function showMcq(word) {
         feedback.style.color = "green";
         score += 0.5;
         scoreDisplay.innerText = score;
+        roundResults.push({ english: word.english, correct: false });
       } else {
         btn.classList.add("wrong");
         // Montrer la bonne réponse
@@ -2879,6 +2895,7 @@ function showMcq(word) {
         });
         feedback.innerText = "C'était « " + correctAnswer + " »";
         feedback.style.color = "red";
+        roundResults.push({ english: word.english, correct: false });
       }
 
       waitingNext = true;
@@ -2902,6 +2919,8 @@ let matchedCount = 0;
 let selectedEn = null;
 let selectedFr = null;
 let matchLocked = false;
+let matchResults = [];
+let matchAttempts = {};
 
 function startMatchRound() {
   matchScore = 0;
@@ -2909,6 +2928,8 @@ function startMatchRound() {
   selectedEn = null;
   selectedFr = null;
   matchLocked = false;
+  matchResults = [];
+  matchAttempts = {};
   matchFeedback.innerText = "";
   matchEndButtons.style.display = "none";
 
@@ -2984,6 +3005,10 @@ function tryMatch() {
     matchFeedback.innerText = "Bravo !";
     matchFeedback.style.color = "green";
 
+    const key = selectedEn.word.english;
+    const hadWrong = matchAttempts[key] > 0;
+    matchResults.push({ english: key, correct: !hadWrong });
+
     selectedEn = null;
     selectedFr = null;
     matchLocked = false;
@@ -2992,6 +3017,12 @@ function tryMatch() {
       endMatchRound();
     }
   } else {
+    // Track wrong attempts for both words involved
+    const enKey = selectedEn.word.english;
+    const frKey = selectedFr.word.english;
+    matchAttempts[enKey] = (matchAttempts[enKey] || 0) + 1;
+    matchAttempts[frKey] = (matchAttempts[frKey] || 0) + 1;
+
     selectedEn.el.classList.add("wrong");
     selectedFr.el.classList.add("wrong");
     matchFeedback.innerText = "Essaie encore !";
@@ -3016,6 +3047,7 @@ function endMatchRound() {
   matchFeedback.style.color = "#344e41";
   matchProgress.innerText = "Partie terminée !";
   matchEndButtons.style.display = "";
+  recordGameResult(currentThemeName, matchResults);
 }
 
 // ===== Flashcards de révision =====
@@ -3090,6 +3122,20 @@ flashcardNextBtn.addEventListener("click", () => {
       flashcardReplayLearningBtn.style.display = "";
     } else {
       flashcardReplayLearningBtn.style.display = "none";
+    }
+
+    // Record flashcard results (only words that were marked)
+    const flashcardResults = [];
+    flashcardWords.forEach((word, i) => {
+      const status = flashcardStatus[i];
+      if (status === "learned") {
+        flashcardResults.push({ english: word.english, correct: true });
+      } else if (status === "learning") {
+        flashcardResults.push({ english: word.english, correct: false });
+      }
+    });
+    if (flashcardResults.length > 0) {
+      recordGameResult(currentThemeName, flashcardResults);
     }
   }
 });
@@ -3190,9 +3236,11 @@ function renderSavedLists() {
 
     btn.appendChild(nameSpan);
     btn.appendChild(deleteSpan);
+    renderMasteryBadge(btn, name);
 
     btn.addEventListener("click", () => {
       words = lists[name];
+      currentThemeName = name;
       showModeSelect();
     });
 
@@ -3255,6 +3303,172 @@ proposeThemeBtn.addEventListener("click", () => {
   );
 });
 
+// ===== Statistiques et recommandations =====
+
+const STATS_KEY = "vocabulaire-stats";
+
+function loadStats() {
+  try {
+    return JSON.parse(localStorage.getItem(STATS_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveStats(stats) {
+  localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+}
+
+function recordGameResult(themeName, wordResults) {
+  if (!themeName || wordResults.length === 0) return;
+  const stats = loadStats();
+  const now = Date.now();
+
+  if (!stats[themeName]) {
+    stats[themeName] = { lastPlayed: now, games: 0, words: {} };
+  }
+
+  const theme = stats[themeName];
+  theme.lastPlayed = now;
+  theme.games++;
+
+  wordResults.forEach((r) => {
+    const key = r.english;
+    if (!theme.words[key]) {
+      theme.words[key] = { correct: 0, wrong: 0, lastSeen: now };
+    }
+    const w = theme.words[key];
+    w.lastSeen = now;
+    if (r.correct) {
+      w.correct++;
+    } else {
+      w.wrong++;
+    }
+  });
+
+  saveStats(stats);
+}
+
+function getThemeMastery(themeName) {
+  const stats = loadStats();
+  const theme = stats[themeName];
+  if (!theme) return null;
+
+  const wordEntries = Object.values(theme.words);
+  if (wordEntries.length === 0) return null;
+
+  let totalCorrect = 0;
+  let totalWrong = 0;
+  wordEntries.forEach((w) => {
+    totalCorrect += w.correct;
+    totalWrong += w.wrong;
+  });
+
+  if (totalCorrect + totalWrong === 0) return null;
+  return Math.round((totalCorrect / (totalCorrect + totalWrong)) * 100);
+}
+
+function getRecommendations() {
+  const stats = loadStats();
+  const recommendations = [];
+  const now = Date.now();
+  const FOURTEEN_DAYS = 14 * 24 * 60 * 60 * 1000;
+
+  for (const [name, theme] of Object.entries(stats)) {
+    const mastery = getThemeMastery(name);
+    if (mastery !== null && mastery < 60) {
+      recommendations.push({
+        themeName: name,
+        type: "weak",
+        mastery,
+        lastPlayed: theme.lastPlayed,
+        text: "Tu as du mal avec " + name + " (" + mastery + " %) — révise-le !",
+      });
+    } else if (theme.lastPlayed && now - theme.lastPlayed > FOURTEEN_DAYS) {
+      const days = Math.floor((now - theme.lastPlayed) / (24 * 60 * 60 * 1000));
+      recommendations.push({
+        themeName: name,
+        type: "stale",
+        mastery: mastery || 0,
+        lastPlayed: theme.lastPlayed,
+        text:
+          "Ça fait " + days + " jours que tu n'as pas révisé " + name + " !",
+      });
+    }
+  }
+
+  // Sort: weak first (by mastery ascending), then stale (by oldest first)
+  recommendations.sort((a, b) => {
+    if (a.type === "weak" && b.type !== "weak") return -1;
+    if (a.type !== "weak" && b.type === "weak") return 1;
+    if (a.type === "weak" && b.type === "weak") return a.mastery - b.mastery;
+    return a.lastPlayed - b.lastPlayed;
+  });
+
+  return recommendations.slice(0, 2);
+}
+
+function renderRecommendations() {
+  const container = document.getElementById("recommendations");
+  const recs = getRecommendations();
+
+  if (recs.length === 0) {
+    container.style.display = "none";
+    return;
+  }
+
+  container.style.display = "";
+  container.innerHTML = "";
+
+  recs.forEach((rec) => {
+    const el = document.createElement("div");
+    el.className = "recommendation";
+    el.textContent = rec.text;
+    el.addEventListener("click", () => {
+      // Check if this theme exists in built-in themes or saved lists
+      if (themes[rec.themeName]) {
+        words = themes[rec.themeName];
+      } else {
+        const lists = loadSavedLists();
+        if (lists[rec.themeName]) {
+          words = lists[rec.themeName];
+        } else {
+          return;
+        }
+      }
+      currentThemeName = rec.themeName;
+      showModeSelect();
+    });
+    container.appendChild(el);
+  });
+}
+
+function renderMasteryBadge(btn, themeName) {
+  const mastery = getThemeMastery(themeName) || 0;
+
+  const container = document.createElement("div");
+  container.className = "mastery-container";
+
+  const track = document.createElement("div");
+  track.className = "mastery-track";
+
+  const fill = document.createElement("div");
+  fill.className = "mastery-fill";
+  fill.style.width = mastery + "%";
+  if (mastery === 0) fill.classList.add("mastery-zero");
+  else if (mastery >= 80) fill.classList.add("mastery-high");
+  else if (mastery >= 50) fill.classList.add("mastery-mid");
+  else fill.classList.add("mastery-low");
+
+  const pct = document.createElement("span");
+  pct.className = "mastery-pct";
+  pct.textContent = mastery + "%";
+
+  track.appendChild(fill);
+  container.appendChild(track);
+  container.appendChild(pct);
+  btn.appendChild(container);
+}
+
 // On démarre sur l'écran de configuration
-renderSavedLists();
 showSetup();

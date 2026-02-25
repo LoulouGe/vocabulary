@@ -1,3 +1,1 @@
 -NOUVEAU MODE !!!! mots croisé avec les definition des mots en anglais et trouvés les mots aussi en anglais.
--mettre des barres de difficultés comme dans just dance avec des petites barres comme la 4G
--faire des stat sur les thèmes et les mots que tu maitrises pour les affichés et te conseillé de révisé les mots ou les thèmes que tu maitrise le moins sauf sur les thèmes jamais essayés part l'utilisateur. penses tu que c'est une bonne idée
