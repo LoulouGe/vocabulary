@@ -558,6 +558,74 @@ textarea:focus {
     box-shadow: inset 0 -20px 15px -15px rgba(0, 0, 0, 0.08);
 }
 
+/* Mastery badges */
+.mastery-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.mastery-track {
+    flex: 1;
+    height: 3px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.mastery-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+.mastery-fill.mastery-high {
+    background: #588157;
+}
+
+.mastery-fill.mastery-mid {
+    background: #e9a820;
+}
+
+.mastery-fill.mastery-low {
+    background: #c1121f;
+}
+
+.mastery-fill.mastery-zero {
+    background: #e0e0e0;
+}
+
+.mastery-pct {
+    font-size: 0.6rem;
+    color: #a3b18a;
+    min-width: 24px;
+    text-align: right;
+}
+
+/* Recommendations */
+#recommendations {
+    margin-bottom: 15px;
+}
+
+.recommendation {
+    background: #fdf0d5;
+    border: 1px solid #e9a820;
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #344e41;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.recommendation:hover {
+    background: #fbe8c0;
+    transform: translateY(-1px);
+}
+
 /* Mobile */
 @media (max-width: 480px) {
     .game-container {
