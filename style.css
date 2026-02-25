@@ -603,6 +603,24 @@ textarea:focus {
     text-align: right;
 }
 
+/* Reset button */
+.btn-reset {
+    margin-top: 20px;
+    background: transparent;
+    color: #a3b18a;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 8px;
+    text-decoration: underline;
+}
+
+.btn-reset:hover {
+    color: #c1121f;
+    background: transparent;
+    transform: none;
+}
+
 /* Recommendations */
 #recommendations {
     margin-bottom: 15px;

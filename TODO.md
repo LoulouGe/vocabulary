@@ -1,1 +1,2 @@
 -NOUVEAU MODE !!!! mots croisé avec les definition des mots en anglais et trouvés les mots aussi en anglais.
+-bouton reset pour remettre toute la progression a 0. quand pense tu ? si cela te semble une bonne idée fait une double vérification pour leur demander s'ils sont sur qu'il veulent reset.
