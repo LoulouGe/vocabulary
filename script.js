@@ -550,11 +550,26 @@ function parseWordList(text) {
     return parsed;
 }
 
+const flashcardArea = document.getElementById('flashcard-area');
+const flashcard = document.getElementById('flashcard');
+const flashcardFrontWord = document.getElementById('flashcard-front-word');
+const flashcardBackWord = document.getElementById('flashcard-back-word');
+const flashcardBackHint = document.getElementById('flashcard-back-hint');
+const flashcardProgress = document.getElementById('flashcard-progress');
+const flashcardPrevBtn = document.getElementById('flashcard-prev-btn');
+const flashcardNextBtn = document.getElementById('flashcard-next-btn');
+const flashcardNav = document.getElementById('flashcard-nav');
+const flashcardEndButtons = document.getElementById('flashcard-end-buttons');
+const flashcardReplayBtn = document.getElementById('flashcard-replay-btn');
+const flashcardMenuBtn = document.getElementById('flashcard-menu-btn');
+const modeFlashcardBtn = document.getElementById('mode-flashcard-btn');
+
 function hideAll() {
     setupScreen.style.display = 'none';
     modeScreen.style.display = 'none';
     quizArea.style.display = 'none';
     matchArea.style.display = 'none';
+    flashcardArea.style.display = 'none';
 }
 
 function showSetup() {
@@ -575,6 +590,11 @@ function showQuiz() {
 function showMatch() {
     hideAll();
     matchArea.style.display = '';
+}
+
+function showFlashcard() {
+    hideAll();
+    flashcardArea.style.display = '';
 }
 
 // Génère les boutons de thèmes
@@ -608,6 +628,11 @@ modeQuizBtn.addEventListener('click', () => {
 modeMatchBtn.addEventListener('click', () => {
     showMatch();
     startMatchRound();
+});
+
+modeFlashcardBtn.addEventListener('click', () => {
+    showFlashcard();
+    startFlashcardRound();
 });
 
 backToSetupBtn.addEventListener('click', () => {
@@ -940,6 +965,76 @@ function endMatchRound() {
     matchProgress.innerText = "Partie terminée !";
     matchEndButtons.style.display = "";
 }
+
+// ===== Flashcards de révision =====
+
+let flashcardWords = [];
+let flashcardIndex = 0;
+
+function startFlashcardRound() {
+    flashcardWords = shuffle(words);
+    flashcardIndex = 0;
+    flashcardEndButtons.style.display = 'none';
+    flashcardNav.style.display = 'flex';
+    displayFlashcard();
+}
+
+function displayFlashcard() {
+    const word = flashcardWords[flashcardIndex];
+    const isFlipped = flashcard.classList.contains('flipped');
+
+    if (isFlipped) {
+        // Retourner au recto d'abord, puis changer le contenu après l'animation
+        flashcard.classList.remove('flipped');
+        setTimeout(() => {
+            updateFlashcardContent(word);
+        }, 600);
+    } else {
+        updateFlashcardContent(word);
+    }
+}
+
+function updateFlashcardContent(word) {
+    flashcardFrontWord.textContent = word.english;
+    flashcardBackWord.textContent = word.french;
+    flashcardBackHint.textContent = word.hintFr || '';
+
+    flashcardProgress.textContent = (flashcardIndex + 1) + ' / ' + flashcardWords.length;
+
+    flashcardPrevBtn.disabled = flashcardIndex === 0;
+    flashcardPrevBtn.style.opacity = flashcardIndex === 0 ? '0.4' : '1';
+}
+
+flashcard.addEventListener('click', () => {
+    flashcard.classList.toggle('flipped');
+});
+
+flashcardNextBtn.addEventListener('click', () => {
+    if (flashcardIndex < flashcardWords.length - 1) {
+        flashcardIndex++;
+        displayFlashcard();
+    } else {
+        // Fin de la révision
+        flashcardNav.style.display = 'none';
+        flashcardProgress.textContent = 'Révision terminée !';
+        flashcardEndButtons.style.display = '';
+    }
+});
+
+flashcardPrevBtn.addEventListener('click', () => {
+    if (flashcardIndex > 0) {
+        flashcardIndex--;
+        displayFlashcard();
+    }
+});
+
+flashcardReplayBtn.addEventListener('click', () => {
+    startFlashcardRound();
+});
+
+flashcardMenuBtn.addEventListener('click', () => {
+    showSetup();
+});
 
 // On démarre sur l'écran de configuration
 showSetup();

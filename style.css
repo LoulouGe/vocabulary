@@ -350,3 +350,91 @@ textarea:focus {
     color: #c1121f;
     border-color: #c1121f;
 }
+
+/* Flashcards */
+.flashcard {
+    perspective: 800px;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flashcard-front {
+    background: #f1f3f0;
+    border: 2px solid #dad7cd;
+}
+
+.flashcard-front p {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #344e41;
+    margin: 0;
+}
+
+.flashcard-back {
+    background: #588157;
+    border: 2px solid #3a5a40;
+    transform: rotateY(180deg);
+}
+
+.flashcard-back p {
+    margin: 0;
+    color: white;
+}
+
+#flashcard-back-word {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+.flashcard-hint {
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.85;
+    margin-top: 10px !important;
+}
+
+#flashcard-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#flashcard-nav button {
+    flex: 1;
+}
+
+#flashcard-end-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
