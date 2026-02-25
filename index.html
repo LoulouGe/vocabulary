@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mon English Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Learn English</h1>
+
+        <!-- Écran de configuration -->
+        <div id="setup-screen">
+            <p class="instruction">Choisis un thème :</p>
+            <div id="theme-grid"></div>
+
+            <div class="separator">ou crée ta propre liste</div>
+
+            <p class="hint">Format : anglais = français</p>
+            <textarea id="word-list-input" rows="6" placeholder="Apple = Pomme
+House = Maison
+Dog = Chien"></textarea>
+            <button id="start-custom-btn">Jouer avec ma liste</button>
+        </div>
+
+        <!-- Écran de quiz (caché au début) -->
+        <div id="quiz-area" style="display: none;">
+            <p id="instruction" class="instruction">Traduisez en français :</p>
+            <h2 id="word-to-translate">---</h2>
+            <p id="progress" class="progress"></p>
+
+            <input type="text" id="user-input" placeholder="Tapez votre réponse ici...">
+            <button id="check-btn">Vérifier</button>
+
+            <p id="feedback"></p>
+
+            <div id="end-buttons" style="display: none;">
+                <button id="replay-btn">Rejouer sur la même liste</button>
+                <button id="menu-btn" class="btn-secondary">Changer de thème</button>
+            </div>
+
+            <div class="score-board">
+                Score : <span id="score">0</span> / <span id="total">10</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
