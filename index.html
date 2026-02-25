@@ -31,6 +31,7 @@ Dog = Chien"></textarea>
             <div id="mode-grid">
                 <button id="mode-quiz-btn" class="mode-btn">Quiz</button>
                 <button id="mode-match-btn" class="mode-btn">Relier les mots</button>
+                <button id="mode-flashcard-btn" class="mode-btn">Révision</button>
             </div>
             <button id="back-to-setup-btn" class="btn-secondary">Retour</button>
         </div>
@@ -76,6 +77,33 @@ Dog = Chien"></textarea>
 
             <div class="score-board">
                 Score : <span id="match-score">0</span> / <span id="match-total">5</span>
+            </div>
+        </div>
+        <!-- Écran des flashcards de révision -->
+        <div id="flashcard-area" style="display: none;">
+            <p class="instruction">Clique sur la carte pour la retourner !</p>
+            <p id="flashcard-progress" class="progress"></p>
+
+            <div id="flashcard" class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <p id="flashcard-front-word"></p>
+                    </div>
+                    <div class="flashcard-back">
+                        <p id="flashcard-back-word"></p>
+                        <p id="flashcard-back-hint" class="flashcard-hint"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="flashcard-nav">
+                <button id="flashcard-prev-btn" class="btn-secondary">Précédent</button>
+                <button id="flashcard-next-btn">Suivant</button>
+            </div>
+
+            <div id="flashcard-end-buttons" style="display: none;">
+                <button id="flashcard-replay-btn">Rejouer</button>
+                <button id="flashcard-menu-btn" class="btn-secondary">Changer de thème</button>
             </div>
         </div>
     </div>
