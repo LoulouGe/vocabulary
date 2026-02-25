@@ -261,6 +261,8 @@ function startRound() {
     displayWord();
 }
 
+const mcqChoices = document.getElementById('mcq-choices');
+
 function displayWord() {
     const word = roundWords[currentIndex];
     const dir = word.direction;
@@ -275,6 +277,8 @@ function displayWord() {
 
     attempts = 0;
     feedback.innerText = "";
+    mcqChoices.style.display = "none";
+    mcqChoices.innerHTML = "";
     progress.innerText = (currentIndex + 1) + " / " + roundWords.length;
     userInput.value = "";
     userInput.focus();
@@ -315,13 +319,20 @@ function checkAnswer() {
     } else {
         attempts++;
         if (attempts === 1) {
-            const hint = getHint(word);
-            if (hint) {
-                feedback.innerText = "Essaie encore ! Indice : " + hint;
+            if (word.direction === "fr-to-en") {
+                // QCM : 3 choix dont la bonne réponse
+                feedback.innerText = "Essaie encore ! Choisis la bonne réponse :";
                 feedback.style.color = "#b08b2e";
+                showMcq(word);
             } else {
-                feedback.innerText = "Essaie encore !";
-                feedback.style.color = "#b08b2e";
+                const hint = getHint(word);
+                if (hint) {
+                    feedback.innerText = "Essaie encore ! Indice : " + hint;
+                    feedback.style.color = "#b08b2e";
+                } else {
+                    feedback.innerText = "Essaie encore !";
+                    feedback.style.color = "#b08b2e";
+                }
             }
             userInput.value = "";
             userInput.focus();
@@ -363,6 +374,56 @@ function nextWord() {
         userInput.style.display = "none";
         endButtons.style.display = "";
     }
+}
+
+function showMcq(word) {
+    const correctAnswer = word.english;
+    // Choisir 2 mauvaises réponses parmi les autres mots
+    const others = words.filter(w => w.english !== correctAnswer);
+    const wrongAnswers = shuffle(others).slice(0, 2).map(w => w.english);
+    const choices = shuffle([correctAnswer, ...wrongAnswers]);
+
+    mcqChoices.innerHTML = "";
+    mcqChoices.style.display = "flex";
+    userInput.style.display = "none";
+    checkBtn.style.display = "none";
+
+    choices.forEach(choice => {
+        const btn = document.createElement('button');
+        btn.className = 'mcq-btn';
+        btn.textContent = choice;
+        btn.addEventListener('click', () => {
+            if (waitingNext) return;
+            // Désactiver tous les boutons
+            mcqChoices.querySelectorAll('.mcq-btn').forEach(b => b.style.pointerEvents = 'none');
+
+            if (choice === correctAnswer) {
+                btn.classList.add('correct');
+                feedback.innerText = "Bravo !";
+                feedback.style.color = "green";
+                score += 0.5;
+                scoreDisplay.innerText = score;
+            } else {
+                btn.classList.add('wrong');
+                // Montrer la bonne réponse
+                mcqChoices.querySelectorAll('.mcq-btn').forEach(b => {
+                    if (b.textContent === correctAnswer) b.classList.add('correct');
+                });
+                feedback.innerText = "C'était « " + correctAnswer + " »";
+                feedback.style.color = "red";
+            }
+
+            waitingNext = true;
+            setTimeout(() => {
+                waitingNext = false;
+                mcqChoices.style.display = "none";
+                userInput.style.display = "";
+                checkBtn.style.display = "";
+                nextWord();
+            }, 1500);
+        });
+        mcqChoices.appendChild(btn);
+    });
 }
 
 // ===== Jeu Relier les mots =====
