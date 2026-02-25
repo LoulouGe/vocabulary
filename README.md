@@ -2,6 +2,8 @@
 
 Une application web pour apprendre le vocabulaire anglais-français de manière ludique.
 
+**Jouer en ligne :** https://loulouge.github.io/vocabulary/
+
 ## Modes de jeu
 
 ### Quiz
