@@ -16,13 +16,24 @@
             <p class="instruction">Choisis un thème :</p>
             <div id="theme-grid"></div>
 
+            <!-- Section listes sauvegardées (cachée si vide) -->
+            <div id="saved-lists-section" style="display: none;">
+                <div class="separator">Mes listes</div>
+                <div id="saved-lists-grid"></div>
+            </div>
+
             <div class="separator">ou crée ta propre liste</div>
 
+            <input type="text" id="custom-list-name" placeholder="Nom de ta liste (ex : Les fruits)">
             <p class="hint">Format : anglais = français</p>
             <textarea id="word-list-input" rows="6" placeholder="Apple = Pomme
 House = Maison
 Dog = Chien"></textarea>
             <button id="start-custom-btn">Jouer avec ma liste</button>
+            <div id="custom-actions" style="display: none;">
+                <button id="save-list-btn" class="btn-secondary btn-small">Sauvegarder ma liste</button>
+                <button id="propose-theme-btn" class="btn-secondary btn-small">Proposer ce thème</button>
+            </div>
         </div>
 
         <!-- Écran de choix du mode de jeu -->

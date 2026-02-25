@@ -3083,5 +3083,133 @@ flashcardMenuBtn.addEventListener("click", () => {
   showSetup();
 });
 
+// ===== Listes personnalisées sauvegardées =====
+
+const STORAGE_KEY = "vocabulaire-listes-perso";
+const savedListsSection = document.getElementById("saved-lists-section");
+const savedListsGrid = document.getElementById("saved-lists-grid");
+const customActions = document.getElementById("custom-actions");
+const saveListBtn = document.getElementById("save-list-btn");
+const proposeThemeBtn = document.getElementById("propose-theme-btn");
+
+function loadSavedLists() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveList(name, wordList) {
+  const lists = loadSavedLists();
+  lists[name] = wordList;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(lists));
+}
+
+function deleteList(name) {
+  const lists = loadSavedLists();
+  delete lists[name];
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(lists));
+}
+
+function renderSavedLists() {
+  const lists = loadSavedLists();
+  const names = Object.keys(lists);
+
+  if (names.length === 0) {
+    savedListsSection.style.display = "none";
+    return;
+  }
+
+  savedListsSection.style.display = "";
+  savedListsGrid.innerHTML = "";
+
+  names.forEach((name) => {
+    const btn = document.createElement("button");
+    btn.className = "saved-list-btn";
+
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "saved-list-name";
+    nameSpan.textContent = name;
+
+    const deleteSpan = document.createElement("span");
+    deleteSpan.className = "saved-list-delete";
+    deleteSpan.textContent = "\u00d7";
+    deleteSpan.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (confirm('Supprimer la liste « ' + name + ' » ?')) {
+        deleteList(name);
+        renderSavedLists();
+      }
+    });
+
+    btn.appendChild(nameSpan);
+    btn.appendChild(deleteSpan);
+
+    btn.addEventListener("click", () => {
+      words = lists[name];
+      showModeSelect();
+    });
+
+    savedListsGrid.appendChild(btn);
+  });
+}
+
+const customListName = document.getElementById("custom-list-name");
+
+// Show/hide custom action buttons based on textarea content AND title
+function updateCustomActions() {
+  const parsed = parseWordList(wordListInput.value);
+  const hasName = customListName.value.trim().length > 0;
+  customActions.style.display = parsed.length >= 2 && hasName ? "flex" : "none";
+}
+
+wordListInput.addEventListener("input", updateCustomActions);
+customListName.addEventListener("input", updateCustomActions);
+
+saveListBtn.addEventListener("click", () => {
+  const parsed = parseWordList(wordListInput.value);
+  if (parsed.length < 2) return;
+
+  const trimmedName = customListName.value.trim();
+  if (!trimmedName) {
+    alert("Donne un nom à ta liste !");
+    customListName.focus();
+    return;
+  }
+
+  const lists = loadSavedLists();
+  if (lists[trimmedName]) {
+    if (!confirm('La liste « ' + trimmedName + ' » existe déjà. Remplacer ?')) {
+      return;
+    }
+  }
+
+  saveList(trimmedName, parsed);
+  renderSavedLists();
+});
+
+proposeThemeBtn.addEventListener("click", () => {
+  const parsed = parseWordList(wordListInput.value);
+  if (parsed.length < 2) return;
+
+  const themeName = customListName.value.trim();
+  if (!themeName) {
+    alert("Donne un nom à ton thème !");
+    customListName.focus();
+    return;
+  }
+  const title = encodeURIComponent("Proposition de thème : " + themeName);
+  const body = encodeURIComponent(
+    "Bonjour ! Voici une proposition de thème « " + themeName + " » :\n\n" +
+    parsed.map((w) => w.english + " = " + w.french).join("\n")
+  );
+  window.open(
+    "https://github.com/loulouge/vocabulary/issues/new?title=" + title + "&body=" + body,
+    "_blank"
+  );
+});
+
 // On démarre sur l'écran de configuration
+renderSavedLists();
 showSetup();
