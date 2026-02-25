@@ -3349,23 +3349,36 @@ function recordGameResult(themeName, wordResults) {
   saveStats(stats);
 }
 
+function getThemeWordList(themeName) {
+  if (themes[themeName]) return themes[themeName];
+  const lists = loadSavedLists();
+  if (lists[themeName]) return lists[themeName];
+  return null;
+}
+
 function getThemeMastery(themeName) {
   const stats = loadStats();
   const theme = stats[themeName];
   if (!theme) return null;
 
-  const wordEntries = Object.values(theme.words);
-  if (wordEntries.length === 0) return null;
+  const wordList = getThemeWordList(themeName);
+  const totalWords = wordList ? wordList.length : 0;
 
-  let totalCorrect = 0;
-  let totalWrong = 0;
-  wordEntries.forEach((w) => {
-    totalCorrect += w.correct;
-    totalWrong += w.wrong;
+  // Per-word mastery: seen words get correct/(correct+wrong), unseen = 0
+  let masterySum = 0;
+  let seenCount = 0;
+  Object.values(theme.words).forEach((w) => {
+    if (w.correct + w.wrong > 0) {
+      masterySum += w.correct / (w.correct + w.wrong);
+      seenCount++;
+    }
   });
 
-  if (totalCorrect + totalWrong === 0) return null;
-  return Math.round((totalCorrect / (totalCorrect + totalWrong)) * 100);
+  // Total = max of theme word count and seen count (safety for deleted themes)
+  const total = Math.max(totalWords, seenCount);
+  if (total === 0) return null;
+
+  return Math.round((masterySum / total) * 100);
 }
 
 function getRecommendations() {
