@@ -2553,20 +2553,20 @@ function getThemes() {
   return currentLang === "es" ? themesEs : themes;
 }
 
+function langKey(base) {
+  return currentLang === "en" ? base : base + "-" + currentLang;
+}
+
 function getStatsKey() {
-  return currentLang === "es" ? "vocabulaire-stats-es" : "vocabulaire-stats";
+  return langKey("vocabulaire-stats");
 }
 
 function getTotalScoreKey() {
-  return currentLang === "es"
-    ? "vocabulaire-total-score-es"
-    : "vocabulaire-total-score";
+  return langKey("vocabulaire-total-score");
 }
 
 function getStorageKey() {
-  return currentLang === "es"
-    ? "vocabulaire-listes-perso-es"
-    : "vocabulaire-listes-perso";
+  return langKey("vocabulaire-listes-perso");
 }
 
 let words = [];
@@ -2676,6 +2676,13 @@ const crosswordMenuBtn = document.getElementById("crossword-menu-btn");
 const modeCrosswordBtn = document.getElementById("mode-crossword-btn");
 
 const langSelector = document.getElementById("lang-selector");
+const mainTitle = document.getElementById("main-title");
+const matchInstruction = document.getElementById("match-instruction");
+const crosswordInstruction = document.getElementById("crossword-instruction");
+const customFormatHint = document.getElementById("custom-format-hint");
+const customListName = document.getElementById("custom-list-name");
+const langEnBtn = document.getElementById("lang-en");
+const langEsBtn = document.getElementById("lang-es");
 
 function hideAll() {
   setupScreen.style.display = "none";
@@ -2689,41 +2696,24 @@ function hideAll() {
 
 function updateUIStrings() {
   const s = uiStrings[currentLang];
-  document.getElementById("main-title").textContent = s.title;
-  document.getElementById("match-instruction").textContent =
-    s.matchInstruction;
-  document.getElementById("crossword-instruction").textContent =
-    s.crosswordInstruction;
-  document.getElementById("custom-format-hint").textContent =
-    s.customFormatHint;
-  document.getElementById("word-list-input").placeholder = s.customPlaceholder;
-  document.getElementById("custom-list-name").placeholder =
-    s.customListNamePlaceholder;
-
-  // Update flag buttons
-  document.getElementById("lang-en").classList.toggle(
-    "active",
-    currentLang === "en",
-  );
-  document.getElementById("lang-es").classList.toggle(
-    "active",
-    currentLang === "es",
-  );
+  mainTitle.textContent = s.title;
+  matchInstruction.textContent = s.matchInstruction;
+  crosswordInstruction.textContent = s.crosswordInstruction;
+  customFormatHint.textContent = s.customFormatHint;
+  wordListInput.placeholder = s.customPlaceholder;
+  customListName.placeholder = s.customListNamePlaceholder;
+  langEnBtn.classList.toggle("active", currentLang === "en");
+  langEsBtn.classList.toggle("active", currentLang === "es");
 }
 
 function switchLang(lang) {
   currentLang = lang;
   localStorage.setItem("vocabulaire-lang", lang);
-  updateUIStrings();
   showSetup();
 }
 
-document.getElementById("lang-en").addEventListener("click", () => {
-  switchLang("en");
-});
-document.getElementById("lang-es").addEventListener("click", () => {
-  switchLang("es");
-});
+langEnBtn.addEventListener("click", () => switchLang("en"));
+langEsBtn.addEventListener("click", () => switchLang("es"));
 
 function showSetup() {
   hideAll();
@@ -3370,8 +3360,6 @@ function renderSavedLists() {
     savedListsGrid.appendChild(btn);
   });
 }
-
-const customListName = document.getElementById("custom-list-name");
 
 // Show/hide custom action buttons based on textarea content AND title
 function updateCustomActions() {
