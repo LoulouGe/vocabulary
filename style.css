@@ -15,6 +15,7 @@ body {
 }
 
 .game-container {
+  position: relative;
   background: rgba(255, 255, 255, 0.95);
   padding: 40px;
   border-radius: 30px;
@@ -792,6 +793,37 @@ textarea:focus {
   flex-direction: column;
   gap: 10px;
   margin-top: 15px;
+}
+
+/* Language selector */
+#lang-selector {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.lang-btn {
+  width: auto;
+  padding: 4px 8px;
+  font-size: 1.3rem;
+  line-height: 1;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lang-btn:hover {
+  background: #f1f3f0;
+  transform: none;
+}
+
+.lang-btn.active {
+  border-color: #588157;
+  background: #dde5db;
 }
 
 /* Mobile */
