@@ -504,9 +504,20 @@ textarea:focus {
   border: 1px solid #dad7cd;
   font-weight: 600;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.saved-list-btn .saved-list-top {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 6px;
+  width: 100%;
+}
+
+.saved-list-btn .mastery-container {
+  width: 100%;
 }
 
 .saved-list-btn:hover {
