@@ -2521,6 +2521,54 @@ const ROUND_SIZE = 10;
 const MATCH_SIZE = 5;
 const CROSSWORD_SIZE = 8;
 
+// Language state
+let currentLang = localStorage.getItem("vocabulaire-lang") || "en";
+
+const uiStrings = {
+  en: {
+    title: "Learn English",
+    matchInstruction: "Relie chaque mot anglais à sa traduction française !",
+    crosswordInstruction: "Remplis la grille avec les mots anglais !",
+    customFormatHint: "Format : anglais = français",
+    customPlaceholder: "Apple = Pomme\nHouse = Maison\nDog = Chien",
+    customListNamePlaceholder: "Nom de ta liste (ex : Les fruits)",
+    customAlertMin: "Il faut au moins 2 mots ! Vérifie le format : anglais = français",
+    quizToFr: "Traduisez en français :",
+    quizToForeign: "Translate into English:",
+  },
+  es: {
+    title: "Aprende Español",
+    matchInstruction: "Relie chaque mot espagnol à sa traduction française !",
+    crosswordInstruction: "Remplis la grille avec les mots espagnols !",
+    customFormatHint: "Format : espagnol = français",
+    customPlaceholder: "Mesa = Table\nCasa = Maison\nPerro = Chien",
+    customListNamePlaceholder: "Nom de ta liste (ex : Les fruits)",
+    customAlertMin: "Il faut au moins 2 mots ! Vérifie le format : espagnol = français",
+    quizToFr: "Traduisez en français :",
+    quizToForeign: "Traduce al español:",
+  },
+};
+
+function getThemes() {
+  return currentLang === "es" ? themesEs : themes;
+}
+
+function getStatsKey() {
+  return currentLang === "es" ? "vocabulaire-stats-es" : "vocabulaire-stats";
+}
+
+function getTotalScoreKey() {
+  return currentLang === "es"
+    ? "vocabulaire-total-score-es"
+    : "vocabulaire-total-score";
+}
+
+function getStorageKey() {
+  return currentLang === "es"
+    ? "vocabulaire-listes-perso-es"
+    : "vocabulaire-listes-perso";
+}
+
 let words = [];
 let currentThemeName = "";
 let currentIndex = 0;
@@ -2627,6 +2675,8 @@ const crosswordReplayBtn = document.getElementById("crossword-replay-btn");
 const crosswordMenuBtn = document.getElementById("crossword-menu-btn");
 const modeCrosswordBtn = document.getElementById("mode-crossword-btn");
 
+const langSelector = document.getElementById("lang-selector");
+
 function hideAll() {
   setupScreen.style.display = "none";
   modeScreen.style.display = "none";
@@ -2634,14 +2684,56 @@ function hideAll() {
   matchArea.style.display = "none";
   flashcardArea.style.display = "none";
   crosswordArea.style.display = "none";
+  langSelector.style.display = "none";
 }
+
+function updateUIStrings() {
+  const s = uiStrings[currentLang];
+  document.getElementById("main-title").textContent = s.title;
+  document.getElementById("match-instruction").textContent =
+    s.matchInstruction;
+  document.getElementById("crossword-instruction").textContent =
+    s.crosswordInstruction;
+  document.getElementById("custom-format-hint").textContent =
+    s.customFormatHint;
+  document.getElementById("word-list-input").placeholder = s.customPlaceholder;
+  document.getElementById("custom-list-name").placeholder =
+    s.customListNamePlaceholder;
+
+  // Update flag buttons
+  document.getElementById("lang-en").classList.toggle(
+    "active",
+    currentLang === "en",
+  );
+  document.getElementById("lang-es").classList.toggle(
+    "active",
+    currentLang === "es",
+  );
+}
+
+function switchLang(lang) {
+  currentLang = lang;
+  localStorage.setItem("vocabulaire-lang", lang);
+  updateUIStrings();
+  showSetup();
+}
+
+document.getElementById("lang-en").addEventListener("click", () => {
+  switchLang("en");
+});
+document.getElementById("lang-es").addEventListener("click", () => {
+  switchLang("es");
+});
 
 function showSetup() {
   hideAll();
   setupScreen.style.display = "";
+  langSelector.style.display = "";
+  updateUIStrings();
   renderThemeButtons();
   renderSavedLists();
   renderRecommendations();
+  renderTotalScore();
 }
 
 function showModeSelect() {
@@ -2672,13 +2764,14 @@ function showCrossword() {
 // Génère les boutons de thèmes
 function renderThemeButtons() {
   themeGrid.innerHTML = "";
-  for (const themeName of Object.keys(themes)) {
+  const t = getThemes();
+  for (const themeName of Object.keys(t)) {
     const btn = document.createElement("button");
     btn.className = "theme-btn";
     btn.textContent = themeName;
     renderMasteryBadge(btn, themeName);
     btn.addEventListener("click", () => {
-      words = themes[themeName];
+      words = t[themeName];
       currentThemeName = themeName;
       showModeSelect();
     });
@@ -2689,7 +2782,7 @@ function renderThemeButtons() {
 startCustomBtn.addEventListener("click", () => {
   const parsed = parseWordList(wordListInput.value);
   if (parsed.length < 2) {
-    alert("Il faut au moins 2 mots ! Vérifie le format : anglais = français");
+    alert(uiStrings[currentLang].customAlertMin);
     return;
   }
   words = parsed;
@@ -2772,10 +2865,10 @@ function displayWord() {
 
   if (dir === "en-to-fr") {
     wordDisplay.innerText = word.english;
-    instruction.innerText = "Traduisez en français :";
+    instruction.innerText = uiStrings[currentLang].quizToFr;
   } else {
     wordDisplay.innerText = word.french;
-    instruction.innerText = "Translate into English:";
+    instruction.innerText = uiStrings[currentLang].quizToForeign;
   }
 
   attempts = 0;
@@ -3203,7 +3296,6 @@ flashcardMenuBtn.addEventListener("click", () => {
 
 // ===== Listes personnalisées sauvegardées =====
 
-const STORAGE_KEY = "vocabulaire-listes-perso";
 const savedListsSection = document.getElementById("saved-lists-section");
 const savedListsGrid = document.getElementById("saved-lists-grid");
 const customActions = document.getElementById("custom-actions");
@@ -3212,7 +3304,7 @@ const proposeThemeBtn = document.getElementById("propose-theme-btn");
 
 function loadSavedLists() {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    return JSON.parse(localStorage.getItem(getStorageKey())) || {};
   } catch {
     return {};
   }
@@ -3221,13 +3313,13 @@ function loadSavedLists() {
 function saveList(name, wordList) {
   const lists = loadSavedLists();
   lists[name] = wordList;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(lists));
+  localStorage.setItem(getStorageKey(), JSON.stringify(lists));
 }
 
 function deleteList(name) {
   const lists = loadSavedLists();
   delete lists[name];
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(lists));
+  localStorage.setItem(getStorageKey(), JSON.stringify(lists));
 }
 
 function renderSavedLists() {
@@ -3246,6 +3338,9 @@ function renderSavedLists() {
     const btn = document.createElement("button");
     btn.className = "saved-list-btn";
 
+    const topRow = document.createElement("span");
+    topRow.className = "saved-list-top";
+
     const nameSpan = document.createElement("span");
     nameSpan.className = "saved-list-name";
     nameSpan.textContent = name;
@@ -3261,8 +3356,9 @@ function renderSavedLists() {
       }
     });
 
-    btn.appendChild(nameSpan);
-    btn.appendChild(deleteSpan);
+    topRow.appendChild(nameSpan);
+    topRow.appendChild(deleteSpan);
+    btn.appendChild(topRow);
     renderMasteryBadge(btn, name);
 
     btn.addEventListener("click", () => {
@@ -3875,22 +3971,41 @@ crosswordMenuBtn.addEventListener("click", () => {
 
 // ===== Statistiques et recommandations =====
 
-const STATS_KEY = "vocabulaire-stats";
+// Stats and score keys are functions (getStatsKey, getTotalScoreKey) defined above
 
 function loadStats() {
   try {
-    return JSON.parse(localStorage.getItem(STATS_KEY)) || {};
+    return JSON.parse(localStorage.getItem(getStatsKey())) || {};
   } catch {
     return {};
   }
 }
 
 function saveStats(stats) {
-  localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+  localStorage.setItem(getStatsKey(), JSON.stringify(stats));
+}
+
+function loadTotalScore() {
+  return parseInt(localStorage.getItem(getTotalScoreKey()), 10) || 0;
+}
+
+function addToTotalScore(points) {
+  const total = loadTotalScore() + points;
+  localStorage.setItem(getTotalScoreKey(), total);
+  renderTotalScore();
+}
+
+function renderTotalScore() {
+  const el = document.getElementById("total-score-display");
+  const total = loadTotalScore();
+  el.innerHTML =
+    'Score total : <span class="total-score-value">' + total + "</span> pts";
 }
 
 function recordGameResult(themeName, wordResults) {
   if (!themeName || wordResults.length === 0) return;
+  const correctCount = wordResults.filter((r) => r.correct).length;
+  addToTotalScore(correctCount);
   const stats = loadStats();
   const now = Date.now();
 
@@ -3920,7 +4035,8 @@ function recordGameResult(themeName, wordResults) {
 }
 
 function getThemeWordList(themeName) {
-  if (themes[themeName]) return themes[themeName];
+  const t = getThemes();
+  if (t[themeName]) return t[themeName];
   const lists = loadSavedLists();
   if (lists[themeName]) return lists[themeName];
   return null;
@@ -4009,8 +4125,9 @@ function renderRecommendations() {
     el.textContent = rec.text;
     el.addEventListener("click", () => {
       // Check if this theme exists in built-in themes or saved lists
-      if (themes[rec.themeName]) {
-        words = themes[rec.themeName];
+      const t = getThemes();
+      if (t[rec.themeName]) {
+        words = t[rec.themeName];
       } else {
         const lists = loadSavedLists();
         if (lists[rec.themeName]) {
@@ -4065,7 +4182,8 @@ document.getElementById("reset-stats-btn").addEventListener("click", () => {
   ) {
     return;
   }
-  localStorage.removeItem(STATS_KEY);
+  localStorage.removeItem(getStatsKey());
+  localStorage.removeItem(getTotalScoreKey());
   showSetup();
 });
 
