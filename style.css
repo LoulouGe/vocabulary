@@ -32,7 +32,19 @@ h1 {
   color: #588157;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+#total-score-display {
+  font-size: 0.85rem;
+  color: #a3b18a;
+  margin-bottom: 15px;
+}
+
+#total-score-display .total-score-value {
+  font-weight: 700;
+  color: #588157;
+  font-size: 1rem;
 }
 
 #word-to-translate {

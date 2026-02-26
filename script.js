@@ -2642,6 +2642,7 @@ function showSetup() {
   renderThemeButtons();
   renderSavedLists();
   renderRecommendations();
+  renderTotalScore();
 }
 
 function showModeSelect() {
@@ -3246,6 +3247,9 @@ function renderSavedLists() {
     const btn = document.createElement("button");
     btn.className = "saved-list-btn";
 
+    const topRow = document.createElement("span");
+    topRow.className = "saved-list-top";
+
     const nameSpan = document.createElement("span");
     nameSpan.className = "saved-list-name";
     nameSpan.textContent = name;
@@ -3261,8 +3265,9 @@ function renderSavedLists() {
       }
     });
 
-    btn.appendChild(nameSpan);
-    btn.appendChild(deleteSpan);
+    topRow.appendChild(nameSpan);
+    topRow.appendChild(deleteSpan);
+    btn.appendChild(topRow);
     renderMasteryBadge(btn, name);
 
     btn.addEventListener("click", () => {
@@ -3876,6 +3881,7 @@ crosswordMenuBtn.addEventListener("click", () => {
 // ===== Statistiques et recommandations =====
 
 const STATS_KEY = "vocabulaire-stats";
+const TOTAL_SCORE_KEY = "vocabulaire-total-score";
 
 function loadStats() {
   try {
@@ -3889,8 +3895,27 @@ function saveStats(stats) {
   localStorage.setItem(STATS_KEY, JSON.stringify(stats));
 }
 
+function loadTotalScore() {
+  return parseInt(localStorage.getItem(TOTAL_SCORE_KEY), 10) || 0;
+}
+
+function addToTotalScore(points) {
+  const total = loadTotalScore() + points;
+  localStorage.setItem(TOTAL_SCORE_KEY, total);
+  renderTotalScore();
+}
+
+function renderTotalScore() {
+  const el = document.getElementById("total-score-display");
+  const total = loadTotalScore();
+  el.innerHTML =
+    'Score total : <span class="total-score-value">' + total + "</span> pts";
+}
+
 function recordGameResult(themeName, wordResults) {
   if (!themeName || wordResults.length === 0) return;
+  const correctCount = wordResults.filter((r) => r.correct).length;
+  addToTotalScore(correctCount);
   const stats = loadStats();
   const now = Date.now();
 
@@ -4066,6 +4091,7 @@ document.getElementById("reset-stats-btn").addEventListener("click", () => {
     return;
   }
   localStorage.removeItem(STATS_KEY);
+  localStorage.removeItem(TOTAL_SCORE_KEY);
   showSetup();
 });
 
