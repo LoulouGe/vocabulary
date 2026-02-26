@@ -46,6 +46,7 @@ Dog = Chien"></textarea>
                 <button id="mode-quiz-btn" class="mode-btn">Quiz</button>
                 <button id="mode-match-btn" class="mode-btn">Relier les mots</button>
                 <button id="mode-flashcard-btn" class="mode-btn">Révision</button>
+                <button id="mode-crossword-btn" class="mode-btn">Mots croisés</button>
             </div>
             <button id="back-to-setup-btn" class="btn-secondary">Retour</button>
         </div>
@@ -124,6 +125,30 @@ Dog = Chien"></textarea>
                 <button id="flashcard-replay-learning-btn" style="display: none;">Réviser les mots en cours</button>
                 <button id="flashcard-replay-btn">Rejouer</button>
                 <button id="flashcard-menu-btn" class="btn-secondary">Changer de thème</button>
+            </div>
+        </div>
+        <!-- Écran des mots croisés -->
+        <div id="crossword-area" style="display: none;">
+            <p class="instruction">Remplis la grille avec les mots anglais !</p>
+            <div id="crossword-grid"></div>
+            <div id="crossword-clues">
+                <div class="crossword-clue-section">
+                    <h3>Horizontal →</h3>
+                    <ol id="crossword-across-clues"></ol>
+                </div>
+                <div class="crossword-clue-section">
+                    <h3>Vertical ↓</h3>
+                    <ol id="crossword-down-clues"></ol>
+                </div>
+            </div>
+            <button id="crossword-check-btn">Vérifier</button>
+            <p id="crossword-feedback"></p>
+            <div id="crossword-end-buttons" style="display: none;">
+                <button id="crossword-replay-btn">Rejouer</button>
+                <button id="crossword-menu-btn" class="btn-secondary">Changer de thème</button>
+            </div>
+            <div class="score-board">
+                Score : <span id="crossword-score">0</span> / <span id="crossword-total">0</span>
             </div>
         </div>
     </div>
