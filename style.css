@@ -6,7 +6,7 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   background-color: #e9ede6;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3C!-- feuille 1 --%3E%3Cpath d='M50 80 Q60 40 80 30 Q70 60 75 85 Q60 90 50 80Z' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M55 82 Q62 50 75 35' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.5'/%3E%3C!-- tige 1 --%3E%3Cpath d='M58 85 Q55 110 60 130' stroke='%23a3b18a' stroke-width='1.2' fill='none' opacity='0.4'/%3E%3C!-- petite feuille --%3E%3Cpath d='M62 105 Q72 95 78 100 Q70 108 62 105Z' fill='%23d4dfd0' opacity='0.5'/%3E%3C!-- fleur simple --%3E%3Ccircle cx='60' cy='135' r='4' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='60' cy='135' r='1.5' fill='%23c8d5b9' opacity='0.5'/%3E%3C!-- branche eucalyptus --%3E%3Cpath d='M320 50 Q330 80 325 120' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.4'/%3E%3Cellipse cx='315' cy='60' rx='8' ry='5' transform='rotate(-30 315 60)' fill='%23c8d5b9' opacity='0.4'/%3E%3Cellipse cx='330' cy='75' rx='8' ry='5' transform='rotate(20 330 75)' fill='%23d4dfd0' opacity='0.4'/%3E%3Cellipse cx='318' cy='90' rx='8' ry='5' transform='rotate(-20 318 90)' fill='%23c8d5b9' opacity='0.35'/%3E%3Cellipse cx='328' cy='108' rx='7' ry='4.5' transform='rotate(15 328 108)' fill='%23d4dfd0' opacity='0.4'/%3E%3C!-- fougere --%3E%3Cpath d='M180 340 Q185 310 190 280' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.35'/%3E%3Cpath d='M185 320 Q175 312 170 315 Q178 318 185 320Z' fill='%23c8d5b9' opacity='0.4'/%3E%3Cpath d='M186 310 Q195 302 200 306 Q193 308 186 310Z' fill='%23d4dfd0' opacity='0.4'/%3E%3Cpath d='M187 300 Q178 292 173 296 Q180 298 187 300Z' fill='%23c8d5b9' opacity='0.35'/%3E%3Cpath d='M189 290 Q197 283 202 287 Q195 288 189 290Z' fill='%23d4dfd0' opacity='0.35'/%3E%3C!-- feuille monstera simplifiee --%3E%3Cpath d='M350 300 Q340 270 355 250 Q360 270 370 265 Q365 280 375 278 Q368 295 355 305Z' fill='%23c8d5b9' opacity='0.3'/%3E%3Cpath d='M352 300 Q348 275 355 255' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.35'/%3E%3C!-- petites baies --%3E%3Ccircle cx='140' cy='180' r='3' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='148' cy='175' r='3' fill='%23d4dfd0' opacity='0.4'/%3E%3Ccircle cx='144' cy='185' r='2.5' fill='%23c8d5b9' opacity='0.35'/%3E%3Cpath d='M144 175 Q142 165 145 155' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C!-- grande feuille tombante --%3E%3Cpath d='M250 20 Q230 50 240 90 Q250 60 260 55 Q255 40 250 20Z' fill='%23d4dfd0' opacity='0.3'/%3E%3Cpath d='M248 25 Q238 55 242 85' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.35'/%3E%3C!-- brin d herbe --%3E%3Cpath d='M90 380 Q85 350 95 330' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.3'/%3E%3Cpath d='M95 380 Q100 355 92 335' stroke='%23c8d5b9' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C!-- petite fleur 2 --%3E%3Cpath d='M280 180 Q283 175 286 180 Q283 178 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M286 180 Q289 177 286 174 Q287 177 286 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M280 180 Q277 177 280 174 Q279 177 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M280 180 Q283 183 286 180 Q283 182 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='283' cy='178' r='1.5' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M283 183 Q280 200 282 215' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3C!-- feuille 1 --%3E%3Cpath d='M50 80 Q60 40 80 30 Q70 60 75 85 Q60 90 50 80Z' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M55 82 Q62 50 75 35' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.5'/%3E%3C!-- tige 1 --%3E%3Cpath d='M58 85 Q55 110 60 130' stroke='%23a3b18a' stroke-width='1.2' fill='none' opacity='0.4'/%3E%3C!-- petite feuille --%3E%3Cpath d='M62 105 Q72 95 78 100 Q70 108 62 105Z' fill='%23d4dfd0' opacity='0.5'/%3E%3C!-- fleur simple --%3E%3Ccircle cx='60' cy='135' r='4' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='60' cy='135' r='1.5' fill='%23c8d5b9' opacity='0.5'/%3E%3C!-- branche eucalyptus --%3E%3Cpath d='M320 50 Q330 80 325 120' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.4'/%3E%3Cellipse cx='315' cy='60' rx='8' ry='5' transform='rotate(-30 315 60)' fill='%23c8d5b9' opacity='0.4'/%3E%3Cellipse cx='330' cy='75' rx='8' ry='5' transform='rotate(20 330 75)' fill='%23d4dfd0' opacity='0.4'/%3E%3Cellipse cx='318' cy='90' rx='8' ry='5' transform='rotate(-20 318 90)' fill='%23c8d5b9' opacity='0.35'/%3E%3Cellipse cx='328' cy='108' rx='7' ry='4.5' transform='rotate(15 328 108)' fill='%23d4dfd0' opacity='0.4'/%3E%3C!-- fougere --%3E%3Cpath d='M180 340 Q185 310 190 280' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.35'/%3E%3Cpath d='M185 320 Q175 312 170 315 Q178 318 185 320Z' fill='%23c8d5b9' opacity='0.4'/%3E%3Cpath d='M186 310 Q195 302 200 306 Q193 308 186 310Z' fill='%23d4dfd0' opacity='0.4'/%3E%3Cpath d='M187 300 Q178 292 173 296 Q180 298 187 300Z' fill='%23c8d5b9' opacity='0.35'/%3E%3Cpath d='M189 290 Q197 283 202 287 Q195 288 189 290Z' fill='%23d4dfd0' opacity='0.35'/%3E%3C!-- feuille monstera simplifiee --%3E%3Cpath d='M350 300 Q340 270 355 250 Q360 270 370 265 Q365 280 375 278 Q368 295 355 305Z' fill='%23c8d5b9' opacity='0.3'/%3E%3Cpath d='M352 300 Q348 275 355 255' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.35'/%3E%3C!-- petites baies --%3E%3Ccircle cx='140' cy='180' r='3' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='148' cy='175' r='3' fill='%23d4dfd0' opacity='0.4'/%3E%3Ccircle cx='144' cy='185' r='2.5' fill='%23c8d5b9' opacity='0.35'/%3E%3Cpath d='M144 175 Q142 165 145 155' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C!-- grande feuille tombante --%3E%3Cpath d='M250 20 Q230 50 240 90 Q250 60 260 55 Q255 40 250 20Z' fill='%23d4dfd0' opacity='0.3'/%3E%3Cpath d='M248 25 Q238 55 242 85' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.35'/%3E%3C!-- brin d herbe --%3E%3Cpath d='M90 380 Q85 350 95 330' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.3'/%3E%3Cpath d='M95 380 Q100 355 92 335' stroke='%23c8d5b9' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C!-- petite fleur 2 --%3E%3Cpath d='M280 180 Q283 175 286 180 Q283 178 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M286 180 Q289 177 286 174 Q287 177 286 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M280 180 Q277 177 280 174 Q279 177 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Cpath d='M280 180 Q283 183 286 180 Q283 182 280 180Z' fill='%23dad7cd' opacity='0.4'/%3E%3Ccircle cx='283' cy='178' r='1.5' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M283 183 Q280 200 282 215' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.3'/%3E%3C!-- branche centre --%3E%3Cpath d='M190 230 Q198 195 215 165' stroke='%23a3b18a' stroke-width='1.2' fill='none' opacity='0.45'/%3E%3Cpath d='M196 210 Q182 200 176 206 Q186 209 196 210Z' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M202 192 Q215 182 221 188 Q212 191 202 192Z' fill='%23d4dfd0' opacity='0.45'/%3E%3Cpath d='M194 222 Q208 214 214 220 Q204 222 194 222Z' fill='%23c8d5b9' opacity='0.45'/%3E%3C!-- feuille bas-gauche --%3E%3Cpath d='M25 280 Q38 248 60 235 Q48 260 43 285 Q33 290 25 280Z' fill='%23d4dfd0' opacity='0.45'/%3E%3Cpath d='M28 277 Q40 252 56 240' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.5'/%3E%3C!-- brin haut-centre --%3E%3Cpath d='M140 80 Q148 52 160 28' stroke='%23a3b18a' stroke-width='1.2' fill='none' opacity='0.45'/%3E%3Cpath d='M145 62 Q133 53 128 59 Q137 61 145 62Z' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M150 45 Q162 36 167 43 Q158 45 150 45Z' fill='%23d4dfd0' opacity='0.45'/%3E%3C!-- feuille droite --%3E%3Cpath d='M370 160 Q360 182 365 210 Q374 188 385 184 Q380 172 370 160Z' fill='%23c8d5b9' opacity='0.45'/%3E%3Cpath d='M369 164 Q363 183 366 206' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.45'/%3E%3C!-- fougere gauche --%3E%3Cpath d='M12 210 Q16 188 24 162' stroke='%23a3b18a' stroke-width='1.2' fill='none' opacity='0.45'/%3E%3Cpath d='M15 195 Q5 187 2 193 Q9 195 15 195Z' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M18 178 Q28 170 32 177 Q25 179 18 178Z' fill='%23d4dfd0' opacity='0.45'/%3E%3Cpath d='M13 205 Q4 200 2 205 Q8 206 13 205Z' fill='%23c8d5b9' opacity='0.45'/%3E%3C!-- petite fleur 3 --%3E%3Ccircle cx='112' cy='130' r='5' fill='%23dad7cd' opacity='0.45'/%3E%3Ccircle cx='112' cy='130' r='2' fill='%23c8d5b9' opacity='0.5'/%3E%3Cpath d='M112 135 Q109 150 110 165' stroke='%23a3b18a' stroke-width='1' fill='none' opacity='0.4'/%3E%3C!-- feuille milieu-droite --%3E%3Cpath d='M300 205 Q315 188 330 194 Q316 202 300 205Z' fill='%23d4dfd0' opacity='0.45'/%3E%3Cpath d='M302 204 Q314 192 327 195' stroke='%23a3b18a' stroke-width='0.8' fill='none' opacity='0.4'/%3E%3C!-- brin bas-droite --%3E%3Cpath d='M255 380 Q262 350 254 320' stroke='%23a3b18a' stroke-width='1.2' fill='none' opacity='0.4'/%3E%3Cpath d='M258 358 Q248 350 245 356 Q252 358 258 358Z' fill='%23c8d5b9' opacity='0.45'/%3E%3Cpath d='M256 338 Q266 330 270 337 Q263 339 256 338Z' fill='%23d4dfd0' opacity='0.4'/%3E%3C/svg%3E");
   background-size: 400px 400px;
   min-height: 100vh;
   display: flex;
@@ -795,35 +795,116 @@ textarea:focus {
   margin-top: 15px;
 }
 
-/* Language selector */
+/* Language selector dropdown */
 #lang-selector {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  gap: 6px;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 10px;
 }
 
-.lang-btn {
+.lang-toggle {
   width: auto;
-  padding: 4px 8px;
+  padding: 4px 10px;
   font-size: 1.3rem;
   line-height: 1;
   background: transparent;
-  border: 2px solid transparent;
+  border: 2px solid #ccc;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.25s ease;
+  color: #588157;
 }
 
-.lang-btn:hover {
+.lang-toggle:hover {
   background: #f1f3f0;
-  transform: none;
+  border-color: #588157;
 }
 
-.lang-btn.active {
-  border-color: #588157;
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  margin-top: 4px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.lang-dropdown.open {
+  display: flex;
+}
+
+.lang-option {
+  width: auto;
+  padding: 6px 14px;
+  font-size: 1.3rem;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.lang-option:hover {
+  background: #f1f3f0;
+}
+
+.lang-option.active {
   background: #dde5db;
+  border-left: 3px solid #588157;
+}
+
+/* Chinese virtual keyboard */
+.zh-keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px auto;
+}
+
+.zh-keyboard:empty {
+  display: none;
+}
+
+.zh-key {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 8px;
+  background: #f1f3f0;
+  color: #344e41;
+  border: 1px solid #dad7cd;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zh-key:hover {
+  background: #dde5db;
+  transform: translateY(-1px);
+}
+
+.zh-key.zh-backspace {
+  background: #fde2e4;
+  color: #c1121f;
+  border-color: #f0c0c0;
+  font-size: 1.1rem;
+}
+
+.zh-key.zh-backspace:hover {
+  background: #f9cdd0;
+  transform: translateY(-1px);
 }
 
 /* Mobile */

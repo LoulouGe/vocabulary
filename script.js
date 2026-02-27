@@ -2547,26 +2547,51 @@ const uiStrings = {
     quizToFr: "Traduisez en français :",
     quizToForeign: "Traduce al español:",
   },
+  de: {
+    title: "Lerne Deutsch",
+    matchInstruction: "Relie chaque mot allemand à sa traduction française !",
+    crosswordInstruction: "Remplis la grille avec les mots allemands !",
+    customFormatHint: "Format : allemand = français",
+    customPlaceholder: "der Tisch = Table\ndas Haus = Maison\nder Hund = Chien",
+    customListNamePlaceholder: "Nom de ta liste (ex : Les fruits)",
+    customAlertMin: "Il faut au moins 2 mots ! Vérifie le format : allemand = français",
+    quizToFr: "Traduisez en français :",
+    quizToForeign: "Übersetze ins Deutsche:",
+  },
+  zh: {
+    title: "学中文",
+    matchInstruction: "Relie chaque mot chinois à sa traduction française !",
+    crosswordInstruction: "Remplis la grille avec les mots chinois !",
+    customFormatHint: "Format : chinois = français",
+    customPlaceholder: "桌子 (zhuōzi) = Table\n房子 (fángzi) = Maison\n狗 (gǒu) = Chien",
+    customListNamePlaceholder: "Nom de ta liste (ex : Les fruits)",
+    customAlertMin: "Il faut au moins 2 mots ! Vérifie le format : chinois = français",
+    quizToFr: "Traduisez en français :",
+    quizToForeign: "翻译成中文：",
+  },
 };
 
 function getThemes() {
-  return currentLang === "es" ? themesEs : themes;
+  if (currentLang === "es") return themesEs;
+  if (currentLang === "de") return themesDe;
+  if (currentLang === "zh") return themesZh;
+  return themes;
+}
+
+function langKey(base) {
+  return currentLang === "en" ? base : base + "-" + currentLang;
 }
 
 function getStatsKey() {
-  return currentLang === "es" ? "vocabulaire-stats-es" : "vocabulaire-stats";
+  return langKey("vocabulaire-stats");
 }
 
 function getTotalScoreKey() {
-  return currentLang === "es"
-    ? "vocabulaire-total-score-es"
-    : "vocabulaire-total-score";
+  return langKey("vocabulaire-total-score");
 }
 
 function getStorageKey() {
-  return currentLang === "es"
-    ? "vocabulaire-listes-perso-es"
-    : "vocabulaire-listes-perso";
+  return langKey("vocabulaire-listes-perso");
 }
 
 let words = [];
@@ -2675,7 +2700,18 @@ const crosswordReplayBtn = document.getElementById("crossword-replay-btn");
 const crosswordMenuBtn = document.getElementById("crossword-menu-btn");
 const modeCrosswordBtn = document.getElementById("mode-crossword-btn");
 
+const zhKeyboardQuiz = document.getElementById("zh-keyboard-quiz");
+const zhKeyboardCrossword = document.getElementById("zh-keyboard-crossword");
+
 const langSelector = document.getElementById("lang-selector");
+const mainTitle = document.getElementById("main-title");
+const matchInstruction = document.getElementById("match-instruction");
+const crosswordInstruction = document.getElementById("crossword-instruction");
+const customFormatHint = document.getElementById("custom-format-hint");
+const customListName = document.getElementById("custom-list-name");
+const langToggle = document.getElementById("lang-toggle");
+const langDropdown = document.getElementById("lang-dropdown");
+const langFlags = { en: "🇬🇧", es: "🇪🇸", de: "🇩🇪", zh: "🇨🇳" };
 
 function hideAll() {
   setupScreen.style.display = "none";
@@ -2689,40 +2725,38 @@ function hideAll() {
 
 function updateUIStrings() {
   const s = uiStrings[currentLang];
-  document.getElementById("main-title").textContent = s.title;
-  document.getElementById("match-instruction").textContent =
-    s.matchInstruction;
-  document.getElementById("crossword-instruction").textContent =
-    s.crosswordInstruction;
-  document.getElementById("custom-format-hint").textContent =
-    s.customFormatHint;
-  document.getElementById("word-list-input").placeholder = s.customPlaceholder;
-  document.getElementById("custom-list-name").placeholder =
-    s.customListNamePlaceholder;
-
-  // Update flag buttons
-  document.getElementById("lang-en").classList.toggle(
-    "active",
-    currentLang === "en",
-  );
-  document.getElementById("lang-es").classList.toggle(
-    "active",
-    currentLang === "es",
-  );
+  mainTitle.textContent = s.title;
+  matchInstruction.textContent = s.matchInstruction;
+  crosswordInstruction.textContent = s.crosswordInstruction;
+  customFormatHint.textContent = s.customFormatHint;
+  wordListInput.placeholder = s.customPlaceholder;
+  customListName.placeholder = s.customListNamePlaceholder;
+  langToggle.textContent = langFlags[currentLang] + " ▾";
+  langDropdown.querySelectorAll(".lang-option").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === currentLang);
+  });
 }
 
 function switchLang(lang) {
   currentLang = lang;
   localStorage.setItem("vocabulaire-lang", lang);
-  updateUIStrings();
   showSetup();
 }
 
-document.getElementById("lang-en").addEventListener("click", () => {
-  switchLang("en");
+langToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  langDropdown.classList.toggle("open");
 });
-document.getElementById("lang-es").addEventListener("click", () => {
-  switchLang("es");
+
+langDropdown.addEventListener("click", (e) => {
+  const option = e.target.closest(".lang-option");
+  if (!option) return;
+  langDropdown.classList.remove("open");
+  switchLang(option.dataset.lang);
+});
+
+document.addEventListener("click", () => {
+  langDropdown.classList.remove("open");
 });
 
 function showSetup() {
@@ -2833,6 +2867,31 @@ matchMenuBtn.addEventListener("click", () => {
   showSetup();
 });
 
+function extractZhChars(text) {
+  return (text.match(/[\u4e00-\u9fff]/g) || []);
+}
+
+function buildZhKeyboard(container, chars, onCharClick, onBackspace) {
+  container.innerHTML = "";
+  const shuffled = shuffle(chars);
+  shuffled.forEach((ch) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "zh-key";
+    btn.textContent = ch;
+    btn.addEventListener("mousedown", (e) => e.preventDefault());
+    btn.addEventListener("click", () => onCharClick(ch));
+    container.appendChild(btn);
+  });
+  const bksp = document.createElement("button");
+  bksp.type = "button";
+  bksp.className = "zh-key zh-backspace";
+  bksp.textContent = "⌫";
+  bksp.addEventListener("mousedown", (e) => e.preventDefault());
+  bksp.addEventListener("click", onBackspace);
+  container.appendChild(bksp);
+}
+
 function startRound() {
   currentIndex = 0;
   score = 0;
@@ -2854,6 +2913,21 @@ function startRound() {
     }));
   totalDisplay.innerText = roundWords.length;
 
+  // Build Chinese virtual keyboard for quiz
+  if (currentLang === "zh") {
+    const allChars = [];
+    roundWords.forEach((w) => allChars.push(...extractZhChars(w.english)));
+    const uniqueChars = [...new Set(allChars)];
+    buildZhKeyboard(
+      zhKeyboardQuiz,
+      uniqueChars,
+      (ch) => { userInput.value += ch; userInput.focus(); },
+      () => { userInput.value = userInput.value.slice(0, -1); userInput.focus(); },
+    );
+  } else {
+    zhKeyboardQuiz.innerHTML = "";
+  }
+
   displayWord();
 }
 
@@ -2870,6 +2944,10 @@ function displayWord() {
     wordDisplay.innerText = word.french;
     instruction.innerText = uiStrings[currentLang].quizToForeign;
   }
+
+  // Show Chinese keyboard only when user must type Chinese
+  const needZhKb = currentLang === "zh" && dir === "fr-to-en";
+  zhKeyboardQuiz.style.display = needZhKb ? "" : "none";
 
   attempts = 0;
   feedback.innerText = "";
@@ -2898,6 +2976,8 @@ function checkAnswer() {
   let correctAnswer;
   if (word.direction === "en-to-fr") {
     correctAnswer = word.french.toLowerCase();
+  } else if (currentLang === "zh") {
+    correctAnswer = extractZhChars(word.english).join("");
   } else {
     correctAnswer = word.english.toLowerCase();
   }
@@ -2970,6 +3050,7 @@ function nextWord() {
     instruction.innerText = "Partie terminée !";
     checkBtn.style.display = "none";
     userInput.style.display = "none";
+    zhKeyboardQuiz.style.display = "none";
     endButtons.style.display = "";
     recordGameResult(currentThemeName, roundResults);
   }
@@ -2988,6 +3069,7 @@ function showMcq(word) {
   mcqChoices.style.display = "flex";
   userInput.style.display = "none";
   checkBtn.style.display = "none";
+  zhKeyboardQuiz.style.display = "none";
 
   choices.forEach((choice) => {
     const btn = document.createElement("button");
@@ -3371,8 +3453,6 @@ function renderSavedLists() {
   });
 }
 
-const customListName = document.getElementById("custom-list-name");
-
 // Show/hide custom action buttons based on textarea content AND title
 function updateCustomActions() {
   const parsed = parseWordList(wordListInput.value);
@@ -3434,9 +3514,11 @@ function generateCrossword(wordList) {
   const size = Math.min(CROSSWORD_SIZE, wordList.length);
   const selected = shuffle(wordList).slice(0, size);
 
-  // Normalize words: uppercase, no spaces
+  // Normalize words: uppercase, no spaces (Chinese: keep only CJK chars)
   const items = selected.map((w) => ({
-    word: w.english.toUpperCase().replace(/\s+/g, ""),
+    word: currentLang === "zh"
+      ? extractZhChars(w.english).join("")
+      : w.english.toUpperCase().replace(/\s+/g, ""),
     clue: w.hintEn || w.french,
     wordObj: w,
   }));
@@ -3636,6 +3718,36 @@ function startCrosswordRound() {
   crosswordScoreDisplay.innerText = 0;
   renderCrosswordGrid();
   renderCrosswordClues();
+
+  // Build Chinese virtual keyboard for crossword
+  if (currentLang === "zh") {
+    const allChars = [];
+    crosswordData.placedWords.forEach((pw) => {
+      for (const ch of pw.word) allChars.push(ch);
+    });
+    const uniqueChars = [...new Set(allChars)];
+    buildZhKeyboard(
+      zhKeyboardCrossword,
+      uniqueChars,
+      (ch) => {
+        const focused = crosswordGrid.querySelector("input:focus");
+        if (focused) {
+          focused.value = ch;
+          const r = parseInt(focused.dataset.row);
+          const c = parseInt(focused.dataset.col);
+          moveToNext(r, c);
+        }
+      },
+      () => {
+        const focused = crosswordGrid.querySelector("input:focus");
+        if (focused) focused.value = "";
+      },
+    );
+    zhKeyboardCrossword.style.display = "";
+  } else {
+    zhKeyboardCrossword.innerHTML = "";
+    zhKeyboardCrossword.style.display = "none";
+  }
 }
 
 let crosswordDirection = "across";
@@ -3684,7 +3796,12 @@ function renderCrosswordGrid() {
         input.autocapitalize = "characters";
 
         input.addEventListener("input", (e) => {
-          const val = e.target.value.toUpperCase().replace(/[^A-Z]/g, "");
+          let val;
+          if (currentLang === "zh") {
+            val = e.target.value.slice(-1);
+          } else {
+            val = e.target.value.toUpperCase().replace(/[^A-Z]/g, "");
+          }
           e.target.value = val;
           if (val) moveToNext(r, c);
         });
@@ -3902,7 +4019,7 @@ function checkCrossword() {
   const userAnswers = {};
   crosswordGrid.querySelectorAll("input").forEach((inp) => {
     userAnswers[inp.dataset.row + "," + inp.dataset.col] =
-      inp.value.toUpperCase();
+      currentLang === "zh" ? inp.value : inp.value.toUpperCase();
   });
 
   placedWords.forEach((w) => {
