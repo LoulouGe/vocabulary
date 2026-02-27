@@ -2547,10 +2547,35 @@ const uiStrings = {
     quizToFr: "Traduisez en français :",
     quizToForeign: "Traduce al español:",
   },
+  de: {
+    title: "Lerne Deutsch",
+    matchInstruction: "Relie chaque mot allemand à sa traduction française !",
+    crosswordInstruction: "Remplis la grille avec les mots allemands !",
+    customFormatHint: "Format : allemand = français",
+    customPlaceholder: "der Tisch = Table\ndas Haus = Maison\nder Hund = Chien",
+    customListNamePlaceholder: "Nom de ta liste (ex : Les fruits)",
+    customAlertMin: "Il faut au moins 2 mots ! Vérifie le format : allemand = français",
+    quizToFr: "Traduisez en français :",
+    quizToForeign: "Übersetze ins Deutsche:",
+  },
+  zh: {
+    title: "学中文",
+    matchInstruction: "Relie chaque mot chinois à sa traduction française !",
+    crosswordInstruction: "Remplis la grille avec les mots chinois !",
+    customFormatHint: "Format : chinois = français",
+    customPlaceholder: "桌子 (zhuōzi) = Table\n房子 (fángzi) = Maison\n狗 (gǒu) = Chien",
+    customListNamePlaceholder: "Nom de ta liste (ex : Les fruits)",
+    customAlertMin: "Il faut au moins 2 mots ! Vérifie le format : chinois = français",
+    quizToFr: "Traduisez en français :",
+    quizToForeign: "翻译成中文：",
+  },
 };
 
 function getThemes() {
-  return currentLang === "es" ? themesEs : themes;
+  if (currentLang === "es") return themesEs;
+  if (currentLang === "de") return themesDe;
+  if (currentLang === "zh") return themesZh;
+  return themes;
 }
 
 function langKey(base) {
@@ -2683,6 +2708,8 @@ const customFormatHint = document.getElementById("custom-format-hint");
 const customListName = document.getElementById("custom-list-name");
 const langEnBtn = document.getElementById("lang-en");
 const langEsBtn = document.getElementById("lang-es");
+const langDeBtn = document.getElementById("lang-de");
+const langZhBtn = document.getElementById("lang-zh");
 
 function hideAll() {
   setupScreen.style.display = "none";
@@ -2704,6 +2731,8 @@ function updateUIStrings() {
   customListName.placeholder = s.customListNamePlaceholder;
   langEnBtn.classList.toggle("active", currentLang === "en");
   langEsBtn.classList.toggle("active", currentLang === "es");
+  langDeBtn.classList.toggle("active", currentLang === "de");
+  langZhBtn.classList.toggle("active", currentLang === "zh");
 }
 
 function switchLang(lang) {
@@ -2714,6 +2743,8 @@ function switchLang(lang) {
 
 langEnBtn.addEventListener("click", () => switchLang("en"));
 langEsBtn.addEventListener("click", () => switchLang("es"));
+langDeBtn.addEventListener("click", () => switchLang("de"));
+langZhBtn.addEventListener("click", () => switchLang("zh"));
 
 function showSetup() {
   hideAll();
