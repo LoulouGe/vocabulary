@@ -11,10 +11,13 @@
 <body>
     <div class="game-container">
         <div id="lang-selector">
-            <button id="lang-en" class="lang-btn active" title="English">🇬🇧</button>
-            <button id="lang-es" class="lang-btn" title="Español">🇪🇸</button>
-            <button id="lang-de" class="lang-btn" title="Deutsch">🇩🇪</button>
-            <button id="lang-zh" class="lang-btn" title="中文">🇨🇳</button>
+            <button id="lang-toggle" class="lang-toggle">🇬🇧 ▾</button>
+            <div id="lang-dropdown" class="lang-dropdown">
+                <button class="lang-option active" data-lang="en" title="English">🇬🇧</button>
+                <button class="lang-option" data-lang="es" title="Español">🇪🇸</button>
+                <button class="lang-option" data-lang="de" title="Deutsch">🇩🇪</button>
+                <button class="lang-option" data-lang="zh" title="中文">🇨🇳</button>
+            </div>
         </div>
         <h1 id="main-title">Learn English</h1>
         <div id="total-score-display"></div>
@@ -66,6 +69,7 @@ Dog = Chien"></textarea>
 
             <input type="text" id="user-input" placeholder="Tapez votre réponse ici...">
             <button id="check-btn">Vérifier</button>
+            <div id="zh-keyboard-quiz" class="zh-keyboard"></div>
 
             <p id="feedback"></p>
             <div id="mcq-choices" style="display: none;"></div>
@@ -149,6 +153,7 @@ Dog = Chien"></textarea>
                 </div>
             </div>
             <button id="crossword-check-btn">Vérifier</button>
+            <div id="zh-keyboard-crossword" class="zh-keyboard"></div>
             <p id="crossword-feedback"></p>
             <div id="crossword-end-buttons" style="display: none;">
                 <button id="crossword-replay-btn">Rejouer</button>

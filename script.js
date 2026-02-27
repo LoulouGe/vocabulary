@@ -2700,16 +2700,18 @@ const crosswordReplayBtn = document.getElementById("crossword-replay-btn");
 const crosswordMenuBtn = document.getElementById("crossword-menu-btn");
 const modeCrosswordBtn = document.getElementById("mode-crossword-btn");
 
+const zhKeyboardQuiz = document.getElementById("zh-keyboard-quiz");
+const zhKeyboardCrossword = document.getElementById("zh-keyboard-crossword");
+
 const langSelector = document.getElementById("lang-selector");
 const mainTitle = document.getElementById("main-title");
 const matchInstruction = document.getElementById("match-instruction");
 const crosswordInstruction = document.getElementById("crossword-instruction");
 const customFormatHint = document.getElementById("custom-format-hint");
 const customListName = document.getElementById("custom-list-name");
-const langEnBtn = document.getElementById("lang-en");
-const langEsBtn = document.getElementById("lang-es");
-const langDeBtn = document.getElementById("lang-de");
-const langZhBtn = document.getElementById("lang-zh");
+const langToggle = document.getElementById("lang-toggle");
+const langDropdown = document.getElementById("lang-dropdown");
+const langFlags = { en: "🇬🇧", es: "🇪🇸", de: "🇩🇪", zh: "🇨🇳" };
 
 function hideAll() {
   setupScreen.style.display = "none";
@@ -2729,10 +2731,10 @@ function updateUIStrings() {
   customFormatHint.textContent = s.customFormatHint;
   wordListInput.placeholder = s.customPlaceholder;
   customListName.placeholder = s.customListNamePlaceholder;
-  langEnBtn.classList.toggle("active", currentLang === "en");
-  langEsBtn.classList.toggle("active", currentLang === "es");
-  langDeBtn.classList.toggle("active", currentLang === "de");
-  langZhBtn.classList.toggle("active", currentLang === "zh");
+  langToggle.textContent = langFlags[currentLang] + " ▾";
+  langDropdown.querySelectorAll(".lang-option").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === currentLang);
+  });
 }
 
 function switchLang(lang) {
@@ -2741,10 +2743,21 @@ function switchLang(lang) {
   showSetup();
 }
 
-langEnBtn.addEventListener("click", () => switchLang("en"));
-langEsBtn.addEventListener("click", () => switchLang("es"));
-langDeBtn.addEventListener("click", () => switchLang("de"));
-langZhBtn.addEventListener("click", () => switchLang("zh"));
+langToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  langDropdown.classList.toggle("open");
+});
+
+langDropdown.addEventListener("click", (e) => {
+  const option = e.target.closest(".lang-option");
+  if (!option) return;
+  langDropdown.classList.remove("open");
+  switchLang(option.dataset.lang);
+});
+
+document.addEventListener("click", () => {
+  langDropdown.classList.remove("open");
+});
 
 function showSetup() {
   hideAll();
@@ -2854,6 +2867,31 @@ matchMenuBtn.addEventListener("click", () => {
   showSetup();
 });
 
+function extractZhChars(text) {
+  return (text.match(/[\u4e00-\u9fff]/g) || []);
+}
+
+function buildZhKeyboard(container, chars, onCharClick, onBackspace) {
+  container.innerHTML = "";
+  const shuffled = shuffle(chars);
+  shuffled.forEach((ch) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "zh-key";
+    btn.textContent = ch;
+    btn.addEventListener("mousedown", (e) => e.preventDefault());
+    btn.addEventListener("click", () => onCharClick(ch));
+    container.appendChild(btn);
+  });
+  const bksp = document.createElement("button");
+  bksp.type = "button";
+  bksp.className = "zh-key zh-backspace";
+  bksp.textContent = "⌫";
+  bksp.addEventListener("mousedown", (e) => e.preventDefault());
+  bksp.addEventListener("click", onBackspace);
+  container.appendChild(bksp);
+}
+
 function startRound() {
   currentIndex = 0;
   score = 0;
@@ -2875,6 +2913,21 @@ function startRound() {
     }));
   totalDisplay.innerText = roundWords.length;
 
+  // Build Chinese virtual keyboard for quiz
+  if (currentLang === "zh") {
+    const allChars = [];
+    roundWords.forEach((w) => allChars.push(...extractZhChars(w.english)));
+    const uniqueChars = [...new Set(allChars)];
+    buildZhKeyboard(
+      zhKeyboardQuiz,
+      uniqueChars,
+      (ch) => { userInput.value += ch; userInput.focus(); },
+      () => { userInput.value = userInput.value.slice(0, -1); userInput.focus(); },
+    );
+  } else {
+    zhKeyboardQuiz.innerHTML = "";
+  }
+
   displayWord();
 }
 
@@ -2891,6 +2944,10 @@ function displayWord() {
     wordDisplay.innerText = word.french;
     instruction.innerText = uiStrings[currentLang].quizToForeign;
   }
+
+  // Show Chinese keyboard only when user must type Chinese
+  const needZhKb = currentLang === "zh" && dir === "fr-to-en";
+  zhKeyboardQuiz.style.display = needZhKb ? "" : "none";
 
   attempts = 0;
   feedback.innerText = "";
@@ -2919,6 +2976,8 @@ function checkAnswer() {
   let correctAnswer;
   if (word.direction === "en-to-fr") {
     correctAnswer = word.french.toLowerCase();
+  } else if (currentLang === "zh") {
+    correctAnswer = extractZhChars(word.english).join("");
   } else {
     correctAnswer = word.english.toLowerCase();
   }
@@ -2991,6 +3050,7 @@ function nextWord() {
     instruction.innerText = "Partie terminée !";
     checkBtn.style.display = "none";
     userInput.style.display = "none";
+    zhKeyboardQuiz.style.display = "none";
     endButtons.style.display = "";
     recordGameResult(currentThemeName, roundResults);
   }
@@ -3009,6 +3069,7 @@ function showMcq(word) {
   mcqChoices.style.display = "flex";
   userInput.style.display = "none";
   checkBtn.style.display = "none";
+  zhKeyboardQuiz.style.display = "none";
 
   choices.forEach((choice) => {
     const btn = document.createElement("button");
@@ -3453,9 +3514,11 @@ function generateCrossword(wordList) {
   const size = Math.min(CROSSWORD_SIZE, wordList.length);
   const selected = shuffle(wordList).slice(0, size);
 
-  // Normalize words: uppercase, no spaces
+  // Normalize words: uppercase, no spaces (Chinese: keep only CJK chars)
   const items = selected.map((w) => ({
-    word: w.english.toUpperCase().replace(/\s+/g, ""),
+    word: currentLang === "zh"
+      ? extractZhChars(w.english).join("")
+      : w.english.toUpperCase().replace(/\s+/g, ""),
     clue: w.hintEn || w.french,
     wordObj: w,
   }));
@@ -3655,6 +3718,36 @@ function startCrosswordRound() {
   crosswordScoreDisplay.innerText = 0;
   renderCrosswordGrid();
   renderCrosswordClues();
+
+  // Build Chinese virtual keyboard for crossword
+  if (currentLang === "zh") {
+    const allChars = [];
+    crosswordData.placedWords.forEach((pw) => {
+      for (const ch of pw.word) allChars.push(ch);
+    });
+    const uniqueChars = [...new Set(allChars)];
+    buildZhKeyboard(
+      zhKeyboardCrossword,
+      uniqueChars,
+      (ch) => {
+        const focused = crosswordGrid.querySelector("input:focus");
+        if (focused) {
+          focused.value = ch;
+          const r = parseInt(focused.dataset.row);
+          const c = parseInt(focused.dataset.col);
+          moveToNext(r, c);
+        }
+      },
+      () => {
+        const focused = crosswordGrid.querySelector("input:focus");
+        if (focused) focused.value = "";
+      },
+    );
+    zhKeyboardCrossword.style.display = "";
+  } else {
+    zhKeyboardCrossword.innerHTML = "";
+    zhKeyboardCrossword.style.display = "none";
+  }
 }
 
 let crosswordDirection = "across";
@@ -3703,7 +3796,12 @@ function renderCrosswordGrid() {
         input.autocapitalize = "characters";
 
         input.addEventListener("input", (e) => {
-          const val = e.target.value.toUpperCase().replace(/[^A-Z]/g, "");
+          let val;
+          if (currentLang === "zh") {
+            val = e.target.value.slice(-1);
+          } else {
+            val = e.target.value.toUpperCase().replace(/[^A-Z]/g, "");
+          }
           e.target.value = val;
           if (val) moveToNext(r, c);
         });
@@ -3921,7 +4019,7 @@ function checkCrossword() {
   const userAnswers = {};
   crosswordGrid.querySelectorAll("input").forEach((inp) => {
     userAnswers[inp.dataset.row + "," + inp.dataset.col] =
-      inp.value.toUpperCase();
+      currentLang === "zh" ? inp.value : inp.value.toUpperCase();
   });
 
   placedWords.forEach((w) => {

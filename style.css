@@ -795,34 +795,116 @@ textarea:focus {
   margin-top: 15px;
 }
 
-/* Language selector */
+/* Language selector dropdown */
 #lang-selector {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 10px;
 }
 
-.lang-btn {
+.lang-toggle {
   width: auto;
-  padding: 4px 8px;
+  padding: 4px 10px;
   font-size: 1.3rem;
   line-height: 1;
   background: transparent;
-  border: 2px solid transparent;
+  border: 2px solid #ccc;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.25s ease;
+  color: #588157;
 }
 
-.lang-btn:hover {
+.lang-toggle:hover {
   background: #f1f3f0;
-  transform: none;
+  border-color: #588157;
 }
 
-.lang-btn.active {
-  border-color: #588157;
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  margin-top: 4px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.lang-dropdown.open {
+  display: flex;
+}
+
+.lang-option {
+  width: auto;
+  padding: 6px 14px;
+  font-size: 1.3rem;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.lang-option:hover {
+  background: #f1f3f0;
+}
+
+.lang-option.active {
   background: #dde5db;
+  border-left: 3px solid #588157;
+}
+
+/* Chinese virtual keyboard */
+.zh-keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 12px auto;
+}
+
+.zh-keyboard:empty {
+  display: none;
+}
+
+.zh-key {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 8px;
+  background: #f1f3f0;
+  color: #344e41;
+  border: 1px solid #dad7cd;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zh-key:hover {
+  background: #dde5db;
+  transform: translateY(-1px);
+}
+
+.zh-key.zh-backspace {
+  background: #fde2e4;
+  color: #c1121f;
+  border-color: #f0c0c0;
+  font-size: 1.1rem;
+}
+
+.zh-key.zh-backspace:hover {
+  background: #f9cdd0;
+  transform: translateY(-1px);
 }
 
 /* Mobile */
