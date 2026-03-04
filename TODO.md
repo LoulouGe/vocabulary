@@ -1,3 +1,1 @@
-- NOUVEAU MODE !!!! mots croisé avec les definition des mots en anglais et trouvés les mots aussi en anglais.
-- il n'y a pas de barre de progression sur mes propres listes
-- faire un score total qui est stocké dans le local storage qui additonne tous les scores que tu fais dans tous les modes. Il s'afficherait dans l'écran d'acceuil.
+x
