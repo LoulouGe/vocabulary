@@ -696,7 +696,7 @@ const themesEs = {
       hintEn: "Lo que es más importante y debe hacerse primero",
       hintFr: "Ce qui est le plus important et doit être fait en premier",
     },
-  ],,
+  ],
   "La maison": [
     {
       english: "Mesa",
@@ -3213,5 +3213,4 @@ const themesEs = {
       hintFr: "Une courbe qui tourne autour d'un point central",
     },
   ],
-
 };
