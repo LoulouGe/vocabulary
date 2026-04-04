@@ -2909,7 +2909,7 @@ function startRound() {
     .slice(0, size)
     .map((word) => ({
       ...word,
-      direction: Math.random() < 0.5 ? "en-to-fr" : "fr-to-en",
+      direction: currentLang === "es" ? "fr-to-en" : Math.random() < 0.5 ? "en-to-fr" : "fr-to-en",
     }));
   totalDisplay.innerText = roundWords.length;
 
@@ -3285,9 +3285,15 @@ function displayFlashcard() {
 }
 
 function updateFlashcardContent(word) {
-  flashcardFrontWord.textContent = word.english;
-  flashcardBackWord.textContent = word.french;
-  flashcardBackHint.textContent = word.hintEn || "";
+  if (currentLang === "es") {
+    flashcardFrontWord.textContent = word.french;
+    flashcardBackWord.textContent = word.english;
+    flashcardBackHint.textContent = word.hintEn || "";
+  } else {
+    flashcardFrontWord.textContent = word.english;
+    flashcardBackWord.textContent = word.french;
+    flashcardBackHint.textContent = word.hintEn || "";
+  }
 
   flashcardProgress.textContent =
     flashcardIndex + 1 + " / " + flashcardWords.length;
