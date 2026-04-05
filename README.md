@@ -12,6 +12,9 @@ Traduis les mots un par un (langue cible vers français ou inversement). Un indi
 ### Relier les mots
 Associe 5 mots de la langue cible à leur traduction française en cliquant sur les paires. Les bonnes réponses sont validées en vert, les erreurs clignotent en rouge.
 
+### Révision (Flashcards)
+Parcours les cartes une par une, retourne-les pour voir la traduction. Marque chaque mot comme "appris" ou "en cours".
+
 ### Mots croisés
 Remplis une grille de mots croisés de 8 mots à partir d'indices en français.
 

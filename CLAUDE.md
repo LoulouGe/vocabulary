@@ -24,11 +24,11 @@ Deployed automatically via GitHub Pages from `main` branch — no build step nee
 
 ## Architecture
 
-Single-page app at the root:
+Single-page app using native ES modules (`<script type="module">`):
 
 - **index.html** — Page structure with three screens: theme selection, mode selection, game play
-- **script.js** — All game logic, English vocabulary data, and screen transitions
-- **themes-es.js / themes-de.js / themes-zh.js** — Vocabulary data for Spanish, German, Chinese
+- **js/** — ES modules: `app.js` (entry point), `ui.js`, `quiz.js`, `match.js`, `flashcard.js`, `crossword.js`, `stats.js`, `custom-lists.js`, `data.js`, `state.js`, `utils.js`, `chinese-kb.js`
+- **data/** — Vocabulary JSON files per language (`themes-en.json`, `themes-es.json`, `themes-de.json`, `themes-zh.json`), loaded on demand via fetch
 - **style.css** — Styling with botanical green palette (#588157, #a3b18a, #344e41), CSS animations
 - **sw.js** — Service worker for PWA / offline support
 
@@ -44,14 +44,7 @@ Setup screen (pick from 35 themes or create custom list) → Mode selection → 
 
 ### Vocabulary Data
 
-Vocabulary is stored as JSON in `data/`:
-
-- `data/themes-en.json` — English (extracted from `script.js`)
-- `data/themes-es.json` — Spanish (extracted from `themes-es.js`)
-- `data/themes-de.json` — German (extracted from `themes-de.js`)
-- `data/themes-zh.json` — Chinese (extracted from `themes-zh.js`)
-
-Each theme typically has 12 items with: target-language word, french translation, target-language hint, french hint. The Tourisme (Delilah) theme is larger (116 items). Custom lists are parsed from `anglais = français` format (minimum 2 words).
+Vocabulary is stored as JSON in `data/` (one file per language: `themes-en.json`, `themes-es.json`, `themes-de.json`, `themes-zh.json`). Only the selected language is fetched at runtime, cached in memory. Each theme typically has 12 items with: target-language word, french translation, target-language hint, french hint. The Tourisme (Delilah) theme is larger (116 items). Custom lists are parsed from `anglais = francais` format (minimum 2 words).
 
 ## Code Conventions
 
