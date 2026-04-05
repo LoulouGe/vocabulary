@@ -1,0 +1,3216 @@
+{
+  "La maison": [
+    {
+      "english": "Table",
+      "french": "Table",
+      "hintEn": "A flat surface with legs, for eating or working",
+      "hintFr": "Surface plate avec des pieds, pour manger ou travailler"
+    },
+    {
+      "english": "Chair",
+      "french": "Chaise",
+      "hintEn": "A seat with a back, for one person",
+      "hintFr": "Un siège avec un dossier, pour une personne"
+    },
+    {
+      "english": "Window",
+      "french": "Fenêtre",
+      "hintEn": "An opening in a wall with glass, to see outside",
+      "hintFr": "Une ouverture dans un mur avec du verre, pour voir dehors"
+    },
+    {
+      "english": "Bed",
+      "french": "Lit",
+      "hintEn": "Where you sleep at night",
+      "hintFr": "Là où tu dors la nuit"
+    },
+    {
+      "english": "Door",
+      "french": "Porte",
+      "hintEn": "You open it to enter or leave a room",
+      "hintFr": "Tu l'ouvres pour entrer ou sortir d'une pièce"
+    },
+    {
+      "english": "Kitchen",
+      "french": "Cuisine",
+      "hintEn": "The room where you cook food",
+      "hintFr": "La pièce où on prépare les repas"
+    },
+    {
+      "english": "Bathroom",
+      "french": "Salle de bain",
+      "hintEn": "The room with a shower or bathtub",
+      "hintFr": "La pièce avec une douche ou une baignoire"
+    },
+    {
+      "english": "Garden",
+      "french": "Jardin",
+      "hintEn": "An outdoor area with plants and flowers",
+      "hintFr": "Un espace extérieur avec des plantes et des fleurs"
+    },
+    {
+      "english": "Roof",
+      "french": "Toit",
+      "hintEn": "The top part of a house that protects from rain",
+      "hintFr": "La partie en haut de la maison qui protège de la pluie"
+    },
+    {
+      "english": "Wall",
+      "french": "Mur",
+      "hintEn": "A vertical surface that separates rooms",
+      "hintFr": "Une surface verticale qui sépare les pièces"
+    },
+    {
+      "english": "Floor",
+      "french": "Sol",
+      "hintEn": "The surface you walk on inside a room",
+      "hintFr": "La surface sur laquelle tu marches dans une pièce"
+    },
+    {
+      "english": "Stairs",
+      "french": "Escalier",
+      "hintEn": "Steps that go up or down between floors",
+      "hintFr": "Des marches pour monter ou descendre entre les étages"
+    }
+  ],
+  "La nourriture": [
+    {
+      "english": "Apple",
+      "french": "Pomme",
+      "hintEn": "A round fruit, often red or green",
+      "hintFr": "Un fruit rond, souvent rouge ou vert"
+    },
+    {
+      "english": "Bread",
+      "french": "Pain",
+      "hintEn": "Made with flour, you eat it every day",
+      "hintFr": "Fait avec de la farine, on en mange tous les jours"
+    },
+    {
+      "english": "Cheese",
+      "french": "Fromage",
+      "hintEn": "Made from milk, often yellow",
+      "hintFr": "Fait avec du lait, souvent jaune"
+    },
+    {
+      "english": "Cake",
+      "french": "Gâteau",
+      "hintEn": "A sweet dessert for birthdays",
+      "hintFr": "Un dessert sucré pour les anniversaires"
+    },
+    {
+      "english": "Milk",
+      "french": "Lait",
+      "hintEn": "A white drink that comes from cows",
+      "hintFr": "Une boisson blanche qui vient des vaches"
+    },
+    {
+      "english": "Water",
+      "french": "Eau",
+      "hintEn": "A clear liquid you drink every day",
+      "hintFr": "Un liquide transparent que tu bois chaque jour"
+    },
+    {
+      "english": "Chicken",
+      "french": "Poulet",
+      "hintEn": "A bird you can eat, very common meat",
+      "hintFr": "Un oiseau que l'on mange, une viande très courante"
+    },
+    {
+      "english": "Rice",
+      "french": "Riz",
+      "hintEn": "Small white grains, eaten a lot in Asia",
+      "hintFr": "Petits grains blancs, très mangés en Asie"
+    },
+    {
+      "english": "Salad",
+      "french": "Salade",
+      "hintEn": "A dish with lettuce and vegetables",
+      "hintFr": "Un plat avec de la laitue et des légumes"
+    },
+    {
+      "english": "Butter",
+      "french": "Beurre",
+      "hintEn": "A yellow spread made from cream",
+      "hintFr": "Une pâte jaune faite à partir de crème"
+    },
+    {
+      "english": "Egg",
+      "french": "Oeuf",
+      "hintEn": "It comes from a hen, with a shell",
+      "hintFr": "Il vient de la poule, avec une coquille"
+    },
+    {
+      "english": "Sugar",
+      "french": "Sucre",
+      "hintEn": "A sweet white powder for tea or coffee",
+      "hintFr": "Une poudre blanche et sucrée pour le thé ou le café"
+    }
+  ],
+  "Les animaux": [
+    {
+      "english": "Dog",
+      "french": "Chien",
+      "hintEn": "A pet that barks and wags its tail",
+      "hintFr": "Un animal qui aboie et remue la queue"
+    },
+    {
+      "english": "Cat",
+      "french": "Chat",
+      "hintEn": "A pet that purrs and catches mice",
+      "hintFr": "Un animal qui ronronne et attrape les souris"
+    },
+    {
+      "english": "Bird",
+      "french": "Oiseau",
+      "hintEn": "An animal with wings that can fly",
+      "hintFr": "Un animal avec des ailes qui peut voler"
+    },
+    {
+      "english": "Fish",
+      "french": "Poisson",
+      "hintEn": "An animal that lives in water",
+      "hintFr": "Un animal qui vit dans l'eau"
+    },
+    {
+      "english": "Horse",
+      "french": "Cheval",
+      "hintEn": "A large animal you can ride",
+      "hintFr": "Un grand animal que l'on peut monter"
+    },
+    {
+      "english": "Rabbit",
+      "french": "Lapin",
+      "hintEn": "A small animal with long ears that hops",
+      "hintFr": "Un petit animal avec de longues oreilles qui saute"
+    },
+    {
+      "english": "Mouse",
+      "french": "Souris",
+      "hintEn": "A very small animal that likes cheese",
+      "hintFr": "Un très petit animal qui aime le fromage"
+    },
+    {
+      "english": "Cow",
+      "french": "Vache",
+      "hintEn": "A large farm animal that gives milk",
+      "hintFr": "Un grand animal de ferme qui donne du lait"
+    },
+    {
+      "english": "Pig",
+      "french": "Cochon",
+      "hintEn": "A pink farm animal that loves mud",
+      "hintFr": "Un animal de ferme rose qui aime la boue"
+    },
+    {
+      "english": "Sheep",
+      "french": "Mouton",
+      "hintEn": "A farm animal with soft white wool",
+      "hintFr": "Un animal de ferme avec de la laine blanche"
+    },
+    {
+      "english": "Duck",
+      "french": "Canard",
+      "hintEn": "A bird that swims and says 'quack'",
+      "hintFr": "Un oiseau qui nage et fait 'coin coin'"
+    },
+    {
+      "english": "Frog",
+      "french": "Grenouille",
+      "hintEn": "A small green animal that jumps near water",
+      "hintFr": "Un petit animal vert qui saute près de l'eau"
+    }
+  ],
+  "La nature": [
+    {
+      "english": "Sun",
+      "french": "Soleil",
+      "hintEn": "The big yellow star in the sky during the day",
+      "hintFr": "La grande étoile jaune dans le ciel pendant la journée"
+    },
+    {
+      "english": "Moon",
+      "french": "Lune",
+      "hintEn": "You can see it in the sky at night",
+      "hintFr": "On la voit dans le ciel la nuit"
+    },
+    {
+      "english": "Star",
+      "french": "Étoile",
+      "hintEn": "A small shining point in the night sky",
+      "hintFr": "Un petit point brillant dans le ciel la nuit"
+    },
+    {
+      "english": "Cloud",
+      "french": "Nuage",
+      "hintEn": "A white or grey shape in the sky",
+      "hintFr": "Une forme blanche ou grise dans le ciel"
+    },
+    {
+      "english": "Rain",
+      "french": "Pluie",
+      "hintEn": "Water that falls from the sky",
+      "hintFr": "De l'eau qui tombe du ciel"
+    },
+    {
+      "english": "Tree",
+      "french": "Arbre",
+      "hintEn": "A tall plant with a trunk and leaves",
+      "hintFr": "Une grande plante avec un tronc et des feuilles"
+    },
+    {
+      "english": "Flower",
+      "french": "Fleur",
+      "hintEn": "A colorful plant that smells nice",
+      "hintFr": "Une plante colorée qui sent bon"
+    },
+    {
+      "english": "River",
+      "french": "Rivière",
+      "hintEn": "A long flow of water through the land",
+      "hintFr": "Un long cours d'eau à travers la terre"
+    },
+    {
+      "english": "Mountain",
+      "french": "Montagne",
+      "hintEn": "A very high piece of land, with snow on top",
+      "hintFr": "Un terrain très élevé, avec de la neige au sommet"
+    },
+    {
+      "english": "Sea",
+      "french": "Mer",
+      "hintEn": "A large area of salty water",
+      "hintFr": "Une grande étendue d'eau salée"
+    },
+    {
+      "english": "Snow",
+      "french": "Neige",
+      "hintEn": "White and cold, it falls in winter",
+      "hintFr": "Blanc et froid, ça tombe en hiver"
+    },
+    {
+      "english": "Wind",
+      "french": "Vent",
+      "hintEn": "Moving air you can feel but not see",
+      "hintFr": "De l'air qui bouge, qu'on sent mais qu'on ne voit pas"
+    }
+  ],
+  "L'école": [
+    {
+      "english": "Book",
+      "french": "Livre",
+      "hintEn": "You read it, it has pages",
+      "hintFr": "Tu le lis, il a des pages"
+    },
+    {
+      "english": "School",
+      "french": "École",
+      "hintEn": "A place where children go to learn",
+      "hintFr": "Un endroit où les enfants vont pour apprendre"
+    },
+    {
+      "english": "Pen",
+      "french": "Stylo",
+      "hintEn": "You write with it, it uses ink",
+      "hintFr": "Tu écris avec, il utilise de l'encre"
+    },
+    {
+      "english": "Pencil",
+      "french": "Crayon",
+      "hintEn": "You write with it, you can erase it",
+      "hintFr": "Tu écris avec, tu peux effacer"
+    },
+    {
+      "english": "Teacher",
+      "french": "Professeur",
+      "hintEn": "A person who teaches in a school",
+      "hintFr": "Une personne qui enseigne à l'école"
+    },
+    {
+      "english": "Student",
+      "french": "Élève",
+      "hintEn": "A person who learns in a school",
+      "hintFr": "Une personne qui apprend à l'école"
+    },
+    {
+      "english": "Desk",
+      "french": "Bureau",
+      "hintEn": "A table where you work or study",
+      "hintFr": "Une table où tu travailles ou étudies"
+    },
+    {
+      "english": "Homework",
+      "french": "Devoirs",
+      "hintEn": "School work you do at home",
+      "hintFr": "Du travail scolaire que tu fais à la maison"
+    },
+    {
+      "english": "Lesson",
+      "french": "Leçon",
+      "hintEn": "A period of learning in class",
+      "hintFr": "Un moment d'apprentissage en classe"
+    },
+    {
+      "english": "Notebook",
+      "french": "Cahier",
+      "hintEn": "A book with empty pages for writing",
+      "hintFr": "Un livre avec des pages vides pour écrire"
+    },
+    {
+      "english": "Blackboard",
+      "french": "Tableau",
+      "hintEn": "A large dark board the teacher writes on",
+      "hintFr": "Un grand tableau sombre sur lequel le professeur écrit"
+    },
+    {
+      "english": "Bag",
+      "french": "Sac",
+      "hintEn": "You carry your things in it",
+      "hintFr": "Tu transportes tes affaires dedans"
+    }
+  ],
+  "Les vêtements": [
+    {
+      "english": "Shirt",
+      "french": "Chemise",
+      "hintEn": "You wear it on your upper body, with buttons",
+      "hintFr": "Tu le portes sur le haut du corps, avec des boutons"
+    },
+    {
+      "english": "Dress",
+      "french": "Robe",
+      "hintEn": "A one-piece clothing, often worn by girls",
+      "hintFr": "Un vêtement d'une seule pièce, souvent porté par les filles"
+    },
+    {
+      "english": "Shoes",
+      "french": "Chaussures",
+      "hintEn": "You wear them on your feet to walk",
+      "hintFr": "Tu les portes aux pieds pour marcher"
+    },
+    {
+      "english": "Hat",
+      "french": "Chapeau",
+      "hintEn": "You wear it on your head",
+      "hintFr": "Tu le portes sur la tête"
+    },
+    {
+      "english": "Coat",
+      "french": "Manteau",
+      "hintEn": "A warm piece of clothing for cold weather",
+      "hintFr": "Un vêtement chaud pour le froid"
+    },
+    {
+      "english": "Pants",
+      "french": "Pantalon",
+      "hintEn": "Clothing for your legs, with two holes",
+      "hintFr": "Vêtement pour les jambes, avec deux trous"
+    },
+    {
+      "english": "Socks",
+      "french": "Chaussettes",
+      "hintEn": "You wear them on your feet, inside shoes",
+      "hintFr": "Tu les portes aux pieds, dans les chaussures"
+    },
+    {
+      "english": "Gloves",
+      "french": "Gants",
+      "hintEn": "You wear them on your hands when it's cold",
+      "hintFr": "Tu les portes aux mains quand il fait froid"
+    },
+    {
+      "english": "Scarf",
+      "french": "Écharpe",
+      "hintEn": "You wrap it around your neck in winter",
+      "hintFr": "Tu l'enroules autour du cou en hiver"
+    },
+    {
+      "english": "Skirt",
+      "french": "Jupe",
+      "hintEn": "A piece of clothing that hangs from the waist",
+      "hintFr": "Un vêtement qui pend à partir de la taille"
+    },
+    {
+      "english": "Sweater",
+      "french": "Pull",
+      "hintEn": "A warm knitted top for cold days",
+      "hintFr": "Un haut en maille chaud pour les jours froids"
+    },
+    {
+      "english": "Jacket",
+      "french": "Veste",
+      "hintEn": "A light coat you wear outside",
+      "hintFr": "Un manteau léger que tu portes dehors"
+    }
+  ],
+  "Le corps humain": [
+    {
+      "english": "Head",
+      "french": "Tête",
+      "hintEn": "The top part of your body",
+      "hintFr": "La partie en haut de ton corps"
+    },
+    {
+      "english": "Hand",
+      "french": "Main",
+      "hintEn": "You use it to grab things",
+      "hintFr": "Tu l'utilises pour attraper des choses"
+    },
+    {
+      "english": "Arm",
+      "french": "Bras",
+      "hintEn": "Between your shoulder and hand",
+      "hintFr": "Entre ton épaule et ta main"
+    },
+    {
+      "english": "Leg",
+      "french": "Jambe",
+      "hintEn": "You use them to walk",
+      "hintFr": "Tu les utilises pour marcher"
+    },
+    {
+      "english": "Foot",
+      "french": "Pied",
+      "hintEn": "At the bottom of your leg",
+      "hintFr": "En bas de ta jambe"
+    },
+    {
+      "english": "Eye",
+      "french": "Œil",
+      "hintEn": "You see with it",
+      "hintFr": "Tu vois avec"
+    },
+    {
+      "english": "Ear",
+      "french": "Oreille",
+      "hintEn": "You hear with it",
+      "hintFr": "Tu entends avec"
+    },
+    {
+      "english": "Nose",
+      "french": "Nez",
+      "hintEn": "You smell with it",
+      "hintFr": "Tu sens les odeurs avec"
+    },
+    {
+      "english": "Mouth",
+      "french": "Bouche",
+      "hintEn": "You eat and talk with it",
+      "hintFr": "Tu manges et parles avec"
+    },
+    {
+      "english": "Hair",
+      "french": "Cheveux",
+      "hintEn": "It grows on your head",
+      "hintFr": "Ça pousse sur ta tête"
+    },
+    {
+      "english": "Heart",
+      "french": "Cœur",
+      "hintEn": "It pumps blood in your body",
+      "hintFr": "Il pompe le sang dans ton corps"
+    },
+    {
+      "english": "Finger",
+      "french": "Doigt",
+      "hintEn": "You have ten of them on your hands",
+      "hintFr": "Tu en as dix sur tes mains"
+    }
+  ],
+  "La famille": [
+    {
+      "english": "Mother",
+      "french": "Mère",
+      "hintEn": "The woman who gave birth to you",
+      "hintFr": "La femme qui t'a mis au monde"
+    },
+    {
+      "english": "Father",
+      "french": "Père",
+      "hintEn": "Your male parent",
+      "hintFr": "Ton parent masculin"
+    },
+    {
+      "english": "Brother",
+      "french": "Frère",
+      "hintEn": "A boy with the same parents as you",
+      "hintFr": "Un garçon avec les mêmes parents que toi"
+    },
+    {
+      "english": "Sister",
+      "french": "Sœur",
+      "hintEn": "A girl with the same parents as you",
+      "hintFr": "Une fille avec les mêmes parents que toi"
+    },
+    {
+      "english": "Grandmother",
+      "french": "Grand-mère",
+      "hintEn": "Your parent's mother",
+      "hintFr": "La mère de ton parent"
+    },
+    {
+      "english": "Grandfather",
+      "french": "Grand-père",
+      "hintEn": "Your parent's father",
+      "hintFr": "Le père de ton parent"
+    },
+    {
+      "english": "Uncle",
+      "french": "Oncle",
+      "hintEn": "Your parent's brother",
+      "hintFr": "Le frère de ton parent"
+    },
+    {
+      "english": "Aunt",
+      "french": "Tante",
+      "hintEn": "Your parent's sister",
+      "hintFr": "La sœur de ton parent"
+    },
+    {
+      "english": "Cousin",
+      "french": "Cousin",
+      "hintEn": "Your uncle or aunt's child",
+      "hintFr": "L'enfant de ton oncle ou ta tante"
+    },
+    {
+      "english": "Baby",
+      "french": "Bébé",
+      "hintEn": "A very young child",
+      "hintFr": "Un très jeune enfant"
+    },
+    {
+      "english": "Son",
+      "french": "Fils",
+      "hintEn": "A male child",
+      "hintFr": "Un enfant masculin"
+    },
+    {
+      "english": "Daughter",
+      "french": "Fille",
+      "hintEn": "A female child",
+      "hintFr": "Un enfant féminin"
+    }
+  ],
+  "Les couleurs": [
+    {
+      "english": "Red",
+      "french": "Rouge",
+      "hintEn": "The color of strawberries",
+      "hintFr": "La couleur des fraises"
+    },
+    {
+      "english": "Blue",
+      "french": "Bleu",
+      "hintEn": "The color of the sky",
+      "hintFr": "La couleur du ciel"
+    },
+    {
+      "english": "Green",
+      "french": "Vert",
+      "hintEn": "The color of grass",
+      "hintFr": "La couleur de l'herbe"
+    },
+    {
+      "english": "Yellow",
+      "french": "Jaune",
+      "hintEn": "The color of the sun",
+      "hintFr": "La couleur du soleil"
+    },
+    {
+      "english": "White",
+      "french": "Blanc",
+      "hintEn": "The color of snow",
+      "hintFr": "La couleur de la neige"
+    },
+    {
+      "english": "Black",
+      "french": "Noir",
+      "hintEn": "The color of night",
+      "hintFr": "La couleur de la nuit"
+    },
+    {
+      "english": "Orange",
+      "french": "Orange",
+      "hintEn": "The color of a carrot",
+      "hintFr": "La couleur d'une carotte"
+    },
+    {
+      "english": "Pink",
+      "french": "Rose",
+      "hintEn": "A light shade of red",
+      "hintFr": "Une teinte claire de rouge"
+    },
+    {
+      "english": "Purple",
+      "french": "Violet",
+      "hintEn": "A mix of red and blue",
+      "hintFr": "Un mélange de rouge et bleu"
+    },
+    {
+      "english": "Brown",
+      "french": "Marron",
+      "hintEn": "The color of chocolate",
+      "hintFr": "La couleur du chocolat"
+    },
+    {
+      "english": "Grey",
+      "french": "Gris",
+      "hintEn": "A mix of black and white",
+      "hintFr": "Un mélange de noir et blanc"
+    },
+    {
+      "english": "Gold",
+      "french": "Doré",
+      "hintEn": "A shiny yellow color",
+      "hintFr": "Une couleur jaune brillante"
+    }
+  ],
+  "Les fruits": [
+    {
+      "english": "Strawberry",
+      "french": "Fraise",
+      "hintEn": "A small red fruit with seeds outside",
+      "hintFr": "Un petit fruit rouge avec des graines dehors"
+    },
+    {
+      "english": "Banana",
+      "french": "Banane",
+      "hintEn": "A long yellow fruit",
+      "hintFr": "Un long fruit jaune"
+    },
+    {
+      "english": "Grape",
+      "french": "Raisin",
+      "hintEn": "Small round fruits that grow in bunches",
+      "hintFr": "Petits fruits ronds qui poussent en grappes"
+    },
+    {
+      "english": "Lemon",
+      "french": "Citron",
+      "hintEn": "A sour yellow fruit",
+      "hintFr": "Un fruit jaune acide"
+    },
+    {
+      "english": "Peach",
+      "french": "Pêche",
+      "hintEn": "A soft fuzzy fruit with a pit",
+      "hintFr": "Un fruit doux et duveteux avec un noyau"
+    },
+    {
+      "english": "Cherry",
+      "french": "Cerise",
+      "hintEn": "A small red fruit with a stem",
+      "hintFr": "Un petit fruit rouge avec une tige"
+    },
+    {
+      "english": "Pear",
+      "french": "Poire",
+      "hintEn": "Shaped like a bell, green or yellow",
+      "hintFr": "En forme de cloche, vert ou jaune"
+    },
+    {
+      "english": "Watermelon",
+      "french": "Pastèque",
+      "hintEn": "A big green fruit, red inside",
+      "hintFr": "Un gros fruit vert, rouge à l'intérieur"
+    },
+    {
+      "english": "Pineapple",
+      "french": "Ananas",
+      "hintEn": "A tropical fruit with spiky leaves",
+      "hintFr": "Un fruit tropical avec des feuilles piquantes"
+    },
+    {
+      "english": "Raspberry",
+      "french": "Framboise",
+      "hintEn": "A small soft red berry",
+      "hintFr": "Un petit fruit rouge et mou"
+    },
+    {
+      "english": "Plum",
+      "french": "Prune",
+      "hintEn": "A small purple fruit with smooth skin",
+      "hintFr": "Un petit fruit violet à peau lisse"
+    },
+    {
+      "english": "Apricot",
+      "french": "Abricot",
+      "hintEn": "A small orange fruit like a small peach",
+      "hintFr": "Un petit fruit orange comme une petite pêche"
+    }
+  ],
+  "Les légumes": [
+    {
+      "english": "Carrot",
+      "french": "Carotte",
+      "hintEn": "A long orange vegetable",
+      "hintFr": "Un long légume orange"
+    },
+    {
+      "english": "Potato",
+      "french": "Pomme de terre",
+      "hintEn": "You make fries with it",
+      "hintFr": "On fait des frites avec"
+    },
+    {
+      "english": "Tomato",
+      "french": "Tomate",
+      "hintEn": "A red fruit used as vegetable",
+      "hintFr": "Un fruit rouge utilisé comme légume"
+    },
+    {
+      "english": "Onion",
+      "french": "Oignon",
+      "hintEn": "It makes you cry when you cut it",
+      "hintFr": "Il te fait pleurer quand tu le coupes"
+    },
+    {
+      "english": "Pepper",
+      "french": "Poivron",
+      "hintEn": "Can be red, green or yellow",
+      "hintFr": "Peut être rouge, vert ou jaune"
+    },
+    {
+      "english": "Lettuce",
+      "french": "Laitue",
+      "hintEn": "Green leaves used for salads",
+      "hintFr": "Des feuilles vertes pour les salades"
+    },
+    {
+      "english": "Cucumber",
+      "french": "Concombre",
+      "hintEn": "A long green vegetable, cool inside",
+      "hintFr": "Un long légume vert, frais à l'intérieur"
+    },
+    {
+      "english": "Mushroom",
+      "french": "Champignon",
+      "hintEn": "It grows in the forest, has a cap",
+      "hintFr": "Il pousse dans la forêt, avec un chapeau"
+    },
+    {
+      "english": "Corn",
+      "french": "Maïs",
+      "hintEn": "Yellow grains on a cob",
+      "hintFr": "Des grains jaunes sur un épi"
+    },
+    {
+      "english": "Pea",
+      "french": "Petit pois",
+      "hintEn": "Small green round vegetables in a pod",
+      "hintFr": "Petits légumes verts ronds dans une cosse"
+    },
+    {
+      "english": "Garlic",
+      "french": "Ail",
+      "hintEn": "A strong-smelling bulb used for cooking",
+      "hintFr": "Un bulbe à forte odeur pour cuisiner"
+    },
+    {
+      "english": "Spinach",
+      "french": "Épinard",
+      "hintEn": "Dark green leaves, Popeye's food",
+      "hintFr": "Des feuilles vert foncé, la nourriture de Popeye"
+    }
+  ],
+  "Les sports": [
+    {
+      "english": "Football",
+      "french": "Football",
+      "hintEn": "A team sport with a round ball and goals",
+      "hintFr": "Un sport d'équipe avec un ballon rond et des buts"
+    },
+    {
+      "english": "Basketball",
+      "french": "Basket",
+      "hintEn": "You throw a ball into a high hoop",
+      "hintFr": "Tu lances un ballon dans un panier en hauteur"
+    },
+    {
+      "english": "Tennis",
+      "french": "Tennis",
+      "hintEn": "You hit a ball with a racket over a net",
+      "hintFr": "Tu frappes une balle avec une raquette par-dessus un filet"
+    },
+    {
+      "english": "Swimming",
+      "french": "Natation",
+      "hintEn": "Moving through water using your body",
+      "hintFr": "Se déplacer dans l'eau avec son corps"
+    },
+    {
+      "english": "Running",
+      "french": "Course",
+      "hintEn": "Moving fast on your feet",
+      "hintFr": "Se déplacer vite sur ses pieds"
+    },
+    {
+      "english": "Cycling",
+      "french": "Cyclisme",
+      "hintEn": "Riding a bicycle",
+      "hintFr": "Faire du vélo"
+    },
+    {
+      "english": "Skiing",
+      "french": "Ski",
+      "hintEn": "Sliding down snowy mountains",
+      "hintFr": "Glisser sur des montagnes enneigées"
+    },
+    {
+      "english": "Dancing",
+      "french": "Danse",
+      "hintEn": "Moving your body to music",
+      "hintFr": "Bouger son corps sur de la musique"
+    },
+    {
+      "english": "Boxing",
+      "french": "Boxe",
+      "hintEn": "A combat sport with gloves",
+      "hintFr": "Un sport de combat avec des gants"
+    },
+    {
+      "english": "Gymnastics",
+      "french": "Gymnastique",
+      "hintEn": "A sport with flips and balance",
+      "hintFr": "Un sport avec des sauts et de l'équilibre"
+    },
+    {
+      "english": "Rugby",
+      "french": "Rugby",
+      "hintEn": "A team sport with an oval ball",
+      "hintFr": "Un sport d'équipe avec un ballon ovale"
+    },
+    {
+      "english": "Volleyball",
+      "french": "Volley",
+      "hintEn": "A team sport where you hit a ball over a net",
+      "hintFr": "Un sport d'équipe où on frappe un ballon par-dessus un filet"
+    }
+  ],
+  "Les métiers": [
+    {
+      "english": "Doctor",
+      "french": "Médecin",
+      "hintEn": "A person who treats sick people",
+      "hintFr": "Une personne qui soigne les malades"
+    },
+    {
+      "english": "Firefighter",
+      "french": "Pompier",
+      "hintEn": "A person who puts out fires",
+      "hintFr": "Une personne qui éteint les incendies"
+    },
+    {
+      "english": "Police officer",
+      "french": "Policier",
+      "hintEn": "A person who enforces the law",
+      "hintFr": "Une personne qui fait respecter la loi"
+    },
+    {
+      "english": "Baker",
+      "french": "Boulanger",
+      "hintEn": "A person who makes bread",
+      "hintFr": "Une personne qui fait du pain"
+    },
+    {
+      "english": "Farmer",
+      "french": "Fermier",
+      "hintEn": "A person who grows food",
+      "hintFr": "Une personne qui cultive la nourriture"
+    },
+    {
+      "english": "Pilot",
+      "french": "Pilote",
+      "hintEn": "A person who flies airplanes",
+      "hintFr": "Une personne qui pilote les avions"
+    },
+    {
+      "english": "Nurse",
+      "french": "Infirmier",
+      "hintEn": "A person who helps the doctor",
+      "hintFr": "Une personne qui aide le médecin"
+    },
+    {
+      "english": "Hairdresser",
+      "french": "Coiffeur",
+      "hintEn": "A person who cuts hair",
+      "hintFr": "Une personne qui coupe les cheveux"
+    },
+    {
+      "english": "Waiter",
+      "french": "Serveur",
+      "hintEn": "A person who serves food in a restaurant",
+      "hintFr": "Une personne qui sert dans un restaurant"
+    },
+    {
+      "english": "Dentist",
+      "french": "Dentiste",
+      "hintEn": "A person who takes care of teeth",
+      "hintFr": "Une personne qui soigne les dents"
+    },
+    {
+      "english": "Lawyer",
+      "french": "Avocat",
+      "hintEn": "A person who defends people in court",
+      "hintFr": "Une personne qui défend les gens au tribunal"
+    },
+    {
+      "english": "Mechanic",
+      "french": "Mécanicien",
+      "hintEn": "A person who repairs cars",
+      "hintFr": "Une personne qui répare les voitures"
+    }
+  ],
+  "Les transports": [
+    {
+      "english": "Car",
+      "french": "Voiture",
+      "hintEn": "A vehicle with four wheels",
+      "hintFr": "Un véhicule à quatre roues"
+    },
+    {
+      "english": "Bus",
+      "french": "Bus",
+      "hintEn": "A large vehicle for many passengers",
+      "hintFr": "Un grand véhicule pour beaucoup de passagers"
+    },
+    {
+      "english": "Train",
+      "french": "Train",
+      "hintEn": "It runs on rails",
+      "hintFr": "Il roule sur des rails"
+    },
+    {
+      "english": "Bicycle",
+      "french": "Vélo",
+      "hintEn": "A vehicle with two wheels and pedals",
+      "hintFr": "Un véhicule à deux roues et des pédales"
+    },
+    {
+      "english": "Airplane",
+      "french": "Avion",
+      "hintEn": "It flies in the sky",
+      "hintFr": "Il vole dans le ciel"
+    },
+    {
+      "english": "Boat",
+      "french": "Bateau",
+      "hintEn": "A vehicle that moves on water",
+      "hintFr": "Un véhicule qui se déplace sur l'eau"
+    },
+    {
+      "english": "Motorcycle",
+      "french": "Moto",
+      "hintEn": "A fast two-wheeled vehicle with an engine",
+      "hintFr": "Un véhicule rapide à deux roues avec un moteur"
+    },
+    {
+      "english": "Taxi",
+      "french": "Taxi",
+      "hintEn": "A car you pay to ride in",
+      "hintFr": "Une voiture que tu payes pour te déplacer"
+    },
+    {
+      "english": "Subway",
+      "french": "Métro",
+      "hintEn": "An underground train in cities",
+      "hintFr": "Un train souterrain dans les villes"
+    },
+    {
+      "english": "Helicopter",
+      "french": "Hélicoptère",
+      "hintEn": "It flies with spinning blades on top",
+      "hintFr": "Il vole avec des pales qui tournent"
+    },
+    {
+      "english": "Truck",
+      "french": "Camion",
+      "hintEn": "A large vehicle for transporting goods",
+      "hintFr": "Un gros véhicule pour transporter des marchandises"
+    },
+    {
+      "english": "Scooter",
+      "french": "Trottinette",
+      "hintEn": "A small vehicle you stand on and push",
+      "hintFr": "Un petit véhicule sur lequel tu te tiens debout"
+    }
+  ],
+  "La ville": [
+    {
+      "english": "Street",
+      "french": "Rue",
+      "hintEn": "A road in a city",
+      "hintFr": "Une route dans une ville"
+    },
+    {
+      "english": "Building",
+      "french": "Bâtiment",
+      "hintEn": "A structure with walls and a roof",
+      "hintFr": "Une structure avec des murs et un toit"
+    },
+    {
+      "english": "Park",
+      "french": "Parc",
+      "hintEn": "A green space with trees and benches",
+      "hintFr": "Un espace vert avec des arbres et des bancs"
+    },
+    {
+      "english": "Hospital",
+      "french": "Hôpital",
+      "hintEn": "A place where sick people are treated",
+      "hintFr": "Un endroit où les malades sont soignés"
+    },
+    {
+      "english": "Library",
+      "french": "Bibliothèque",
+      "hintEn": "A place with many books to read",
+      "hintFr": "Un endroit avec beaucoup de livres à lire"
+    },
+    {
+      "english": "Museum",
+      "french": "Musée",
+      "hintEn": "A place to see art and history",
+      "hintFr": "Un endroit pour voir de l'art et de l'histoire"
+    },
+    {
+      "english": "Church",
+      "french": "Église",
+      "hintEn": "A religious building with a bell tower",
+      "hintFr": "Un bâtiment religieux avec un clocher"
+    },
+    {
+      "english": "Bridge",
+      "french": "Pont",
+      "hintEn": "A structure to cross a river",
+      "hintFr": "Une structure pour traverser une rivière"
+    },
+    {
+      "english": "Fountain",
+      "french": "Fontaine",
+      "hintEn": "Water shoots up from it in a square",
+      "hintFr": "L'eau jaillit sur une place"
+    },
+    {
+      "english": "Market",
+      "french": "Marché",
+      "hintEn": "A place to buy fresh food outside",
+      "hintFr": "Un endroit pour acheter de la nourriture fraîche dehors"
+    },
+    {
+      "english": "Sidewalk",
+      "french": "Trottoir",
+      "hintEn": "The path for walking beside a road",
+      "hintFr": "Le chemin pour marcher le long d'une route"
+    },
+    {
+      "english": "Tower",
+      "french": "Tour",
+      "hintEn": "A tall narrow building",
+      "hintFr": "Un bâtiment haut et étroit"
+    }
+  ],
+  "Les émotions": [
+    {
+      "english": "Happy",
+      "french": "Content",
+      "hintEn": "Feeling joy and pleasure",
+      "hintFr": "Ressentir de la joie et du plaisir"
+    },
+    {
+      "english": "Sad",
+      "french": "Triste",
+      "hintEn": "Feeling unhappy, wanting to cry",
+      "hintFr": "Se sentir malheureux, vouloir pleurer"
+    },
+    {
+      "english": "Angry",
+      "french": "En colère",
+      "hintEn": "Feeling mad about something",
+      "hintFr": "Se sentir furieux à propos de quelque chose"
+    },
+    {
+      "english": "Scared",
+      "french": "Effrayé",
+      "hintEn": "Feeling afraid of something",
+      "hintFr": "Avoir peur de quelque chose"
+    },
+    {
+      "english": "Surprised",
+      "french": "Surpris",
+      "hintEn": "Not expecting what happened",
+      "hintFr": "Ne pas s'attendre à ce qui s'est passé"
+    },
+    {
+      "english": "Tired",
+      "french": "Fatigué",
+      "hintEn": "Needing sleep or rest",
+      "hintFr": "Avoir besoin de dormir ou se reposer"
+    },
+    {
+      "english": "Bored",
+      "french": "Ennuyé",
+      "hintEn": "Not interested, nothing fun to do",
+      "hintFr": "Pas intéressé, rien d'amusant à faire"
+    },
+    {
+      "english": "Excited",
+      "french": "Excité",
+      "hintEn": "Very happy about something coming",
+      "hintFr": "Très content à propos de quelque chose qui arrive"
+    },
+    {
+      "english": "Proud",
+      "french": "Fier",
+      "hintEn": "Happy about your achievement",
+      "hintFr": "Content de ce que tu as accompli"
+    },
+    {
+      "english": "Shy",
+      "french": "Timide",
+      "hintEn": "Nervous around other people",
+      "hintFr": "Nerveux en présence d'autres personnes"
+    },
+    {
+      "english": "Jealous",
+      "french": "Jaloux",
+      "hintEn": "Wanting what someone else has",
+      "hintFr": "Vouloir ce que quelqu'un d'autre a"
+    },
+    {
+      "english": "Lonely",
+      "french": "Seul",
+      "hintEn": "Feeling sad because you are alone",
+      "hintFr": "Se sentir triste parce qu'on est seul"
+    }
+  ],
+  "La météo": [
+    {
+      "english": "Sunny",
+      "french": "Ensoleillé",
+      "hintEn": "When the sun is shining bright",
+      "hintFr": "Quand le soleil brille fort"
+    },
+    {
+      "english": "Rainy",
+      "french": "Pluvieux",
+      "hintEn": "When water falls from clouds",
+      "hintFr": "Quand l'eau tombe des nuages"
+    },
+    {
+      "english": "Cloudy",
+      "french": "Nuageux",
+      "hintEn": "When the sky is covered with clouds",
+      "hintFr": "Quand le ciel est couvert de nuages"
+    },
+    {
+      "english": "Windy",
+      "french": "Venteux",
+      "hintEn": "When the air moves a lot",
+      "hintFr": "Quand l'air bouge beaucoup"
+    },
+    {
+      "english": "Stormy",
+      "french": "Orageux",
+      "hintEn": "With thunder and lightning",
+      "hintFr": "Avec du tonnerre et des éclairs"
+    },
+    {
+      "english": "Foggy",
+      "french": "Brumeux",
+      "hintEn": "When you can't see far because of mist",
+      "hintFr": "Quand on ne voit pas loin à cause de la brume"
+    },
+    {
+      "english": "Hot",
+      "french": "Chaud",
+      "hintEn": "High temperature, you sweat",
+      "hintFr": "Température élevée, tu transpires"
+    },
+    {
+      "english": "Cold",
+      "french": "Froid",
+      "hintEn": "Low temperature, you shiver",
+      "hintFr": "Température basse, tu frissonnes"
+    },
+    {
+      "english": "Thunder",
+      "french": "Tonnerre",
+      "hintEn": "A loud boom during a storm",
+      "hintFr": "Un grand bruit pendant un orage"
+    },
+    {
+      "english": "Lightning",
+      "french": "Éclair",
+      "hintEn": "A flash of light in the sky during a storm",
+      "hintFr": "Un flash de lumière dans le ciel pendant un orage"
+    },
+    {
+      "english": "Rainbow",
+      "french": "Arc-en-ciel",
+      "hintEn": "Colorful arc in the sky after rain",
+      "hintFr": "Arc coloré dans le ciel après la pluie"
+    },
+    {
+      "english": "Frost",
+      "french": "Gel",
+      "hintEn": "Ice crystals on the ground in the morning",
+      "hintFr": "Cristaux de glace au sol le matin"
+    }
+  ],
+  "La musique": [
+    {
+      "english": "Guitar",
+      "french": "Guitare",
+      "hintEn": "A string instrument you strum",
+      "hintFr": "Un instrument à cordes que l'on gratte"
+    },
+    {
+      "english": "Piano",
+      "french": "Piano",
+      "hintEn": "A large instrument with black and white keys",
+      "hintFr": "Un grand instrument avec des touches noires et blanches"
+    },
+    {
+      "english": "Drums",
+      "french": "Batterie",
+      "hintEn": "You hit them with sticks to make rhythm",
+      "hintFr": "On les frappe avec des baguettes pour faire du rythme"
+    },
+    {
+      "english": "Violin",
+      "french": "Violon",
+      "hintEn": "A string instrument played with a bow",
+      "hintFr": "Un instrument à cordes joué avec un archet"
+    },
+    {
+      "english": "Flute",
+      "french": "Flûte",
+      "hintEn": "A wind instrument you blow into sideways",
+      "hintFr": "Un instrument à vent dans lequel on souffle de côté"
+    },
+    {
+      "english": "Trumpet",
+      "french": "Trompette",
+      "hintEn": "A brass instrument with three buttons",
+      "hintFr": "Un instrument en cuivre avec trois boutons"
+    },
+    {
+      "english": "Singer",
+      "french": "Chanteur",
+      "hintEn": "A person who sings",
+      "hintFr": "Une personne qui chante"
+    },
+    {
+      "english": "Song",
+      "french": "Chanson",
+      "hintEn": "A piece of music with words",
+      "hintFr": "Un morceau de musique avec des paroles"
+    },
+    {
+      "english": "Concert",
+      "french": "Concert",
+      "hintEn": "A live music performance",
+      "hintFr": "Un spectacle de musique en direct"
+    },
+    {
+      "english": "Melody",
+      "french": "Mélodie",
+      "hintEn": "A sequence of musical notes",
+      "hintFr": "Une suite de notes musicales"
+    },
+    {
+      "english": "Rhythm",
+      "french": "Rythme",
+      "hintEn": "The beat pattern of music",
+      "hintFr": "Le motif de battement de la musique"
+    },
+    {
+      "english": "Microphone",
+      "french": "Microphone",
+      "hintEn": "A device to make your voice louder",
+      "hintFr": "Un appareil pour rendre ta voix plus forte"
+    }
+  ],
+  "Les insectes": [
+    {
+      "english": "Butterfly",
+      "french": "Papillon",
+      "hintEn": "A colorful insect with large wings",
+      "hintFr": "Un insecte coloré avec de grandes ailes"
+    },
+    {
+      "english": "Bee",
+      "french": "Abeille",
+      "hintEn": "It makes honey and can sting",
+      "hintFr": "Elle fait du miel et peut piquer"
+    },
+    {
+      "english": "Ant",
+      "french": "Fourmi",
+      "hintEn": "A tiny insect that lives in colonies",
+      "hintFr": "Un minuscule insecte qui vit en colonies"
+    },
+    {
+      "english": "Spider",
+      "french": "Araignée",
+      "hintEn": "It has eight legs and makes webs",
+      "hintFr": "Elle a huit pattes et fait des toiles"
+    },
+    {
+      "english": "Fly",
+      "french": "Mouche",
+      "hintEn": "A buzzing insect that lands on food",
+      "hintFr": "Un insecte bourdonnant qui se pose sur la nourriture"
+    },
+    {
+      "english": "Mosquito",
+      "french": "Moustique",
+      "hintEn": "It bites you and makes you itch",
+      "hintFr": "Il te pique et te fait gratter"
+    },
+    {
+      "english": "Ladybug",
+      "french": "Coccinelle",
+      "hintEn": "A small red insect with black spots",
+      "hintFr": "Un petit insecte rouge avec des points noirs"
+    },
+    {
+      "english": "Dragonfly",
+      "french": "Libellule",
+      "hintEn": "A long insect with transparent wings near water",
+      "hintFr": "Un long insecte aux ailes transparentes près de l'eau"
+    },
+    {
+      "english": "Beetle",
+      "french": "Scarabée",
+      "hintEn": "An insect with a hard shell",
+      "hintFr": "Un insecte avec une carapace dure"
+    },
+    {
+      "english": "Caterpillar",
+      "french": "Chenille",
+      "hintEn": "A larva that becomes a butterfly",
+      "hintFr": "Une larve qui devient un papillon"
+    },
+    {
+      "english": "Grasshopper",
+      "french": "Sauterelle",
+      "hintEn": "A green insect that jumps far",
+      "hintFr": "Un insecte vert qui saute loin"
+    },
+    {
+      "english": "Snail",
+      "french": "Escargot",
+      "hintEn": "A slow creature with a shell on its back",
+      "hintFr": "Une créature lente avec une coquille sur le dos"
+    }
+  ],
+  "Les boissons": [
+    {
+      "english": "Coffee",
+      "french": "Café",
+      "hintEn": "A hot brown drink that wakes you up",
+      "hintFr": "Une boisson chaude marron qui te réveille"
+    },
+    {
+      "english": "Tea",
+      "french": "Thé",
+      "hintEn": "A hot drink made from leaves",
+      "hintFr": "Une boisson chaude faite avec des feuilles"
+    },
+    {
+      "english": "Juice",
+      "french": "Jus",
+      "hintEn": "A drink made from squeezed fruit",
+      "hintFr": "Une boisson faite de fruits pressés"
+    },
+    {
+      "english": "Lemonade",
+      "french": "Limonade",
+      "hintEn": "A sweet drink made from lemons",
+      "hintFr": "Une boisson sucrée faite de citrons"
+    },
+    {
+      "english": "Hot chocolate",
+      "french": "Chocolat chaud",
+      "hintEn": "A warm sweet drink made from cocoa",
+      "hintFr": "Une boisson chaude sucrée faite de cacao"
+    },
+    {
+      "english": "Smoothie",
+      "french": "Smoothie",
+      "hintEn": "A thick drink made of blended fruit",
+      "hintFr": "Une boisson épaisse de fruits mixés"
+    },
+    {
+      "english": "Milkshake",
+      "french": "Milkshake",
+      "hintEn": "A cold drink made of milk and ice cream",
+      "hintFr": "Une boisson froide de lait et glace"
+    },
+    {
+      "english": "Sparkling water",
+      "french": "Eau gazeuse",
+      "hintEn": "Water with bubbles",
+      "hintFr": "De l'eau avec des bulles"
+    },
+    {
+      "english": "Soda",
+      "french": "Soda",
+      "hintEn": "A sweet fizzy drink",
+      "hintFr": "Une boisson sucrée gazeuse"
+    },
+    {
+      "english": "Syrup",
+      "french": "Sirop",
+      "hintEn": "A sweet thick liquid you mix with water",
+      "hintFr": "Un liquide sucré et épais qu'on mélange avec de l'eau"
+    },
+    {
+      "english": "Straw",
+      "french": "Paille",
+      "hintEn": "A tube you use to sip your drink",
+      "hintFr": "Un tube pour siroter ta boisson"
+    },
+    {
+      "english": "Ice cube",
+      "french": "Glaçon",
+      "hintEn": "A small block of frozen water",
+      "hintFr": "Un petit bloc d'eau gelée"
+    }
+  ],
+  "Les desserts": [
+    {
+      "english": "Ice cream",
+      "french": "Glace",
+      "hintEn": "A cold sweet treat, often in a cone",
+      "hintFr": "Une gourmandise froide, souvent dans un cornet"
+    },
+    {
+      "english": "Chocolate",
+      "french": "Chocolat",
+      "hintEn": "A sweet brown food made from cocoa",
+      "hintFr": "Un aliment sucré marron fait de cacao"
+    },
+    {
+      "english": "Cookie",
+      "french": "Biscuit",
+      "hintEn": "A small flat sweet baked treat",
+      "hintFr": "Un petit gâteau plat et sucré"
+    },
+    {
+      "english": "Pie",
+      "french": "Tarte",
+      "hintEn": "A baked dish with a crust and filling",
+      "hintFr": "Un plat cuit avec une croûte et une garniture"
+    },
+    {
+      "english": "Donut",
+      "french": "Beignet",
+      "hintEn": "A round fried cake with a hole",
+      "hintFr": "Un gâteau frit rond avec un trou"
+    },
+    {
+      "english": "Candy",
+      "french": "Bonbon",
+      "hintEn": "A small sweet treat",
+      "hintFr": "Une petite friandise sucrée"
+    },
+    {
+      "english": "Waffle",
+      "french": "Gaufre",
+      "hintEn": "A crispy cake with a grid pattern",
+      "hintFr": "Un gâteau croustillant avec un motif en grille"
+    },
+    {
+      "english": "Pancake",
+      "french": "Crêpe",
+      "hintEn": "A thin flat cake cooked in a pan",
+      "hintFr": "Un gâteau fin et plat cuit à la poêle"
+    },
+    {
+      "english": "Muffin",
+      "french": "Muffin",
+      "hintEn": "A small round sweet cake",
+      "hintFr": "Un petit gâteau rond et sucré"
+    },
+    {
+      "english": "Croissant",
+      "french": "Croissant",
+      "hintEn": "A flaky crescent-shaped pastry",
+      "hintFr": "Une viennoiserie feuilletée en forme de lune"
+    },
+    {
+      "english": "Pudding",
+      "french": "Pudding",
+      "hintEn": "A soft creamy dessert",
+      "hintFr": "Un dessert mou et crémeux"
+    },
+    {
+      "english": "Brownie",
+      "french": "Brownie",
+      "hintEn": "A rich chocolate square cake",
+      "hintFr": "Un gâteau carré au chocolat fondant"
+    }
+  ],
+  "Les ustensiles": [
+    {
+      "english": "Fork",
+      "french": "Fourchette",
+      "hintEn": "You use it to pick up food, has prongs",
+      "hintFr": "Tu l'utilises pour piquer la nourriture, avec des dents"
+    },
+    {
+      "english": "Knife",
+      "french": "Couteau",
+      "hintEn": "A tool with a sharp blade for cutting",
+      "hintFr": "Un outil avec une lame tranchante pour couper"
+    },
+    {
+      "english": "Spoon",
+      "french": "Cuillère",
+      "hintEn": "You use it to eat soup",
+      "hintFr": "Tu l'utilises pour manger de la soupe"
+    },
+    {
+      "english": "Plate",
+      "french": "Assiette",
+      "hintEn": "A flat dish to put food on",
+      "hintFr": "Un plat à surface plane pour poser la nourriture"
+    },
+    {
+      "english": "Glass",
+      "french": "Verre",
+      "hintEn": "A container for drinking",
+      "hintFr": "Un récipient pour boire"
+    },
+    {
+      "english": "Bowl",
+      "french": "Bol",
+      "hintEn": "A round deep dish for soup or cereal",
+      "hintFr": "Un plat rond et profond pour la soupe ou les céréales"
+    },
+    {
+      "english": "Pan",
+      "french": "Poêle",
+      "hintEn": "A flat metal dish for cooking on the stove",
+      "hintFr": "Un plat plat en métal pour cuisiner sur le feu"
+    },
+    {
+      "english": "Pot",
+      "french": "Casserole",
+      "hintEn": "A deep container for boiling water",
+      "hintFr": "Un récipient profond pour faire bouillir de l'eau"
+    },
+    {
+      "english": "Oven",
+      "french": "Four",
+      "hintEn": "A box that heats food inside",
+      "hintFr": "Une boîte qui chauffe la nourriture à l'intérieur"
+    },
+    {
+      "english": "Fridge",
+      "french": "Réfrigérateur",
+      "hintEn": "A cold machine to keep food fresh",
+      "hintFr": "Une machine froide pour garder la nourriture fraîche"
+    },
+    {
+      "english": "Cup",
+      "french": "Tasse",
+      "hintEn": "A small container for hot drinks",
+      "hintFr": "Un petit récipient pour les boissons chaudes"
+    },
+    {
+      "english": "Napkin",
+      "french": "Serviette",
+      "hintEn": "A piece of cloth or paper to wipe your mouth",
+      "hintFr": "Un morceau de tissu ou papier pour s'essuyer la bouche"
+    }
+  ],
+  "Les meubles": [
+    {
+      "english": "Sofa",
+      "french": "Canapé",
+      "hintEn": "A long comfortable seat for several people",
+      "hintFr": "Un long siège confortable pour plusieurs personnes"
+    },
+    {
+      "english": "Wardrobe",
+      "french": "Armoire",
+      "hintEn": "A tall cupboard for clothes",
+      "hintFr": "Un grand meuble pour les vêtements"
+    },
+    {
+      "english": "Shelf",
+      "french": "Étagère",
+      "hintEn": "A flat board to put things on",
+      "hintFr": "Une planche pour poser des choses"
+    },
+    {
+      "english": "Lamp",
+      "french": "Lampe",
+      "hintEn": "An object that gives light",
+      "hintFr": "Un objet qui donne de la lumière"
+    },
+    {
+      "english": "Mirror",
+      "french": "Miroir",
+      "hintEn": "You see your reflection in it",
+      "hintFr": "Tu vois ton reflet dedans"
+    },
+    {
+      "english": "Carpet",
+      "french": "Tapis",
+      "hintEn": "A soft covering on the floor",
+      "hintFr": "Un revêtement doux sur le sol"
+    },
+    {
+      "english": "Curtain",
+      "french": "Rideau",
+      "hintEn": "Fabric hanging in front of a window",
+      "hintFr": "Du tissu suspendu devant une fenêtre"
+    },
+    {
+      "english": "Drawer",
+      "french": "Tiroir",
+      "hintEn": "A box you pull out of a desk or table",
+      "hintFr": "Une boîte que tu tires d'un bureau ou d'une table"
+    },
+    {
+      "english": "Armchair",
+      "french": "Fauteuil",
+      "hintEn": "A comfortable chair with armrests",
+      "hintFr": "Une chaise confortable avec des accoudoirs"
+    },
+    {
+      "english": "Clock",
+      "french": "Horloge",
+      "hintEn": "An object that shows the time on a wall",
+      "hintFr": "Un objet qui montre l'heure sur un mur"
+    },
+    {
+      "english": "Cushion",
+      "french": "Coussin",
+      "hintEn": "A soft pad you put on a sofa",
+      "hintFr": "Un coussin doux que tu poses sur un canapé"
+    },
+    {
+      "english": "Vase",
+      "french": "Vase",
+      "hintEn": "A container for flowers",
+      "hintFr": "Un récipient pour les fleurs"
+    }
+  ],
+  "L'espace": [
+    {
+      "english": "Planet",
+      "french": "Planète",
+      "hintEn": "A large object orbiting a star",
+      "hintFr": "Un gros objet en orbite autour d'une étoile"
+    },
+    {
+      "english": "Rocket",
+      "french": "Fusée",
+      "hintEn": "A vehicle that goes to space",
+      "hintFr": "Un véhicule qui va dans l'espace"
+    },
+    {
+      "english": "Astronaut",
+      "french": "Astronaute",
+      "hintEn": "A person who travels to space",
+      "hintFr": "Une personne qui voyage dans l'espace"
+    },
+    {
+      "english": "Satellite",
+      "french": "Satellite",
+      "hintEn": "An object orbiting a planet",
+      "hintFr": "Un objet en orbite autour d'une planète"
+    },
+    {
+      "english": "Galaxy",
+      "french": "Galaxie",
+      "hintEn": "A huge group of stars in space",
+      "hintFr": "Un immense groupe d'étoiles dans l'espace"
+    },
+    {
+      "english": "Comet",
+      "french": "Comète",
+      "hintEn": "A ball of ice and dust with a bright tail",
+      "hintFr": "Une boule de glace et poussière avec une queue brillante"
+    },
+    {
+      "english": "Telescope",
+      "french": "Télescope",
+      "hintEn": "A tool to see far away objects in the sky",
+      "hintFr": "Un outil pour voir des objets lointains dans le ciel"
+    },
+    {
+      "english": "Gravity",
+      "french": "Gravité",
+      "hintEn": "The force that pulls things down",
+      "hintFr": "La force qui attire les choses vers le bas"
+    },
+    {
+      "english": "Spaceship",
+      "french": "Vaisseau spatial",
+      "hintEn": "A vehicle for traveling through space",
+      "hintFr": "Un véhicule pour voyager dans l'espace"
+    },
+    {
+      "english": "Universe",
+      "french": "Univers",
+      "hintEn": "Everything that exists in space",
+      "hintFr": "Tout ce qui existe dans l'espace"
+    },
+    {
+      "english": "Orbit",
+      "french": "Orbite",
+      "hintEn": "The path of a planet around a star",
+      "hintFr": "Le chemin d'une planète autour d'une étoile"
+    },
+    {
+      "english": "Alien",
+      "french": "Extraterrestre",
+      "hintEn": "A being from another planet",
+      "hintFr": "Un être venu d'une autre planète"
+    }
+  ],
+  "Les animaux marins": [
+    {
+      "english": "Whale",
+      "french": "Baleine",
+      "hintEn": "The largest animal in the ocean",
+      "hintFr": "Le plus grand animal de l'océan"
+    },
+    {
+      "english": "Dolphin",
+      "french": "Dauphin",
+      "hintEn": "A smart ocean animal that jumps",
+      "hintFr": "Un animal marin intelligent qui saute"
+    },
+    {
+      "english": "Shark",
+      "french": "Requin",
+      "hintEn": "A large fish with sharp teeth",
+      "hintFr": "Un gros poisson avec des dents pointues"
+    },
+    {
+      "english": "Octopus",
+      "french": "Pieuvre",
+      "hintEn": "A sea creature with eight arms",
+      "hintFr": "Une créature marine avec huit bras"
+    },
+    {
+      "english": "Jellyfish",
+      "french": "Méduse",
+      "hintEn": "A transparent sea creature that stings",
+      "hintFr": "Une créature marine transparente qui pique"
+    },
+    {
+      "english": "Crab",
+      "french": "Crabe",
+      "hintEn": "A sea creature with claws that walks sideways",
+      "hintFr": "Une créature marine avec des pinces qui marche de côté"
+    },
+    {
+      "english": "Turtle",
+      "french": "Tortue",
+      "hintEn": "A slow animal with a shell",
+      "hintFr": "Un animal lent avec une carapace"
+    },
+    {
+      "english": "Seahorse",
+      "french": "Hippocampe",
+      "hintEn": "A tiny fish shaped like a horse",
+      "hintFr": "Un petit poisson en forme de cheval"
+    },
+    {
+      "english": "Starfish",
+      "french": "Étoile de mer",
+      "hintEn": "A star-shaped sea creature",
+      "hintFr": "Une créature marine en forme d'étoile"
+    },
+    {
+      "english": "Lobster",
+      "french": "Homard",
+      "hintEn": "A large sea creature with big claws",
+      "hintFr": "Une grande créature marine avec de grosses pinces"
+    },
+    {
+      "english": "Seal",
+      "french": "Phoque",
+      "hintEn": "A marine mammal with flippers",
+      "hintFr": "Un mammifère marin avec des nageoires"
+    },
+    {
+      "english": "Coral",
+      "french": "Corail",
+      "hintEn": "Colorful structures on the ocean floor",
+      "hintFr": "Des structures colorées au fond de l'océan"
+    }
+  ],
+  "Les oiseaux": [
+    {
+      "english": "Eagle",
+      "french": "Aigle",
+      "hintEn": "A large bird of prey with sharp vision",
+      "hintFr": "Un grand oiseau de proie à la vue perçante"
+    },
+    {
+      "english": "Parrot",
+      "french": "Perroquet",
+      "hintEn": "A colorful bird that can talk",
+      "hintFr": "Un oiseau coloré qui peut parler"
+    },
+    {
+      "english": "Owl",
+      "french": "Hibou",
+      "hintEn": "A bird that hunts at night",
+      "hintFr": "Un oiseau qui chasse la nuit"
+    },
+    {
+      "english": "Swan",
+      "french": "Cygne",
+      "hintEn": "A big white bird with a long neck",
+      "hintFr": "Un grand oiseau blanc avec un long cou"
+    },
+    {
+      "english": "Penguin",
+      "french": "Pingouin",
+      "hintEn": "A black and white bird that can't fly",
+      "hintFr": "Un oiseau noir et blanc qui ne peut pas voler"
+    },
+    {
+      "english": "Peacock",
+      "french": "Paon",
+      "hintEn": "A bird with beautiful colorful tail feathers",
+      "hintFr": "Un oiseau avec de belles plumes colorées"
+    },
+    {
+      "english": "Sparrow",
+      "french": "Moineau",
+      "hintEn": "A small common brown bird",
+      "hintFr": "Un petit oiseau brun commun"
+    },
+    {
+      "english": "Crow",
+      "french": "Corbeau",
+      "hintEn": "A large black bird that is very smart",
+      "hintFr": "Un grand oiseau noir très intelligent"
+    },
+    {
+      "english": "Flamingo",
+      "french": "Flamant rose",
+      "hintEn": "A tall pink bird with long legs",
+      "hintFr": "Un grand oiseau rose avec de longues pattes"
+    },
+    {
+      "english": "Pigeon",
+      "french": "Pigeon",
+      "hintEn": "A grey bird common in cities",
+      "hintFr": "Un oiseau gris commun dans les villes"
+    },
+    {
+      "english": "Stork",
+      "french": "Cigogne",
+      "hintEn": "A big white bird with a long beak",
+      "hintFr": "Un grand oiseau blanc avec un long bec"
+    },
+    {
+      "english": "Robin",
+      "french": "Rouge-gorge",
+      "hintEn": "A small bird with a red chest",
+      "hintFr": "Un petit oiseau avec la poitrine rouge"
+    }
+  ],
+  "La plage": [
+    {
+      "english": "Sand",
+      "french": "Sable",
+      "hintEn": "Tiny grains covering the beach",
+      "hintFr": "De petits grains qui couvrent la plage"
+    },
+    {
+      "english": "Wave",
+      "french": "Vague",
+      "hintEn": "Moving water that crashes on the shore",
+      "hintFr": "De l'eau qui bouge et s'écrase sur le rivage"
+    },
+    {
+      "english": "Sunscreen",
+      "french": "Crème solaire",
+      "hintEn": "A cream to protect skin from the sun",
+      "hintFr": "Une crème pour protéger la peau du soleil"
+    },
+    {
+      "english": "Umbrella",
+      "french": "Parasol",
+      "hintEn": "Provides shade from the sun on the beach",
+      "hintFr": "Donne de l'ombre sur la plage"
+    },
+    {
+      "english": "Swimsuit",
+      "french": "Maillot de bain",
+      "hintEn": "Clothing for swimming",
+      "hintFr": "Vêtement pour nager"
+    },
+    {
+      "english": "Towel",
+      "french": "Serviette",
+      "hintEn": "A cloth to dry yourself",
+      "hintFr": "Un tissu pour se sécher"
+    },
+    {
+      "english": "Shell",
+      "french": "Coquillage",
+      "hintEn": "A hard cover from a sea creature",
+      "hintFr": "Une couverture dure d'une créature marine"
+    },
+    {
+      "english": "Surfboard",
+      "french": "Planche de surf",
+      "hintEn": "A board to ride waves",
+      "hintFr": "Une planche pour glisser sur les vagues"
+    },
+    {
+      "english": "Sandcastle",
+      "french": "Château de sable",
+      "hintEn": "A castle made of wet sand",
+      "hintFr": "Un château fait de sable mouillé"
+    },
+    {
+      "english": "Seagull",
+      "french": "Mouette",
+      "hintEn": "A white bird at the beach",
+      "hintFr": "Un oiseau blanc à la plage"
+    },
+    {
+      "english": "Sunset",
+      "french": "Coucher de soleil",
+      "hintEn": "When the sun goes down in the evening",
+      "hintFr": "Quand le soleil descend le soir"
+    },
+    {
+      "english": "Lifeguard",
+      "french": "Maître-nageur",
+      "hintEn": "A person who watches over swimmers",
+      "hintFr": "Une personne qui surveille les nageurs"
+    }
+  ],
+  "Les jouets": [
+    {
+      "english": "Doll",
+      "french": "Poupée",
+      "hintEn": "A toy that looks like a small person",
+      "hintFr": "Un jouet qui ressemble à une petite personne"
+    },
+    {
+      "english": "Puzzle",
+      "french": "Puzzle",
+      "hintEn": "Pieces you put together to make a picture",
+      "hintFr": "Des pièces à assembler pour faire une image"
+    },
+    {
+      "english": "Ball",
+      "french": "Ballon",
+      "hintEn": "A round object you throw or kick",
+      "hintFr": "Un objet rond que tu lances ou que tu frappes"
+    },
+    {
+      "english": "Teddy bear",
+      "french": "Nounours",
+      "hintEn": "A soft stuffed toy bear",
+      "hintFr": "Un ours en peluche tout doux"
+    },
+    {
+      "english": "Kite",
+      "french": "Cerf-volant",
+      "hintEn": "A toy that flies in the wind on a string",
+      "hintFr": "Un jouet qui vole dans le vent au bout d'un fil"
+    },
+    {
+      "english": "Robot",
+      "french": "Robot",
+      "hintEn": "A mechanical toy that moves",
+      "hintFr": "Un jouet mécanique qui bouge"
+    },
+    {
+      "english": "Blocks",
+      "french": "Cubes",
+      "hintEn": "You stack them to build things",
+      "hintFr": "Tu les empiles pour construire des choses"
+    },
+    {
+      "english": "Board game",
+      "french": "Jeu de société",
+      "hintEn": "A game played on a board with pieces",
+      "hintFr": "Un jeu avec un plateau et des pions"
+    },
+    {
+      "english": "Marble",
+      "french": "Bille",
+      "hintEn": "A small glass ball",
+      "hintFr": "Une petite boule en verre"
+    },
+    {
+      "english": "Balloon",
+      "french": "Ballon de baudruche",
+      "hintEn": "A rubber bag you blow up with air",
+      "hintFr": "Un sac en caoutchouc que tu gonfles"
+    },
+    {
+      "english": "Slide",
+      "french": "Toboggan",
+      "hintEn": "You go down it at the playground",
+      "hintFr": "Tu descends dessus au parc"
+    },
+    {
+      "english": "Swing",
+      "french": "Balançoire",
+      "hintEn": "A seat hanging from chains that goes back and forth",
+      "hintFr": "Un siège suspendu à des chaînes qui va et vient"
+    }
+  ],
+  "Le restaurant": [
+    {
+      "english": "Menu",
+      "french": "Menu",
+      "hintEn": "A list of food you can order",
+      "hintFr": "Une liste de plats que tu peux commander"
+    },
+    {
+      "english": "Bill",
+      "french": "Addition",
+      "hintEn": "The paper that shows what you must pay",
+      "hintFr": "Le papier qui montre ce que tu dois payer"
+    },
+    {
+      "english": "Tip",
+      "french": "Pourboire",
+      "hintEn": "Extra money you give to the waiter",
+      "hintFr": "De l'argent en plus que tu donnes au serveur"
+    },
+    {
+      "english": "Reservation",
+      "french": "Réservation",
+      "hintEn": "Booking a table in advance",
+      "hintFr": "Réserver une table à l'avance"
+    },
+    {
+      "english": "Appetizer",
+      "french": "Entrée",
+      "hintEn": "A small dish before the main course",
+      "hintFr": "Un petit plat avant le plat principal"
+    },
+    {
+      "english": "Main course",
+      "french": "Plat principal",
+      "hintEn": "The biggest dish of a meal",
+      "hintFr": "Le plus grand plat d'un repas"
+    },
+    {
+      "english": "Chef",
+      "french": "Chef cuisinier",
+      "hintEn": "The person who cooks in the kitchen",
+      "hintFr": "La personne qui cuisine en cuisine"
+    },
+    {
+      "english": "Order",
+      "french": "Commande",
+      "hintEn": "What you ask for at a restaurant",
+      "hintFr": "Ce que tu demandes au restaurant"
+    },
+    {
+      "english": "Recipe",
+      "french": "Recette",
+      "hintEn": "Instructions to cook a dish",
+      "hintFr": "Les instructions pour préparer un plat"
+    },
+    {
+      "english": "Dish",
+      "french": "Plat",
+      "hintEn": "A particular type of food served",
+      "hintFr": "Un type de nourriture servi"
+    },
+    {
+      "english": "Tablecloth",
+      "french": "Nappe",
+      "hintEn": "A cloth covering the table",
+      "hintFr": "Un tissu qui couvre la table"
+    },
+    {
+      "english": "Candle",
+      "french": "Bougie",
+      "hintEn": "A stick of wax with a flame",
+      "hintFr": "Un bâton de cire avec une flamme"
+    }
+  ],
+  "Le camping": [
+    {
+      "english": "Tent",
+      "french": "Tente",
+      "hintEn": "A portable shelter made of fabric",
+      "hintFr": "Un abri portable en tissu"
+    },
+    {
+      "english": "Sleeping bag",
+      "french": "Sac de couchage",
+      "hintEn": "A warm bag to sleep in",
+      "hintFr": "Un sac chaud pour dormir"
+    },
+    {
+      "english": "Campfire",
+      "french": "Feu de camp",
+      "hintEn": "A fire made outside for warmth",
+      "hintFr": "Un feu fait dehors pour se réchauffer"
+    },
+    {
+      "english": "Flashlight",
+      "french": "Lampe torche",
+      "hintEn": "A small portable light",
+      "hintFr": "Une petite lumière portable"
+    },
+    {
+      "english": "Compass",
+      "french": "Boussole",
+      "hintEn": "A tool that shows north",
+      "hintFr": "Un outil qui montre le nord"
+    },
+    {
+      "english": "Map",
+      "french": "Carte",
+      "hintEn": "A drawing of an area",
+      "hintFr": "Un dessin d'une zone"
+    },
+    {
+      "english": "Backpack",
+      "french": "Sac à dos",
+      "hintEn": "A bag you carry on your back",
+      "hintFr": "Un sac que tu portes sur le dos"
+    },
+    {
+      "english": "Hiking",
+      "french": "Randonnée",
+      "hintEn": "Walking in nature for a long time",
+      "hintFr": "Marcher longtemps dans la nature"
+    },
+    {
+      "english": "Trail",
+      "french": "Sentier",
+      "hintEn": "A path through the forest",
+      "hintFr": "Un chemin à travers la forêt"
+    },
+    {
+      "english": "Cabin",
+      "french": "Cabane",
+      "hintEn": "A small wooden house in the woods",
+      "hintFr": "Une petite maison en bois dans les bois"
+    },
+    {
+      "english": "Binoculars",
+      "french": "Jumelles",
+      "hintEn": "A tool to see things far away",
+      "hintFr": "Un outil pour voir les choses au loin"
+    },
+    {
+      "english": "Firewood",
+      "french": "Bois de chauffage",
+      "hintEn": "Wood used to make a fire",
+      "hintFr": "Du bois utilisé pour faire un feu"
+    }
+  ],
+  "Les voyages": [
+    {
+      "english": "Suitcase",
+      "french": "Valise",
+      "hintEn": "A large bag for travel",
+      "hintFr": "Un grand sac pour voyager"
+    },
+    {
+      "english": "Hotel",
+      "french": "Hôtel",
+      "hintEn": "A place to sleep when traveling",
+      "hintFr": "Un endroit pour dormir quand on voyage"
+    },
+    {
+      "english": "Tourist",
+      "french": "Touriste",
+      "hintEn": "A person visiting a place",
+      "hintFr": "Une personne qui visite un endroit"
+    },
+    {
+      "english": "Camera",
+      "french": "Appareil photo",
+      "hintEn": "A device to take pictures",
+      "hintFr": "Un appareil pour prendre des photos"
+    },
+    {
+      "english": "Souvenir",
+      "french": "Souvenir",
+      "hintEn": "An object to remember a trip",
+      "hintFr": "Un objet pour se rappeler d'un voyage"
+    },
+    {
+      "english": "Passport",
+      "french": "Passeport",
+      "hintEn": "An official document for traveling abroad",
+      "hintFr": "Un document officiel pour voyager à l'étranger"
+    },
+    {
+      "english": "Postcard",
+      "french": "Carte postale",
+      "hintEn": "A card with a picture you send from vacation",
+      "hintFr": "Une carte avec une image que tu envoies en vacances"
+    },
+    {
+      "english": "Luggage",
+      "french": "Bagages",
+      "hintEn": "All the bags you take on a trip",
+      "hintFr": "Tous les sacs que tu prends en voyage"
+    },
+    {
+      "english": "Destination",
+      "french": "Destination",
+      "hintEn": "The place you are going to",
+      "hintFr": "L'endroit où tu vas"
+    },
+    {
+      "english": "Vacation",
+      "french": "Vacances",
+      "hintEn": "Time off from school or work",
+      "hintFr": "Du temps libre sans école ni travail"
+    },
+    {
+      "english": "Guide",
+      "french": "Guide",
+      "hintEn": "A person who shows you around",
+      "hintFr": "Une personne qui te fait visiter"
+    },
+    {
+      "english": "Adventure",
+      "french": "Aventure",
+      "hintEn": "An exciting and unusual experience",
+      "hintFr": "Une expérience excitante et inhabituelle"
+    }
+  ],
+  "La fête": [
+    {
+      "english": "Birthday",
+      "french": "Anniversaire",
+      "hintEn": "The day you were born, celebrated each year",
+      "hintFr": "Le jour de ta naissance, fêté chaque année"
+    },
+    {
+      "english": "Present",
+      "french": "Cadeau",
+      "hintEn": "Something you give to someone",
+      "hintFr": "Quelque chose que tu donnes à quelqu'un"
+    },
+    {
+      "english": "Invitation",
+      "french": "Invitation",
+      "hintEn": "A card asking someone to come",
+      "hintFr": "Une carte qui demande à quelqu'un de venir"
+    },
+    {
+      "english": "Guest",
+      "french": "Invité",
+      "hintEn": "A person who comes to your party",
+      "hintFr": "Une personne qui vient à ta fête"
+    },
+    {
+      "english": "Dance",
+      "french": "Danse",
+      "hintEn": "Moving to music at a party",
+      "hintFr": "Bouger sur la musique à une fête"
+    },
+    {
+      "english": "Fireworks",
+      "french": "Feux d'artifice",
+      "hintEn": "Colorful explosions in the sky",
+      "hintFr": "Des explosions colorées dans le ciel"
+    },
+    {
+      "english": "Costume",
+      "french": "Déguisement",
+      "hintEn": "Special clothes to look like someone else",
+      "hintFr": "Des vêtements spéciaux pour ressembler à quelqu'un d'autre"
+    },
+    {
+      "english": "Confetti",
+      "french": "Confettis",
+      "hintEn": "Small pieces of colored paper thrown in the air",
+      "hintFr": "Petits morceaux de papier coloré lancés en l'air"
+    },
+    {
+      "english": "Surprise",
+      "french": "Surprise",
+      "hintEn": "Something unexpected and nice",
+      "hintFr": "Quelque chose d'inattendu et d'agréable"
+    },
+    {
+      "english": "Celebration",
+      "french": "Célébration",
+      "hintEn": "A happy event with people together",
+      "hintFr": "Un événement joyeux avec des gens réunis"
+    },
+    {
+      "english": "Decoration",
+      "french": "Décoration",
+      "hintEn": "Things you use to make a place pretty",
+      "hintFr": "Des choses pour rendre un endroit joli"
+    },
+    {
+      "english": "Gift wrap",
+      "french": "Papier cadeau",
+      "hintEn": "Paper used to wrap presents",
+      "hintFr": "Du papier pour emballer les cadeaux"
+    }
+  ],
+  "L'informatique": [
+    {
+      "english": "Computer",
+      "french": "Ordinateur",
+      "hintEn": "A machine for working and browsing",
+      "hintFr": "Une machine pour travailler et naviguer"
+    },
+    {
+      "english": "Keyboard",
+      "french": "Clavier",
+      "hintEn": "You type on it with your fingers",
+      "hintFr": "Tu tapes dessus avec tes doigts"
+    },
+    {
+      "english": "Screen",
+      "french": "Écran",
+      "hintEn": "The part you look at on a computer",
+      "hintFr": "La partie que tu regardes sur un ordinateur"
+    },
+    {
+      "english": "Internet",
+      "french": "Internet",
+      "hintEn": "A global network connecting computers",
+      "hintFr": "Un réseau mondial reliant les ordinateurs"
+    },
+    {
+      "english": "Website",
+      "french": "Site web",
+      "hintEn": "A page on the internet",
+      "hintFr": "Une page sur internet"
+    },
+    {
+      "english": "Password",
+      "french": "Mot de passe",
+      "hintEn": "A secret code to access your account",
+      "hintFr": "Un code secret pour accéder à ton compte"
+    },
+    {
+      "english": "Email",
+      "french": "E-mail",
+      "hintEn": "An electronic message",
+      "hintFr": "Un message électronique"
+    },
+    {
+      "english": "File",
+      "french": "Fichier",
+      "hintEn": "A document saved on a computer",
+      "hintFr": "Un document enregistré sur un ordinateur"
+    },
+    {
+      "english": "Printer",
+      "french": "Imprimante",
+      "hintEn": "A machine that puts text on paper",
+      "hintFr": "Une machine qui met du texte sur du papier"
+    },
+    {
+      "english": "Download",
+      "french": "Téléchargement",
+      "hintEn": "Getting a file from the internet",
+      "hintFr": "Récupérer un fichier depuis internet"
+    },
+    {
+      "english": "App",
+      "french": "Application",
+      "hintEn": "A program on your phone or computer",
+      "hintFr": "Un programme sur ton téléphone ou ordinateur"
+    },
+    {
+      "english": "Battery",
+      "french": "Batterie",
+      "hintEn": "What gives energy to your phone",
+      "hintFr": "Ce qui donne de l'énergie à ton téléphone"
+    }
+  ],
+  "Les formes": [
+    {
+      "english": "Circle",
+      "french": "Cercle",
+      "hintEn": "A perfectly round shape",
+      "hintFr": "Une forme parfaitement ronde"
+    },
+    {
+      "english": "Square",
+      "french": "Carré",
+      "hintEn": "A shape with four equal sides",
+      "hintFr": "Une forme avec quatre côtés égaux"
+    },
+    {
+      "english": "Triangle",
+      "french": "Triangle",
+      "hintEn": "A shape with three sides",
+      "hintFr": "Une forme avec trois côtés"
+    },
+    {
+      "english": "Rectangle",
+      "french": "Rectangle",
+      "hintEn": "A shape with four sides, longer than wide",
+      "hintFr": "Une forme à quatre côtés, plus long que large"
+    },
+    {
+      "english": "Star",
+      "french": "Étoile",
+      "hintEn": "A shape with pointed tips",
+      "hintFr": "Une forme avec des pointes"
+    },
+    {
+      "english": "Diamond",
+      "french": "Losange",
+      "hintEn": "A shape like a tilted square",
+      "hintFr": "Une forme comme un carré penché"
+    },
+    {
+      "english": "Heart",
+      "french": "Cœur",
+      "hintEn": "A shape that represents love",
+      "hintFr": "Une forme qui représente l'amour"
+    },
+    {
+      "english": "Oval",
+      "french": "Ovale",
+      "hintEn": "A shape like a stretched circle",
+      "hintFr": "Une forme comme un cercle étiré"
+    },
+    {
+      "english": "Cube",
+      "french": "Cube",
+      "hintEn": "A 3D shape like a box with equal sides",
+      "hintFr": "Une forme 3D comme une boîte à côtés égaux"
+    },
+    {
+      "english": "Sphere",
+      "french": "Sphère",
+      "hintEn": "A 3D shape like a ball",
+      "hintFr": "Une forme 3D comme une balle"
+    },
+    {
+      "english": "Pyramid",
+      "french": "Pyramide",
+      "hintEn": "A 3D shape with a square base and triangular sides",
+      "hintFr": "Une forme 3D avec une base carrée et des côtés triangulaires"
+    },
+    {
+      "english": "Arrow",
+      "french": "Flèche",
+      "hintEn": "A shape that points in a direction",
+      "hintFr": "Une forme qui pointe dans une direction"
+    }
+  ],
+  "Tourisme (Delilah)": [
+    {
+      "english": "Sustainable",
+      "french": "Durable",
+      "hintEn": "That can be maintained without depleting natural resources",
+      "hintFr": "Qui peut se maintenir sans épuiser les ressources naturelles"
+    },
+    {
+      "english": "Unsustainable",
+      "french": "Non durable",
+      "hintEn": "That cannot continue without causing damage to the environment",
+      "hintFr": "Qui ne peut pas continuer sans causer de dommages"
+    },
+    {
+      "english": "Environmental",
+      "french": "Environnemental",
+      "hintEn": "Related to the environment and nature",
+      "hintFr": "Relatif à l'environnement et à la nature"
+    },
+    {
+      "english": "Counterproductive",
+      "french": "Contre-productif",
+      "hintEn": "That produces the opposite effect to the one desired",
+      "hintFr": "Qui produit l'effet contraire à celui voulu"
+    },
+    {
+      "english": "Precarious",
+      "french": "Précaire",
+      "hintEn": "Unstable, insecure, that can easily disappear",
+      "hintFr": "Instable, incertain, qui peut disparaître facilement"
+    },
+    {
+      "english": "Temporary",
+      "french": "Temporaire",
+      "hintEn": "That lasts a limited time, not permanent",
+      "hintFr": "Qui dure un temps limité, pas permanent"
+    },
+    {
+      "english": "Progressive",
+      "french": "Progressif",
+      "hintEn": "That advances or increases little by little",
+      "hintFr": "Qui avance ou augmente progressivement"
+    },
+    {
+      "english": "Massive",
+      "french": "Massif",
+      "hintEn": "In large quantities or proportions",
+      "hintFr": "En grande quantité ou proportion"
+    },
+    {
+      "english": "Inevitable",
+      "french": "Inévitable",
+      "hintEn": "That cannot be avoided or prevented",
+      "hintFr": "Qu'on ne peut pas éviter"
+    },
+    {
+      "english": "Saturated",
+      "french": "Saturé",
+      "hintEn": "Full to the maximum, with no room for more",
+      "hintFr": "Rempli au maximum, sans place pour plus"
+    },
+    {
+      "english": "Indomitable",
+      "french": "Indomptable",
+      "hintEn": "That cannot be controlled or tamed",
+      "hintFr": "Qu'on ne peut pas contrôler ni maîtriser"
+    },
+    {
+      "english": "Satirical",
+      "french": "Satirique",
+      "hintEn": "That uses humour to criticise something",
+      "hintFr": "Qui utilise l'humour pour critiquer quelque chose"
+    },
+    {
+      "english": "Aggressive",
+      "french": "Agressif",
+      "hintEn": "That acts with hostility or violence",
+      "hintFr": "Qui agit avec hostilité ou violence"
+    },
+    {
+      "english": "Unusual",
+      "french": "Insolite",
+      "hintEn": "Not usual, strange, surprising",
+      "hintFr": "Peu habituel, étrange, surprenant"
+    },
+    {
+      "english": "Chronic",
+      "french": "Chronique",
+      "hintEn": "That lasts a long time or is recurring",
+      "hintFr": "Qui dure longtemps ou revient régulièrement"
+    },
+    {
+      "english": "Doubtful",
+      "french": "Douteux",
+      "hintEn": "That raises doubts, unreliable or suspicious",
+      "hintFr": "Qui génère des doutes, peu fiable ou suspect"
+    },
+    {
+      "english": "Packed",
+      "french": "Bondé",
+      "hintEn": "Completely full of people or things",
+      "hintFr": "Complètement plein de gens ou de choses"
+    },
+    {
+      "english": "Overwhelmed",
+      "french": "Accablé",
+      "hintEn": "Weighed down by too much work or too many problems",
+      "hintFr": "Écrasé par trop de travail ou de problèmes"
+    },
+    {
+      "english": "Deep",
+      "french": "Profond",
+      "hintEn": "That has a lot of depth or importance",
+      "hintFr": "Qui a beaucoup de profondeur ou d'importance"
+    },
+    {
+      "english": "Uncontrolled",
+      "french": "Incontrôlé",
+      "hintEn": "That has no control or limits",
+      "hintFr": "Qui n'a pas de contrôle ni de limites"
+    },
+    {
+      "english": "Rural",
+      "french": "Rural",
+      "hintEn": "Of the countryside, far from the city",
+      "hintFr": "De la campagne, loin de la ville"
+    },
+    {
+      "english": "Cultural",
+      "french": "Culturel",
+      "hintEn": "Related to culture, the arts and traditions",
+      "hintFr": "Relatif à la culture, aux arts et aux traditions"
+    },
+    {
+      "english": "Domestic",
+      "french": "Domestique",
+      "hintEn": "Related to the home or the interior of a country",
+      "hintFr": "Lié à la maison ou à l'intérieur d'un pays"
+    },
+    {
+      "english": "Iberian",
+      "french": "Ibérique",
+      "hintEn": "Related to the Iberian Peninsula, Spain and Portugal",
+      "hintFr": "Relatif à la péninsule ibérique, l'Espagne et le Portugal"
+    },
+    {
+      "english": "To change",
+      "french": "Changer",
+      "hintEn": "To make something different",
+      "hintFr": "Faire qu'une chose soit différente"
+    },
+    {
+      "english": "To increase",
+      "french": "Augmenter",
+      "hintEn": "To make something bigger or more numerous",
+      "hintFr": "Faire qu'une chose soit plus grande ou plus nombreuse"
+    },
+    {
+      "english": "To save",
+      "french": "Sauver",
+      "hintEn": "To rescue someone or something from danger",
+      "hintFr": "Secourir quelqu'un ou quelque chose d'un danger"
+    },
+    {
+      "english": "To bet on",
+      "french": "Miser sur",
+      "hintEn": "To choose to support something with confidence and determination",
+      "hintFr": "Choisir de soutenir quelque chose avec confiance"
+    },
+    {
+      "english": "To diversify",
+      "french": "Diversifier",
+      "hintEn": "To make more varied, not depend on a single thing",
+      "hintFr": "Rendre plus varié, ne pas dépendre d'une seule chose"
+    },
+    {
+      "english": "To raise awareness",
+      "french": "Sensibiliser",
+      "hintEn": "To make someone aware of a problem",
+      "hintFr": "Faire prendre conscience d'un problème à quelqu'un"
+    },
+    {
+      "english": "To highlight",
+      "french": "Mettre en évidence",
+      "hintEn": "To show something clearly, to make it evident",
+      "hintFr": "Montrer quelque chose clairement"
+    },
+    {
+      "english": "To develop",
+      "french": "Se développer",
+      "hintEn": "To grow, evolve, progress",
+      "hintFr": "Grandir, évoluer, progresser"
+    },
+    {
+      "english": "To adapt",
+      "french": "S'adapter",
+      "hintEn": "To adjust to a new situation or environment",
+      "hintFr": "S'ajuster à une nouvelle situation ou un nouvel environnement"
+    },
+    {
+      "english": "To put an end to",
+      "french": "Mettre fin à",
+      "hintEn": "To stop something definitively",
+      "hintFr": "Arrêter quelque chose définitivement"
+    },
+    {
+      "english": "To alleviate",
+      "french": "Atténuer",
+      "hintEn": "To reduce the negative effects of something without eliminating them entirely",
+      "hintFr": "Réduire les effets négatifs de quelque chose sans les supprimer totalement"
+    },
+    {
+      "english": "To subdue",
+      "french": "Soumettre",
+      "hintEn": "To force someone to give in or submit",
+      "hintFr": "Obliger quelqu'un à céder ou se soumettre"
+    },
+    {
+      "english": "To surrender",
+      "french": "Capituler",
+      "hintEn": "To stop fighting and accept defeat",
+      "hintFr": "Arrêter de se battre et accepter la défaite"
+    },
+    {
+      "english": "To fill up",
+      "french": "Se remplir",
+      "hintEn": "When something becomes occupied or filled completely",
+      "hintFr": "Quand quelque chose se remplit complètement"
+    },
+    {
+      "english": "To corner",
+      "french": "Acculer",
+      "hintEn": "To put someone in a situation with no way out",
+      "hintFr": "Mettre quelqu'un dans une situation sans issue"
+    },
+    {
+      "english": "To spring up",
+      "french": "Surgir",
+      "hintEn": "To appear suddenly, to emerge",
+      "hintFr": "Apparaître soudainement, émerger"
+    },
+    {
+      "english": "To become",
+      "french": "Devenir",
+      "hintEn": "To turn into something different from what you were before",
+      "hintFr": "Passer à être quelque chose de différent"
+    },
+    {
+      "english": "To despise",
+      "french": "Mépriser",
+      "hintEn": "To not value someone or something, to treat with contempt",
+      "hintFr": "Ne pas accorder de valeur à quelqu'un, le traiter avec mépris"
+    },
+    {
+      "english": "To warn",
+      "french": "Avertir",
+      "hintEn": "To alert about a danger or problem",
+      "hintFr": "Prévenir d'un danger ou d'un problème"
+    },
+    {
+      "english": "To observe",
+      "french": "Constater",
+      "hintEn": "To verify or confirm that something is true",
+      "hintFr": "Vérifier ou confirmer que quelque chose est vrai"
+    },
+    {
+      "english": "To cling to",
+      "french": "S'accrocher à",
+      "hintEn": "To hold on tightly to something, to not want to let go",
+      "hintFr": "Se tenir fermement à quelque chose, ne pas vouloir lâcher"
+    },
+    {
+      "english": "To reject",
+      "french": "Rejeter",
+      "hintEn": "To not accept something or someone",
+      "hintFr": "Ne pas accepter quelque chose ou quelqu'un"
+    },
+    {
+      "english": "To refuse to",
+      "french": "Refuser de",
+      "hintEn": "To say no to doing something",
+      "hintFr": "Dire non à faire quelque chose"
+    },
+    {
+      "english": "To set off alarms",
+      "french": "Déclencher les alarmes",
+      "hintEn": "To cause worry or a general alert",
+      "hintFr": "Provoquer une inquiétude ou une alerte générale"
+    },
+    {
+      "english": "To bother",
+      "french": "Gêner",
+      "hintEn": "To cause discomfort or disturbance to someone",
+      "hintFr": "Causer une gêne ou une perturbation à quelqu'un"
+    },
+    {
+      "english": "To complain",
+      "french": "Se plaindre",
+      "hintEn": "To express discontent or dissatisfaction",
+      "hintFr": "Exprimer son mécontentement"
+    },
+    {
+      "english": "To sell",
+      "french": "Vendre",
+      "hintEn": "To give something in exchange for money",
+      "hintFr": "Donner quelque chose en échange d'argent"
+    },
+    {
+      "english": "To remember",
+      "french": "Se souvenir de",
+      "hintEn": "To bring something from the past back to mind",
+      "hintFr": "Ramener à la mémoire quelque chose du passé"
+    },
+    {
+      "english": "To produce",
+      "french": "Produire",
+      "hintEn": "To create or manufacture something",
+      "hintFr": "Créer ou fabriquer quelque chose"
+    },
+    {
+      "english": "To generate",
+      "french": "Générer",
+      "hintEn": "To create or cause something as a result",
+      "hintFr": "Créer ou provoquer quelque chose comme résultat"
+    },
+    {
+      "english": "To attract",
+      "french": "Attirer",
+      "hintEn": "To make something or someone come towards you",
+      "hintFr": "Faire venir quelque chose ou quelqu'un vers soi"
+    },
+    {
+      "english": "To pollute",
+      "french": "Polluer",
+      "hintEn": "To dirty or poison the environment",
+      "hintFr": "Salir ou empoisonner l'environnement"
+    },
+    {
+      "english": "To recycle",
+      "french": "Recycler",
+      "hintEn": "To transform waste in order to reuse it",
+      "hintFr": "Transformer des déchets pour les réutiliser"
+    },
+    {
+      "english": "To ban",
+      "french": "Interdire",
+      "hintEn": "To not allow something by a rule or law",
+      "hintFr": "Ne pas autoriser quelque chose par une règle ou une loi"
+    },
+    {
+      "english": "To try",
+      "french": "Essayer",
+      "hintEn": "To make an effort to achieve something",
+      "hintFr": "Faire un effort pour accomplir quelque chose"
+    },
+    {
+      "english": "The foreigner",
+      "french": "L'étranger",
+      "hintEn": "A person or place from another country",
+      "hintFr": "Une personne ou un lieu d'un autre pays"
+    },
+    {
+      "english": "The dictator",
+      "french": "Le dictateur",
+      "hintEn": "A leader who rules with absolute power without democracy",
+      "hintFr": "Dirigeant qui gouverne avec un pouvoir absolu sans démocratie"
+    },
+    {
+      "english": "The invader",
+      "french": "L'envahisseur",
+      "hintEn": "A person or group that enters a territory by force",
+      "hintFr": "Personne ou groupe qui entre de force dans un territoire"
+    },
+    {
+      "english": "The refugee",
+      "french": "Le réfugié",
+      "hintEn": "A person who flees their country because of war or persecution",
+      "hintFr": "Personne qui fuit son pays à cause d'une guerre ou d'une persécution"
+    },
+    {
+      "english": "The elected official",
+      "french": "L'élu",
+      "hintEn": "A person selected or voted into a position",
+      "hintFr": "Personne choisie ou élue pour un poste"
+    },
+    {
+      "english": "The State",
+      "french": "L'État",
+      "hintEn": "The government and institutions of a country",
+      "hintFr": "Le gouvernement et les institutions d'un pays"
+    },
+    {
+      "english": "The stereotype",
+      "french": "Le stéréotype",
+      "hintEn": "A simplified and generalised idea about a group of people",
+      "hintFr": "Idée simplifiée et généralisée sur un groupe de personnes"
+    },
+    {
+      "english": "The invasion",
+      "french": "L'invasion",
+      "hintEn": "The massive and forceful entry into a territory",
+      "hintFr": "L'entrée massive et par la force dans un territoire"
+    },
+    {
+      "english": "The amusement park",
+      "french": "Le parc d'attractions",
+      "hintEn": "A place with rides and entertainment for the public",
+      "hintFr": "Lieu avec des attractions et divertissements pour le public"
+    },
+    {
+      "english": "Unemployment",
+      "french": "Le chômage",
+      "hintEn": "The situation of not having a job",
+      "hintFr": "Situation de ne pas avoir de travail"
+    },
+    {
+      "english": "The century",
+      "french": "Le siècle",
+      "hintEn": "A period of one hundred years",
+      "hintFr": "Période de cent ans"
+    },
+    {
+      "english": "The renovation",
+      "french": "La rénovation",
+      "hintEn": "The action of restoring and modernising something",
+      "hintFr": "Action de restaurer et moderniser quelque chose"
+    },
+    {
+      "english": "The transformation",
+      "french": "La transformation",
+      "hintEn": "A deep change in the form or structure of something",
+      "hintFr": "Changement profond dans la forme ou la structure de quelque chose"
+    },
+    {
+      "english": "The identity",
+      "french": "L'identité",
+      "hintEn": "What defines a person or a group",
+      "hintFr": "Ce qui définit une personne ou un groupe"
+    },
+    {
+      "english": "The soul",
+      "french": "L'âme",
+      "hintEn": "The spiritual essence or the deep character of something",
+      "hintFr": "L'essence spirituelle ou le caractère profond de quelque chose"
+    },
+    {
+      "english": "The border",
+      "french": "La frontière",
+      "hintEn": "A boundary that separates two countries or regions",
+      "hintFr": "Limite qui sépare deux pays ou régions"
+    },
+    {
+      "english": "The isolation",
+      "french": "L'isolement",
+      "hintEn": "The state of being separated from others",
+      "hintFr": "État d'être séparé des autres"
+    },
+    {
+      "english": "The regime",
+      "french": "Le régime",
+      "hintEn": "A system of government, sometimes authoritarian",
+      "hintFr": "Système de gouvernement, parfois autoritaire"
+    },
+    {
+      "english": "The misery",
+      "french": "La misère",
+      "hintEn": "A state of extreme poverty and suffering",
+      "hintFr": "État d'extrême pauvreté et de souffrance"
+    },
+    {
+      "english": "The resistance",
+      "french": "La résistance",
+      "hintEn": "Opposition or fight against something",
+      "hintFr": "Opposition ou lutte contre quelque chose"
+    },
+    {
+      "english": "The disorder",
+      "french": "Le désordre",
+      "hintEn": "Lack of order and organisation",
+      "hintFr": "Manque d'ordre et d'organisation"
+    },
+    {
+      "english": "The heritage",
+      "french": "Le patrimoine",
+      "hintEn": "The collection of cultural or historical assets of a people",
+      "hintFr": "Ensemble de biens culturels ou historiques d'un peuple"
+    },
+    {
+      "english": "The diversity",
+      "french": "La diversité",
+      "hintEn": "A large number of different things, a richness of differences",
+      "hintFr": "Grand nombre de choses différentes, richesse des différences"
+    },
+    {
+      "english": "The bubble",
+      "french": "La bulle",
+      "hintEn": "A sphere of air or an unreal situation isolated from reality",
+      "hintFr": "Sphère d'air ou situation irréelle et isolée de la réalité"
+    },
+    {
+      "english": "The appeal",
+      "french": "L'attrait",
+      "hintEn": "What attracts or hooks people towards a place",
+      "hintFr": "Ce qui attire ou accroche les gens vers un endroit"
+    },
+    {
+      "english": "The model",
+      "french": "Le modèle",
+      "hintEn": "An example to follow or a representation of something",
+      "hintFr": "Exemple à suivre ou représentation de quelque chose"
+    },
+    {
+      "english": "The law",
+      "french": "La loi",
+      "hintEn": "A mandatory rule established by the State",
+      "hintFr": "Règle obligatoire établie par l'État"
+    },
+    {
+      "english": "The road",
+      "french": "La route",
+      "hintEn": "A land route for travelling by car",
+      "hintFr": "Voie terrestre pour circuler en voiture"
+    },
+    {
+      "english": "The deckchair",
+      "french": "Le transat",
+      "hintEn": "A long chair for lying down in the sun at the beach",
+      "hintFr": "Chaise longue pour s'allonger au soleil sur la plage"
+    },
+    {
+      "english": "The parasol",
+      "french": "Le parasol",
+      "hintEn": "A large umbrella to protect yourself from the sun at the beach",
+      "hintFr": "Grand parasol pour se protéger du soleil à la plage"
+    },
+    {
+      "english": "The boat",
+      "french": "La barque",
+      "hintEn": "A small rowing or motor vessel",
+      "hintFr": "Petit bateau à rames ou à moteur"
+    },
+    {
+      "english": "The campsite",
+      "french": "Le camping",
+      "hintEn": "A place where you sleep in tents outdoors",
+      "hintFr": "Lieu où l'on dort sous des tentes en plein air"
+    },
+    {
+      "english": "The fisherman",
+      "french": "Le pêcheur",
+      "hintEn": "A person who fishes as a job or hobby",
+      "hintFr": "Personne qui pêche comme métier ou loisir"
+    },
+    {
+      "english": "The journalist",
+      "french": "Le journaliste",
+      "hintEn": "A person who writes or reports in the media",
+      "hintFr": "Personne qui écrit ou informe dans les médias"
+    },
+    {
+      "english": "The narrator",
+      "french": "Le narrateur",
+      "hintEn": "A person who tells a story",
+      "hintFr": "Personne qui raconte une histoire"
+    },
+    {
+      "english": "The weekly",
+      "french": "L'hebdomadaire",
+      "hintEn": "A publication that comes out once a week",
+      "hintFr": "Publication qui paraît une fois par semaine"
+    },
+    {
+      "english": "The editorial cartoon",
+      "french": "Le dessin de presse",
+      "hintEn": "A caricature or illustration published in a newspaper",
+      "hintFr": "Caricature ou illustration publiée dans un journal"
+    },
+    {
+      "english": "Tourism",
+      "french": "Le tourisme",
+      "hintEn": "The activity of travelling for pleasure or rest",
+      "hintFr": "Activité de voyager pour le plaisir ou le repos"
+    },
+    {
+      "english": "The tourist",
+      "french": "Le touriste",
+      "hintEn": "A person who travels for pleasure to other places",
+      "hintFr": "Personne qui voyage pour le plaisir dans d'autres endroits"
+    },
+    {
+      "english": "The destination",
+      "french": "La destination",
+      "hintEn": "The place you travel to",
+      "hintFr": "Lieu vers lequel on voyage"
+    },
+    {
+      "english": "The coastline",
+      "french": "Le littoral",
+      "hintEn": "The coastal area along the sea",
+      "hintFr": "Zone côtière au bord de la mer"
+    },
+    {
+      "english": "The coast",
+      "french": "La côte",
+      "hintEn": "A strip of land along the sea",
+      "hintFr": "Bande de terre le long de la mer"
+    },
+    {
+      "english": "The beach",
+      "french": "La plage",
+      "hintEn": "A sandy area by the sea where people swim",
+      "hintFr": "Zone de sable au bord de la mer où les gens se baignent"
+    },
+    {
+      "english": "Overtourism",
+      "french": "La surfréquentation",
+      "hintEn": "An excess of people in a tourist spot",
+      "hintFr": "Excès de personnes dans un lieu touristique"
+    },
+    {
+      "english": "Tourism-phobia",
+      "french": "La tourismophobie",
+      "hintEn": "Rejection or hostility from locals towards tourists",
+      "hintFr": "Rejet ou hostilité des locaux envers les touristes"
+    },
+    {
+      "english": "The environment",
+      "french": "L'environnement",
+      "hintEn": "The natural surroundings around us",
+      "hintFr": "L'environnement naturel qui nous entoure"
+    },
+    {
+      "english": "The pollution",
+      "french": "La pollution",
+      "hintEn": "Damage caused to the environment by waste or harmful substances",
+      "hintFr": "Dommages causés à l'environnement par des déchets ou substances nocives"
+    },
+    {
+      "english": "The ecosystem",
+      "french": "L'écosystème",
+      "hintEn": "A set of living beings and their natural environment",
+      "hintFr": "Ensemble d'êtres vivants et leur environnement naturel"
+    },
+    {
+      "english": "The havoc",
+      "french": "Le ravage",
+      "hintEn": "Great damage or destruction caused by something",
+      "hintFr": "Grand dommage ou destruction causé par quelque chose"
+    },
+    {
+      "english": "The danger",
+      "french": "Le danger",
+      "hintEn": "A situation that can cause harm",
+      "hintFr": "Situation qui peut causer un dommage"
+    },
+    {
+      "english": "The nuisance",
+      "french": "La nuisance",
+      "hintEn": "Something that causes discomfort or disturbance",
+      "hintFr": "Quelque chose qui cause une gêne ou une perturbation"
+    },
+    {
+      "english": "The chaos",
+      "french": "Le désordre",
+      "hintEn": "A total lack of control or management",
+      "hintFr": "Manque total de contrôle ou de gestion"
+    },
+    {
+      "english": "The economy",
+      "french": "L'économie",
+      "hintEn": "The system of production and distribution of goods and services",
+      "hintFr": "Système de production et distribution de biens et services"
+    },
+    {
+      "english": "The income",
+      "french": "Le revenu",
+      "hintEn": "Money received for work or an activity",
+      "hintFr": "Argent reçu pour un travail ou une activité"
+    },
+    {
+      "english": "The currency",
+      "french": "La devise",
+      "hintEn": "Foreign money used in international exchanges",
+      "hintFr": "Monnaie étrangère utilisée dans les échanges internationaux"
+    },
+    {
+      "english": "The quality",
+      "french": "La qualité",
+      "hintEn": "The degree of excellence or goodness of something",
+      "hintFr": "Le degré d'excellence ou de bonté de quelque chose"
+    },
+    {
+      "english": "The priority",
+      "french": "La priorité",
+      "hintEn": "What is most important and must be done first",
+      "hintFr": "Ce qui est le plus important et doit être fait en premier"
+    }
+  ]
+}

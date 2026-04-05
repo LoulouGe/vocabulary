@@ -44,7 +44,14 @@ Setup screen (pick from 35 themes or create custom list) → Mode selection → 
 
 ### Vocabulary Data
 
-Stored in `script.js` as a `themes` object (English) and in `themes-es.js`, `themes-de.js`, `themes-zh.js` for other languages. Each theme typically has 12 items with: target-language word, french translation, target-language hint, french hint. The Tourisme (Delilah) theme is larger (116 items). Custom lists are parsed from `anglais = français` format (minimum 2 words).
+Vocabulary is stored as JSON in `data/`:
+
+- `data/themes-en.json` — English (extracted from `script.js`)
+- `data/themes-es.json` — Spanish (extracted from `themes-es.js`)
+- `data/themes-de.json` — German (extracted from `themes-de.js`)
+- `data/themes-zh.json` — Chinese (extracted from `themes-zh.js`)
+
+Each theme typically has 12 items with: target-language word, french translation, target-language hint, french hint. The Tourisme (Delilah) theme is larger (116 items). Custom lists are parsed from `anglais = français` format (minimum 2 words).
 
 ## Code Conventions
 
