@@ -1,5 +1,5 @@
-// js/data.js
 import { state } from "./state.js";
+import { getStorageKey } from "./stats.js";
 
 const cache = {};
 
@@ -13,13 +13,8 @@ export async function getThemes(lang) {
 export async function getThemeWordList(themeName) {
   const themes = await getThemes(state.currentLang);
   if (themes[themeName]) return themes[themeName];
-  // Check saved custom lists
   try {
-    const storageKey =
-      state.currentLang === "en"
-        ? "vocabulaire-listes-perso"
-        : "vocabulaire-listes-perso-" + state.currentLang;
-    const lists = JSON.parse(localStorage.getItem(storageKey)) || {};
+    const lists = JSON.parse(localStorage.getItem(getStorageKey())) || {};
     if (lists[themeName]) return lists[themeName];
   } catch {
     // ignore

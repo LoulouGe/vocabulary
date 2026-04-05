@@ -10,6 +10,8 @@ const proposeThemeBtn = document.getElementById("propose-theme-btn");
 const wordListInput = document.getElementById("word-list-input");
 const customListName = document.getElementById("custom-list-name");
 
+let _onThemeSelect = null;
+
 export function loadSavedLists() {
   try {
     return JSON.parse(localStorage.getItem(getStorageKey())) || {};
@@ -31,6 +33,7 @@ function deleteList(name) {
 }
 
 export function renderSavedLists(onThemeSelect) {
+  if (onThemeSelect) _onThemeSelect = onThemeSelect;
   const lists = loadSavedLists();
   const names = Object.keys(lists);
 
@@ -60,7 +63,7 @@ export function renderSavedLists(onThemeSelect) {
       e.stopPropagation();
       if (confirm("Supprimer la liste \u00ab " + name + " \u00bb ?")) {
         deleteList(name);
-        renderSavedLists(onThemeSelect);
+        renderSavedLists();
       }
     });
 
@@ -69,7 +72,7 @@ export function renderSavedLists(onThemeSelect) {
     btn.appendChild(topRow);
     renderMasteryBadge(btn, name, lists[name]);
 
-    btn.addEventListener("click", () => onThemeSelect(name, lists[name]));
+    btn.addEventListener("click", () => _onThemeSelect(name, lists[name]));
 
     savedListsGrid.appendChild(btn);
   });
