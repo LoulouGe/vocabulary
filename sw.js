@@ -1,12 +1,21 @@
-const CACHE_NAME = 'vocab-v1';
+const CACHE_NAME = 'vocab-v2';
 const FILES_TO_CACHE = [
   '/vocabulary/',
   '/vocabulary/index.html',
-  '/vocabulary/script.js',
   '/vocabulary/style.css',
-  '/vocabulary/themes-de.js',
-  '/vocabulary/themes-es.js',
-  '/vocabulary/themes-zh.js',
+  '/vocabulary/js/app.js',
+  '/vocabulary/js/state.js',
+  '/vocabulary/js/data.js',
+  '/vocabulary/js/ui.js',
+  '/vocabulary/js/utils.js',
+  '/vocabulary/js/quiz.js',
+  '/vocabulary/js/match.js',
+  '/vocabulary/js/flashcard.js',
+  '/vocabulary/js/crossword.js',
+  '/vocabulary/js/stats.js',
+  '/vocabulary/js/chinese-kb.js',
+  '/vocabulary/js/custom-lists.js',
+  '/vocabulary/data/themes-en.json',
   '/vocabulary/manifest.json',
   '/vocabulary/assets/IMG_3722.png'
 ];

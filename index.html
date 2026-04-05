@@ -178,25 +178,7 @@ Dog = Chien"></textarea>
         </div>
     </div>
 
-    <script src="themes-es.js"></script>
-    <script src="themes-de.js"></script>
-    <script src="themes-zh.js"></script>
-    <script src="script.js"></script>
-    
-    <!-- Register Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then((registration) => {
-                        console.log('Service Worker registered:', registration);
-                    })
-                    .catch((error) => {
-                        console.log('Service Worker registration failed:', error);
-                    });
-            });
-        }
-    </script>
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>
