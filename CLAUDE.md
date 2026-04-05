@@ -24,24 +24,28 @@ Deployed automatically via GitHub Pages from `main` branch — no build step nee
 
 ## Architecture
 
-Single-page app with three files at the root:
+Single-page app using native ES modules (`<script type="module">`):
 
 - **index.html** — Page structure with three screens: theme selection, mode selection, game play
-- **script.js** — All game logic, vocabulary data, and screen transitions
+- **js/** — ES modules: `app.js` (entry point), `ui.js`, `quiz.js`, `match.js`, `flashcard.js`, `crossword.js`, `stats.js`, `custom-lists.js`, `data.js`, `state.js`, `utils.js`, `chinese-kb.js`
+- **data/** — Vocabulary JSON files per language (`themes-en.json`, `themes-es.json`, `themes-de.json`, `themes-zh.json`), loaded on demand via fetch
 - **style.css** — Styling with botanical green palette (#588157, #a3b18a, #344e41), CSS animations
+- **sw.js** — Service worker for PWA / offline support
 
 ### Game Flow
 
-Setup screen (pick from 6 themes or create custom list) → Mode selection → Game screen
+Setup screen (pick from 35 themes or create custom list) → Mode selection → Game screen
 
-### Two Game Modes
+### Game Modes
 
 1. **Quiz**: 10 words per round, random translation direction, hint system, scoring (1pt full / 0.5pt with hint)
 2. **Matching (Relier les mots)**: 5-word pairs, click to match columns, green/red feedback with animations
+3. **Flashcard (Revision)**: Browse cards, flip to reveal translation, mark as learned or in-progress
+4. **Crossword (Mots croises)**: 8-word crossword grid with French clues, answer in target language
 
 ### Vocabulary Data
 
-Stored in `script.js` as a `themes` object. Each theme has 12 items with: english word, french translation, english hint, french hint. Custom lists are parsed from `anglais = français` format (minimum 2 words).
+Vocabulary is stored as JSON in `data/` (one file per language: `themes-en.json`, `themes-es.json`, `themes-de.json`, `themes-zh.json`). Only the selected language is fetched at runtime, cached in memory. Each theme typically has 12 items with: target-language word, french translation, target-language hint, french hint. The Tourisme (Delilah) theme is larger (116 items). Custom lists are parsed from `anglais = francais` format (minimum 2 words).
 
 ## Code Conventions
 
