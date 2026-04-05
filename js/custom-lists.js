@@ -1,6 +1,6 @@
-import { state } from "./state.js";
+import { state, getStorageKey } from "./state.js";
 import { parseWordList } from "./utils.js";
-import { getStorageKey, renderMasteryBadge } from "./stats.js";
+import { renderMasteryBadge } from "./stats.js";
 
 const savedListsSection = document.getElementById("saved-lists-section");
 const savedListsGrid = document.getElementById("saved-lists-grid");

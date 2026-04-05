@@ -40,7 +40,8 @@ Setup screen (pick from 35 themes or create custom list) → Mode selection → 
 
 1. **Quiz**: 10 words per round, random translation direction, hint system, scoring (1pt full / 0.5pt with hint)
 2. **Matching (Relier les mots)**: 5-word pairs, click to match columns, green/red feedback with animations
-3. **Crossword (Mots croisés)**: 8-word crossword grid with French clues, answer in target language
+3. **Flashcard (Revision)**: Browse cards, flip to reveal translation, mark as learned or in-progress
+4. **Crossword (Mots croises)**: 8-word crossword grid with French clues, answer in target language
 
 ### Vocabulary Data
 

@@ -129,7 +129,7 @@ async function showSetup() {
 
   renderSavedLists((name, wordList) => selectTheme(name, wordList));
 
-  renderRecommendations(async (themeName) => {
+  await renderRecommendations(async (themeName) => {
     const t = await getThemes(state.currentLang);
     if (t[themeName]) {
       selectTheme(themeName, t[themeName]);

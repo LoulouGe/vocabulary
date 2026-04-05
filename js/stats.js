@@ -1,8 +1,5 @@
-import { state } from "./state.js";
-
-function langKey(base) {
-  return state.currentLang === "en" ? base : base + "-" + state.currentLang;
-}
+import { state, langKey } from "./state.js";
+import { getThemeWordList } from "./data.js";
 
 function getStatsKey() {
   return langKey("vocabulaire-stats");
@@ -10,10 +7,6 @@ function getStatsKey() {
 
 function getTotalScoreKey() {
   return langKey("vocabulaire-total-score");
-}
-
-export function getStorageKey() {
-  return langKey("vocabulaire-listes-perso");
 }
 
 export function loadStats() {
@@ -99,14 +92,15 @@ export function getThemeMastery(themeName, wordList) {
   return Math.round((masterySum / total) * 100);
 }
 
-export function getRecommendations() {
+export async function getRecommendations() {
   const stats = loadStats();
   const recommendations = [];
   const now = Date.now();
   const FOURTEEN_DAYS = 14 * 24 * 60 * 60 * 1000;
 
   for (const [name, theme] of Object.entries(stats)) {
-    const mastery = getThemeMastery(name, null);
+    const wordList = await getThemeWordList(name);
+    const mastery = getThemeMastery(name, wordList);
     if (mastery !== null && mastery < 60) {
       recommendations.push({
         themeName: name,
@@ -144,9 +138,9 @@ export function getRecommendations() {
   return recommendations.slice(0, 2);
 }
 
-export function renderRecommendations(onThemeSelect) {
+export async function renderRecommendations(onThemeSelect) {
   const container = document.getElementById("recommendations");
-  const recs = getRecommendations();
+  const recs = await getRecommendations();
 
   if (recs.length === 0) {
     container.style.display = "none";
