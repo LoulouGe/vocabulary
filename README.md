@@ -20,7 +20,7 @@ Remplis une grille de mots croisés de 8 mots à partir d'indices en français.
 
 ## Thèmes disponibles
 
-35 thèmes intégrés dont : La maison, La nourriture, Les animaux, La nature, L'école, Les vêtements, Le corps humain, La famille, Les sports, Les voyages, Tourisme (Delilah), et bien d'autres.
+36 thèmes intégrés dont : La maison, La nourriture, Les animaux, La nature, L'école, Les vêtements, Le corps humain, La famille, Les sports, Les voyages, Tourisme (Delilah), Louise 3ème, et bien d'autres.
 
 Tu peux aussi créer ta propre liste de mots au format `anglais = français`.
 
