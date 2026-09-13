@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vocab-v2';
+const CACHE_NAME = 'vocab-v3';
 const FILES_TO_CACHE = [
   '/vocabulary/',
   '/vocabulary/index.html',

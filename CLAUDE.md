@@ -18,7 +18,7 @@ python3 -m http.server 8080
 # Then open http://localhost:8080
 ```
 
-Alternatively, use VS Code Live Server extension.
+Alternatively, use VS Code Live Server extension. `.claude/launch.json` defines the same server as the `vocabulary` preview for Claude Code.
 
 Deployed automatically via GitHub Pages from `main` branch — no build step needed.
 
@@ -34,7 +34,7 @@ Single-page app using native ES modules (`<script type="module">`):
 
 ### Game Flow
 
-Setup screen (pick from 35 themes or create custom list) → Mode selection → Game screen
+Setup screen (pick from 36 themes or create custom list) → Mode selection → Game screen
 
 ### Game Modes
 
@@ -45,10 +45,11 @@ Setup screen (pick from 35 themes or create custom list) → Mode selection → 
 
 ### Vocabulary Data
 
-Vocabulary is stored as JSON in `data/` (one file per language: `themes-en.json`, `themes-es.json`, `themes-de.json`, `themes-zh.json`). Only the selected language is fetched at runtime, cached in memory. Each theme typically has 12 items with: target-language word, french translation, target-language hint, french hint. The Tourisme (Delilah) theme is larger (116 items). Custom lists are parsed from `anglais = francais` format (minimum 2 words).
+Vocabulary is stored as JSON in `data/` (one file per language: `themes-en.json`, `themes-es.json`, `themes-de.json`, `themes-zh.json`). Only the selected language is fetched at runtime, cached in memory. Each theme typically has 12 items with: target-language word, french translation, target-language hint, french hint. The Tourisme (Delilah) theme is larger (116 items); the Louise 3ème theme (English only, 27 items) comes from a school text. Custom lists are parsed from `anglais = francais` format (minimum 2 words).
 
 ## Code Conventions
 
 - Prettier for formatting (auto-format on save via VS Code workspace config)
 - Answer comparisons are case-insensitive and whitespace-trimmed
+- `sw.js` is cache-first: bump `CACHE_NAME` whenever `data/`, `js/`, `style.css` or `index.html` change, otherwise installed PWAs keep serving the old files
 - Google Fonts loaded via CSS: Playfair Display (serif headings), Poppins (sans-serif body)
